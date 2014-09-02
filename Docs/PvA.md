@@ -54,3 +54,9 @@ Hieronder is per onderdeel duidelijk gemaakt wat wel en wat niet binnen de grens
 | Classificeren | Verschillende symbolen herkennen en deze classificeren | classificeren van meerdere objecten |
 | Positioneren | De positie van een symbool binnen een "Danger Zone" bepalen en met een laser aangeven waar deze is | De positie aangeven buiten de "Danger Zones" |
 | Richten | De positie van een symbool binnen een "Danger Zone" aangeven doormiddel van een laser | De positie aangeven buiten de "Danger Zones" |
+
+Producten
+---------
+Software voor het detecteren
+Torret met Laser
+Software voor het kalibreren
