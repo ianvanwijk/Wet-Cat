@@ -16,19 +16,19 @@ Projectactiviteiten
 -------------------
 De verschilende activiteiten die we zullen moeten ondernemen zijn hieronder gegroepeerd weergegeven.
 
-|ID	|Naam	|Uitleg |Groep|
-|...|.......|.......|.....|
-|1	|Plan van aanpak	|Het plan van aanpak, geverifieerd	|Ontwerp|
-|2	|Requirements	|De requirements die vanuit de klant zijn bevestigd	|Ontwerp|
-|3	|Functioneel ontwerp	|Functionele eisen vastgelegd en bevestigd door de |klant	|Ontwerp|
-|4	|Technisch ontwerp	|Technische eisen vastgelegd voor de programmeurs	|Ontwerp|
-|5	|Software ontwerp	|Ontwerp van de software om duidelijkheid te bieden |over de manier van programmeren	|Ontwerp|
-|6	|Turret ontwerp	|Ontwerp voor de turret die de waterstraal moet gaan |schieten	|Ontwerp|
-|7	|Camera onderzoek	|Onderzoek naar de beste camera 	|Onderzoek|
-|8	|Software onderzoek	|Onderzoek naar de beste programmeer taal voor de |applicatie	|Onderzoek|
-|9	|Turret	|De turret die de waterstraal zal gaan schieten	|Uitvoering|
-|10	|Programma	|Het programma dat de kat detecteerd en de turret richt	|Uitvoering|
-|11	|Testen	|Alles testen	|Uitvoering|
+| ID | Naam |Uitleg |Groep|
+|....|.......|.......|.....|
+| 1  | Plan van aanpak     | Het plan van aanpak, geverifieerd                       | Ontwerp |
+| 2  | Requirements        | De requirements die vanuit de klant zijn bevestigd      | Ontwerp |
+| 3  | Functioneel ontwerp | Functionele eisen vastgelegd en bevestigd door de klant | Ontwerp |
+| 4  | Technisch ontwerp   | Technische eisen vastgelegd voor de programmeurs        | Ontwerp |
+| 5  | Software ontwerp    | Ontwerp van de software om duidelijkheid te bieden over de manier van programmeren |Ontwerp |
+| 6  | Turret ontwerp      | Ontwerp voor de turret die de waterstraal moet gaan schieten |Ontwerp |
+| 7  | Camera onderzoek    | Onderzoek naar de beste camera                       |Onderzoek |
+| 8  | Software onderzoek  | Onderzoek naar de beste programmeer taal voor de applicatie |Onderzoek |
+| 9  | Turret              | De turret die de waterstraal zal gaan schieten |Uitvoering |
+| 10 | Programma           | Het programma dat de kat detecteerd en de turret richt |Uitvoering |
+| 11 | Testen              | Alles testen |Uitvoering |
 
 Zoals te zien is zijn er drie groepen gedefinieerd, Ontwerp, Onderzoek en Uitvoering. Deze groepen kunnen worden uitgevoerd als fases binnen het project.
 
