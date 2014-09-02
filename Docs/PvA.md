@@ -39,3 +39,18 @@ De verschilende activiteiten die we zullen moeten ondernemen zijn hieronder gegr
 
 Zoals te zien is zijn er drie groepen gedefinieerd, Ontwerp, Onderzoek en Uitvoering. Deze groepen kunnen worden uitgevoerd als fases binnen het project.
 
+
+Projectgrensen
+--------------
+Het project valt binnen bepaalde grensen, dit is niet alleen om te behoeden voor uitloop, maar ook om de klant duidelijk te maken wat er wel en vooral niet verwacht kan worden.
+Hieronder is per onderdeel duidelijk gemaakt wat wel en wat niet binnen de grens valt.
+
+| Onderdeel  | Grens wel | Grens niet |
+|------------|-----------|------------|
+| Calibratie | "Danger Zone" toevoegen door vier punten aan te geven en op "toevoegen" te drukken | Meerdere "Danger Zones" tegelijkertijd toevoegen |
+| Calibratie | Opgeslagen "Danger Zones" verwijderen doormiddel van de knop "Clear" | Een van meerdere opgeslagen "Danger Zones" appart verwijderen |
+| Detecteren | Het detecteren van een vooraf gedefineerd symbool | Het detecteren van een kat zonder symbool |
+| Detecteren | Alle symbolen herkennen die zich in zicht en in de "Danger Zones" bevinden | Onderscheid maken tussen katten en mensen |
+| Classificeren | Verschillende symbolen herkennen en deze classificeren | classificeren van meerdere objecten |
+| Positioneren | De positie van een symbool binnen een "Danger Zone" bepalen en met een laser aangeven waar deze is | De positie aangeven buiten de "Danger Zones" |
+| Richten | De positie van een symbool binnen een "Danger Zone" aangeven doormiddel van een laser | De positie aangeven buiten de "Danger Zones" |
