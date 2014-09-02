@@ -4,13 +4,20 @@ Wet-Cat
 Achtergrond
 -----------
 Je hebt over het algemeen twee verschillende mensen. Mensen die katten hebben en mensen die een tuin hebben. Het komt regelmatig voor dat de katten hun “bezigheden” achterlaten in andermans tuin. Nou zijn er al oplossingen voor bedacht, namelijk: een kattenbak, maar helaas los dit het probleem niet volledig op.
+
 Er zou daarom opzoek moet worden gegaan naar een oplosing. De beste oplossing voor dit probleem is uit onderzoek gebleken om een kat nat te spuiten met water. Nou kan je op elk moment van de dag met een grote spuit zitten en wachten totdat de katten komen, maar helaas in ons drukke 24/7 samenleving hebben wij daar geen tijd voor en het probleem doet zich ook nog voor dat er geen katten komen als je er op zit te wachten.
-De beste oplossing zou zijn als je met een robot de tuin analyseert en vervolgens als er een kat langs komt er op reageerd.
+
+De beste oplossing zou zijn als je met een robot de tuin analyseert en vervolgens als er een kat langs komt er op reageer.
 
 Projectopdracht
 ---------------
 De project opdracht is ontstaan uit het katten probleem. Om deze katten weg te jagen is er bedacht om een apparaat te maken dat bij het detecteren van een kat deze op diervriendelijke manier wegjaagt, door middel van een korte waterstraal. Door dit doel is de opdracht in twee delen te definiëren, als eerste het vinden van katten. Op het moment dat er een kat binnen de tuin komt zal deze moeten worden gedetecteerd. Deze detectie moet rekening houden met de grenzen van de tuin en met mensen die ook langs kunnen lopen. De mensen, en vooral ook kinderen, moeten niet worden geraakt.
+
 Na het vinden van de katten moeten deze worden weggejaagd. Er zal een richtsysteem moeten worden gemaakt dat een met een korte waterstraal de kat zal wegjagen. Om niet te veel water te verspillen moet deze redelijk accuraat zijn.
+
+Om dit probleem toch binnen een klas lokaal te demonsteren is er voor gekozen om de katten te vervangen met symbolen. De symbolen moeten nogsteeeds net als bij het detecteren van katten gedetecteerd kunnen worden ondanks dat het beweegt. Voor het schieten van de "katten" zal er ook geen water maar een laser gebruikt worden.
+
+Het idee is dat er een webcam gericht staat op een tuin, daar zal uiteindelijk symbolen doorheen gaan. Die moeten gedetecteerd worden en vervolgens op gereageerd worden doormiddel van een laser er op te richten.
 
 Projectactiviteiten
 -------------------
