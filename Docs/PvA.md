@@ -17,6 +17,7 @@ Projectactiviteiten
 De verschilende activiteiten die we zullen moeten ondernemen zijn hieronder gegroepeerd weergegeven.
 
 |ID	|Naam	|Uitleg |Groep|
+|...|.......|.......|.....|
 |1	|Plan van aanpak	|Het plan van aanpak, geverifieerd	|Ontwerp|
 |2	|Requirements	|De requirements die vanuit de klant zijn bevestigd	|Ontwerp|
 |3	|Functioneel ontwerp	|Functionele eisen vastgelegd en bevestigd door de |klant	|Ontwerp|
