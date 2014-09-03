@@ -84,7 +84,14 @@ Risico's
 Dit project neemt bepaalde risico’s met zich mee. De risico’s en de tijd die we verliezen op het moment dat het probleem zich voordoet, staan hieronder in een tabel.
 
 | Risico | Tijd | 
-|--------|------|
+|---|---|
+| De belichten kan niet goed zijn waardoor objecten niet goed herkend worden |  |
+| Door objecten scheef te houden kan objecten niet goed herkend worden | |
+| Het begrijpen en implementeren van de OpenCV library kan langer duren dan verwacht | |
+| Zekere opperaties kan te veel resources vragen er zou verbeteringen in de algoritmen nodig is | |
+| Framerate kan niet worden bijgehouden | |
+| Objecten worden niet snel genoeg herkend | |
+| De communicatie met de turret kan problemen opleveren | |
 | OpenCV installatie duurt te lang | 2 uur uitloop |
 | OpenCV software werkt niet naar verwachting | 8 uur uitloop |
 | Plan van aanpak maken loopt uit | 4 uur uitloop |
