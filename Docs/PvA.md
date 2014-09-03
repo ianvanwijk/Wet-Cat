@@ -59,6 +59,23 @@ Hieronder is per onderdeel duidelijk gemaakt wat wel en wat niet binnen de grens
 
 Producten
 ---------
-Software voor het detecteren
-Torret met Laser
-Software voor het kalibreren
+Vision Software voor het aansturen en detecteren van objecten
+
+Torret met laser
+
+Software voor het kalibreren van zones en torret en handmatig aansturen torret
+
+Kwaliteit
+---------
+
+Projectorganisatie
+------------------
+
+Planning
+--------
+
+Kosten en baten
+---------------
+
+Risico's
+--------
