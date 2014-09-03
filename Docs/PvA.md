@@ -67,6 +67,8 @@ Software voor het kalibreren van zones en torret en handmatig aansturen torret
 
 Kwaliteit
 ---------
+Het is van groot belang dat de juiste objecten erkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie.
+
 
 Projectorganisatie
 ------------------
