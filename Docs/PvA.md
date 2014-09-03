@@ -67,7 +67,7 @@ Software voor het kalibreren van zones en turret en handmatig aansturen torret
 
 Kwaliteit
 ---------
-Het is van groot belang dat de juiste objecten herkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie. Ook zal er per onderdeel een uitleg worden gemaakt van hoe het onderdeel geïmplementeerd is, hierdoor is het onderdeel altijd opnieuw te maken volgens dezelfde specificaties gemaakt kan worden.
+Het is van groot belang dat de juiste objecten herkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie. Ook zal er per onderdeel een uitleg worden gemaakt van hoe het onderdeel geïmplementeerd is, hierdoor is het onderdeel altijd opnieuw te maken volgens dezelfde specificaties.
 
 Projectorganisatie
 ------------------
