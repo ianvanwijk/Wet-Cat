@@ -94,22 +94,7 @@ Planning
 --------
 | Week | Omschrijving |
 |:-:|---|
-| 1 | - Het bedenken van een project
- - Het maken van de Plan van Aanpak |
-| 2 | Het maken van een:
- - Funtioneel Ontwerp
- - Technisch Ontwerp |
-| 3 | 1. Het herkenen van symbolen met OpenCV ( Proof of Concept )
- 2. Het beeld van een webcam / camera tonen op de beeldscherm met OpenCV + QT |
-| 4 | - Het samenvoegen van de ontwikkelde onderdeel in week 3
- - Het teken van de "DANGER" zones in de applicatie |
-| 5 | - Het toevoegen en verwijderen van de "DANGER" zones via symbool herkenning
- - Turret ontwerpen / bouwen |
-| 6 | - Turret ontwerpen / bouwen
- - Turret aansturen om te schieten |
-| 7 | - Turret kalibreren
- - Alles samenvoegen |
-| 8 | Afronden alle onderdelen en samenvoegen |
+| 1 | Het bedenken van een project, Het maken van de Plan van Aanpak |
 
 Documentatie word parrallel aan het project gemaakt en uitgebreid.
 
