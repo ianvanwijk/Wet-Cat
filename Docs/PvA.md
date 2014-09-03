@@ -63,15 +63,36 @@ Vision Software voor het aansturen en detecteren van objecten
 
 Torret met laser
 
-Software voor het kalibreren van zones en torret en handmatig aansturen torret
+Software voor het kalibreren van zones en turret en handmatig aansturen torret
 
 Kwaliteit
 ---------
-Het is van groot belang dat de juiste objecten erkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie.
+Het is van groot belang dat de juiste objecten herkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie. Ook zal er per onderdeel een uitleg worden gemaakt van hoe het onderdeel geïmplementeerd is, hierdoor is het onderdeel altijd opnieuw te maken volgens dezelfde specificaties gemaakt kan worden.
 
 
 Projectorganisatie
 ------------------
+De project organisatie bestaat uit drie partijen, de opdrachtgever, de project ondersteuning en de projectleden.
+Hieronder staan alle partijen met uitgelegd wat hun rol is binnen de scope van het project.
+
+Opdrachtgever:
+| rol |
+|-----|
+| De opdrachtgever heeft als rol om akkoord te geven bij het beginnen van het project, hij zal contact hebben met het projectteam om het status van het project bij te houden en zal aan het einde van het project traject goedkeuring geven van het eindproduct. |
+| De rol van opdrachtgever wordt gevuld door:  |
+
+Project ondersteuning:
+| rol |
+|-----|
+| De project ondersteuning zal ondersteuning bieden aan het projectteam waar nodig, vooral omdat de omgeving waar het projectteam zal werken is een redelijk nieuwe omgeving, hierdoor is het zaak om snel van start te kunnen en de project ondersteuning zal hierbij helpen. Verder is de project ondersteuning er om te waarschuwen voor risico’s op het moment dat de opdracht meer tijd kan vergen dan voorheen verwacht werd. |
+| De rol van project ondersteuning wordt gevuld door: Hugo Arends |
+
+Projectleden:
+| rol |
+|-----|
+| De projectleden vormen samen het projectteam en zijn verantwoordelijk voor het uitvoeren van de opdracht. Zij zijn eindverantwoordelijk voor de producten die opgeleverd worden aan de opdrachtgever. Ook word van de projectleden verwacht dat ze de opgeleverde producten presenteren op het eind van het project traject. |
+| De rol van projectlid zal worden gevuld door: Ian van Wijk en Floris Venhuizen |
+
 
 Planning
 --------
