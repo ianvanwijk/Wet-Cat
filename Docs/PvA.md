@@ -76,19 +76,19 @@ Hieronder staan alle partijen met uitgelegd wat hun rol is binnen de scope van h
 
 Opdrachtgever:
 
-| rol | uitgevoerd door |
+| Rol | Uitgevoerd door |
 |---|---|
 | De opdrachtgever heeft als rol om akkoord te geven bij het beginnen van het project, hij zal contact hebben met het projectteam om het status van het project bij te houden en zal aan het einde van het project traject goedkeuring geven van het eindproduct. | `geen`  |
 
 Project ondersteuning:
 
-| rol | uitgevoerd door |
+| Rol | Uitgevoerd door |
 |---|---|
 | De project ondersteuning zal ondersteuning bieden aan het projectteam waar nodig, vooral omdat de omgeving waar het projectteam zal werken is een redelijk nieuwe omgeving, hierdoor is het zaak om snel van start te kunnen en de project ondersteuning zal hierbij helpen. Verder is de project ondersteuning er om te waarschuwen voor risico’s op het moment dat de opdracht meer tijd kan vergen dan voorheen verwacht werd. | `Hugo Arends` |
 
 Projectleden:
 
-| rol | uitgevoerd door |
+| Rol | Uitgevoerd door |
 |---|---|
 | De projectleden vormen samen het projectteam en zijn verantwoordelijk voor het uitvoeren van de opdracht. Zij zijn eindverantwoordelijk voor de producten die opgeleverd worden aan de opdrachtgever. Ook word van de projectleden verwacht dat ze de opgeleverde producten presenteren op het eind van het project traject. | `Ian van Wijk`, `Floris Venhuizen` |
 
