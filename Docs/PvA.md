@@ -94,7 +94,8 @@ Planning
 --------
 | Week | Omschrijving |
 |:-:|---|
-| 1 | Het bedenken van een project, Het maken van de Plan van Aanpak |
+| 1 | - Het bedenken van een project 
+ - Het maken van de Plan van Aanpak |
 
 Documentatie word parrallel aan het project gemaakt en uitgebreid.
 
