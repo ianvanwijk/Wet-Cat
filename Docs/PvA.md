@@ -69,12 +69,31 @@ Kwaliteit
 ---------
 Het is van groot belang dat de juiste objecten erkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie.
 
-
 Projectorganisatie
 ------------------
 
 Planning
 --------
+| Week | Omschrijving |
+|*-*|---|
+| 1 | - Het bedenken van een project
+ - Het maken van de Plan van Aanpak |
+| 2 | Het maken van een:
+ - Funtioneel Ontwerp
+ - Technisch Ontwerp |
+| 3 | 1. Het herkenen van symbolen met OpenCV ( Proof of Concept )
+ 2. Het beeld van een webcam / camera tonen op de beeldscherm met OpenCV + QT |
+| 4 | - Het samenvoegen van de ontwikkelde onderdeel in week 3
+ - Het teken van de "DANGER" zones in de applicatie |
+| 5 | - Het toevoegen en verwijderen van de "DANGER" zones via symbool herkenning
+ - Turret ontwerpen / bouwen |
+| 6 | - Turret ontwerpen / bouwen
+ - Turret aansturen om te schieten |
+| 7 | - Turret kalibreren
+ - Alles samenvoegen |
+| 8 | Afronden alle onderdelen en samenvoegen |
+
+Documentatie word parrallel aan het project gemaakt en uitgebreid.
 
 Kosten en baten
 ---------------
@@ -91,7 +110,7 @@ Dit project neemt bepaalde risico’s met zich mee. De risico’s en de tijd die
 | Zekere opperaties kan te veel resources vragen er zou verbeteringen in de algoritmen nodig is | |
 | Framerate kan niet worden bijgehouden | |
 | Objecten worden niet snel genoeg herkend | |
-| De communicatie met de turret kan problemen opleveren | |
+| De communicatie met de turret kan problemen opleveren | | 
 | OpenCV installatie duurt te lang | 2 uur uitloop |
 | OpenCV software werkt niet naar verwachting | 8 uur uitloop |
 | Plan van aanpak maken loopt uit | 4 uur uitloop |
