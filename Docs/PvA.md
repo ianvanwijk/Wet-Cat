@@ -93,7 +93,7 @@ Projectleden:
 Planning
 --------
 | Week | Omschrijving |
-|*-*|---|
+|:-:|---|
 | 1 | - Het bedenken van een project
  - Het maken van de Plan van Aanpak |
 | 2 | Het maken van een:
