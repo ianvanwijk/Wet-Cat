@@ -116,17 +116,17 @@ Binnen dit project zullen er kosten gemaakt worden, tegenover deze kosten staan 
 
 |   |   |
 |---|---|
-| 'Tijd' | Om het project te kunnen maken zal er tijd moeten worden geinvesteerd, deze tijd valt over een span van 8 weken, 9 uur per week van twee personen, in totaal is dat 144 uur. |
-| 'Materiaal' | Ook is er materiaal nodig om het project te realiseren, naast een webcam zal er ook een turret moeten worden gebouwd die voornamelijk uit hout zal bestaan, ook onderdelen als cervo-motoren (2X) en een laser pointer zullen nodig zijn om het project te realiseren. |
+| `Tijd` | Om het project te kunnen maken zal er tijd moeten worden geinvesteerd, deze tijd valt over een span van 8 weken, 9 uur per week van twee personen, in totaal is dat 144 uur. |
+| `Materiaal` | Ook is er materiaal nodig om het project te realiseren, naast een webcam zal er ook een turret moeten worden gebouwd die voornamelijk uit hout zal bestaan, ook onderdelen als cervo-motoren (2X) en een laser pointer zullen nodig zijn om het project te realiseren. |
 
 ### Baten
 
 |   |   |
 |---|---|
-| 'Tijd' | Er wordt tijd gewonnen omdat de opdrachtgever de katten niet zelf hoefd weg te jagen |
-| 'Tijd' | Er wordt tijd gewonnen omdat de opdrachtgever niet meer hetgeen dat de katten achterlaten hoefd op te ruimen |
-| 'Tuin' | De tuin zal minder snel vervuild raken waardoor planten en bloemen beter groeien, hierdoor zal de tuin er beter uitzien |
-| 'Studie punten' | Omdat het project door studenten word gemaakt zal dit project ook studiepunten opleveren voor deze studenten. |
+| `Tijd` | Er wordt tijd gewonnen omdat de opdrachtgever de katten niet zelf hoefd weg te jagen |
+| `Tijd` | Er wordt tijd gewonnen omdat de opdrachtgever niet meer hetgeen dat de katten achterlaten hoefd op te ruimen |
+| `Tuin` | De tuin zal minder snel vervuild raken waardoor planten en bloemen beter groeien, hierdoor zal de tuin er beter uitzien |
+| `Studie punten` | Omdat het project door studenten word gemaakt zal dit project ook studiepunten opleveren voor deze studenten. |
 
 Risico's
 --------
