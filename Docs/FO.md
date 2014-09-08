@@ -8,15 +8,16 @@ Hieronder worden de verschillende eisen vanuit het oogpunt van de user beschreve
 
 | ID   | Overzicht | MoSCoW |
 |:----:|-----------|--------|
-| F1-1 | Het instellen van verschillende "Danger Zones" moet mogelijk zijn. | M |
-| F1-2 | Katten moeten worden gedetecteerd | M |
-| F1-3 | Alle andere objecten (niet katten) moeten worden genegeerd | M |
-| F1-4 | Katten moeten worden geraakt met een waterstraal (laser) | M |
-| F1-5 | Alle anders objecten (niet katten) mogen niet worden geraakt door water | M |
-| F1-6 | De turret is te calibreren | M |
-| F1-7 | Er wor bijgehouden word hoevaak een kat word beschoten | C |
-| F1-8 | Het systeem is via het internet te beheren | C |
-| F1-9 | Het beeld dat de camera ziet is te zien op de laptop waar de software op gedraait word | C |
+| F1-01 | Het instellen van verschillende "Danger Zones" moet mogelijk zijn. | M |
+| F1-02 | Katten moeten worden gedetecteerd | M |
+| F1-03 | Alle andere objecten (niet katten) moeten worden genegeerd | M |
+| F1-04 | Katten moeten worden geraakt met een waterstraal (laser) | M |
+| F1-05 | Alle anders objecten (niet katten) mogen niet worden geraakt door water | M |
+| F1-06 | De turret is te calibreren | M |
+| F1-07 | De "Danger Zones" moeten verwijderbaar zijn | S |
+| F1-08 | Er wor bijgehouden word hoevaak een kat word beschoten | C |
+| F1-09 | Het systeem is via het internet te beheren | C |
+| F1-10 | Het beeld dat de camera ziet is te zien op de laptop waar de software op gedraait word | C |
 
 ## IPO
 
