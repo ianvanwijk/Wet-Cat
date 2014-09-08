@@ -15,7 +15,9 @@ De project opdracht is ontstaan uit het katten probleem. Om deze katten weg te j
 
 Na het vinden van de katten moeten deze worden weggejaagd. Er zal een richtsysteem moeten worden gemaakt dat een met een korte waterstraal de kat zal wegjagen. Om niet te veel water te verspillen moet deze redelijk accuraat zijn.
 
-Om dit probleem toch binnen een klas lokaal te demonsteren is er voor gekozen om de katten te vervangen met symbolen. De symbolen moeten nogsteeeds net als bij het detecteren van katten gedetecteerd kunnen worden ondanks dat het beweegt. Voor het schieten van de "katten" zal er ook geen water maar een laser gebruikt worden.
+Om dit probleem toch binnen een klas lokaal te demonsteren is er voor gekozen om de katten te vervangen met symbolen. De verschillende symbolen zal worden geplaats op een grote dobbelsteen. Op de verschillende kanten zal verschillende symbolen worden gemonteerd. De verschillende symbolen beelden verschillende soorten katten af, er bestaat namelijk drie soorten katten, een "Safe Cat", "Buurman Cat" en de "Maak niet uit Cat". De katten hoeven niet gedetecteerd worden terwijl het beweegt, maar het moet wel binnen 5 seconden gedetecteerd en beschoten worden. Ook voor het schieten van de "katten" zal er ook geen water maar een laser gebruikt worden.
+
+Voor de veiligheid van de mensen in de klas lokaal zal er mechanische beperkingen worden gemonteerd zodat er niet met de laser in de ogen van mensen kunnen worden geschenen.
 
 Het idee is dat er een webcam gericht staat op een tuin, daar zal uiteindelijk symbolen doorheen gaan. Die moeten gedetecteerd worden en vervolgens op gereageerd worden doormiddel van een laser er op te richten.
 
