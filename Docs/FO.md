@@ -2,17 +2,29 @@
 
 ## Eisen
 
+Het eindproduct dat opgeleverd gaat worden moet voldoen aan een aantal eisen van de klant, hieronder staan de globale eisen op een rij en daaronder per categorie de specefiekere eisen.
+
+* Het programma moet stabiel werken
+* Het programma mag niet crashen zonder foutmelding en crashrapport
+
 ### User
 
 Hieronder worden de verschillende eisen vanuit het oogpunt van de user beschreven. In de derde kolom staat hoe belangrijk de issue is op basis van de MoSCoW methode.
+
+> De MoSCoW methode is een makkelijke manier om taken te sorteren op basis van hoe belangrijk ze zijn, binnen de MoSCoW methode zijn er vier niveaus van belangrijkheid waar een taak bij kan horen:
+> M - Must, deze taak moet gemaakt worden om het project af te ronden
+> S - Should, deze taak zou gemaakt moeten worden, maar bij tijdnood kan deze taak afvallen
+> C - Could, deze taak zou graag gemaakt worden, maar alleen als er tijd over is
+> W - Won't, deze taak word niet gemaakt, wel is het belangrijk om hierover na te denken voor de toekomst
 
 | ID   | Overzicht | MoSCoW |
 |:----:|-----------|--------|
 | F1-1 | Het instellen van verschillende "Danger Zones" moet mogelijk zijn. | M |
 | F1-2 | De turret is te calibreren door de hoeken van de tuin te specificeren via de computer | M |
 | F1-3 | De "Danger Zones" moeten verwijderbaar zijn met een symbool | S |
-| F1-4 | Het systeem is via het internet te beheren | C |
-| F1-5 | Het beeld dat de camera ziet is te zien op de laptop waar de software op gedraait word | C |
+| F1-4 | De "Danger Zones" moeten worden onthouden, zelfs als de applicatie afgesloten word | M |
+| F1-5 | Het systeem is via het internet te beheren | C |
+| F1-6 | Het beeld dat de camera ziet is te zien op de laptop waar de software op gedraait word | C |
 
 ### Systeem
 
