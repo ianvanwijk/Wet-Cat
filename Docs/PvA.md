@@ -11,7 +11,7 @@ De beste oplossing zou zijn als je met een robot de tuin analyseert en vervolgen
 
 Projectopdracht
 ---------------
-De project opdracht is ontstaan uit het katten probleem. Om deze katten weg te jagen is er bedacht om een apparaat te maken dat bij het detecteren van een kat deze op diervriendelijke manier wegjaagt, door middel van een korte waterstraal. Door dit doel is de opdracht in twee delen te definiëren, als eerste het vinden van katten. Op het moment dat er een kat binnen de tuin komt zal deze moeten worden gedetecteerd. Deze detectie moet rekening houden met de grenzen van de tuin en met mensen die ook langs kunnen lopen. De mensen, en vooral ook kinderen, moeten niet worden geraakt.
+De project opdracht is ontstaan uit het katten probleem. Om deze katten weg te jagen is er bedacht om een apparaat te maken dat bij het detecteren van een kat deze op diervriendelijke manier wegjaagt, door middel van een korte waterstraal. Door dit doel is de opdracht in twee delen te definiëren, als eerste het vinden van katten. Op het moment dat er een kat binnen de tuin komt zal deze moeten worden gedetecteerd. Deze detectie moet rekening houden met de grenzen van de tuin en met mensen die ook langs kunnen lopen. De mensen, en vooral ook kinderen, moeten niet worden geraakt. Naast het feit dat alleen katten geraakt mogen worden is het alleen toegestaan om een kat te beschieten al die zich bevinden in de zo genaamde "danger zone".
 
 Na het vinden van de katten moeten deze worden weggejaagd. Er zal een richtsysteem moeten worden gemaakt dat een met een korte waterstraal de kat zal wegjagen. Om niet te veel water te verspillen moet deze redelijk accuraat zijn.
 
