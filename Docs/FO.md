@@ -20,3 +20,4 @@ Hieronder worden de verschillende eisen vanuit het oogpunt van de user beschreve
 
 ## IPO
 
+![ipo](/images/ipo.png)
