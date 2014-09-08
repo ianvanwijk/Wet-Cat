@@ -3,11 +3,11 @@
 
 Achtergrond
 -----------
-Je hebt over het algemeen twee verschillende mensen. Mensen die katten hebben en mensen die een tuin hebben. Het komt regelmatig voor dat de katten hun “bezigheden” achterlaten in andermans tuin. Nou zijn er al oplossingen voor bedacht, namelijk: een kattenbak, maar helaas los dit het probleem niet volledig op.
+Over het algemeen zijn er twee verschillende mensen. Mensen die katten hebben en mensen die een tuin hebben. Het komt regelmatig voor dat de katten hun “bezigheden” achterlaten in andermans tuin. Nu zijn hier al oplossingen voor bedacht, namelijk: een kattenbak, maar helaas lost dit het probleem niet volledig op.
 
-Er zou daarom opzoek moet worden gegaan naar een oplosing. De beste oplossing voor dit probleem is uit onderzoek gebleken om een kat nat te spuiten met water. Nou kan je op elk moment van de dag met een grote spuit zitten en wachten totdat de katten komen, maar helaas in ons drukke 24/7 samenleving hebben wij daar geen tijd voor en het probleem doet zich ook nog voor dat er geen katten komen als je er op zit te wachten.
+Er zou daarom opzoek moeten worden gegaan naar een oplosing. Uit ons onderzoek is gebleken dat katten natspuiten met water uitermate effectief werkt. Nou kan je op elk moment van de dag met een grote spuit zitten en wachten totdat de katten komen, maar helaas in ons drukke 24/7 samenleving hebben wij daar geen tijd voor en het probleem doet zich ook nog voor dat er geen katten komen als je er op zit te wachten.
 
-De beste oplossing zou zijn als je met een robot de tuin analyseert en vervolgens als er een kat langs komt er op reageer.
+De beste oplossing zou zijn als je met een robot de tuin analyseert en vervolgens als er een kat langs komt er op reageert.
 
 Projectopdracht
 ---------------
@@ -61,13 +61,13 @@ Producten
 ---------
 Vision Software voor het aansturen en detecteren van objecten
 
-Torret met laser
+Turret met laser
 
-Software voor het kalibreren van zones en turret en handmatig aansturen torret
+Software voor het kalibreren van zones en turret en handmatig aansturen turret
 
 Kwaliteit
 ---------
-Het is van groot belang dat de juiste objecten herkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier. Zodat achteraf niet verwachtingen niet gehaald worden door miscommunicatie. Ook zal er per onderdeel een uitleg worden gemaakt van hoe het onderdeel geïmplementeerd is, hierdoor is het onderdeel altijd opnieuw te maken volgens dezelfde specificaties.
+Het is van groot belang dat de juiste objecten herkend worden. Het is natuurlijk niet de bedoeling dat de verkeerde objecten gelaserd worden. Om die kwaliteit te garanderen zal er uitvoerig getest worden. Voor het ontwikkelen zal er zorgvuldig worden gedocumenteerd. Vooraf zal alles duidelijk worden vastgesteld op papier, zodat geen verwachtingen niet gehaald worden door miscommunicatie. Ook zal er per onderdeel een uitleg worden gemaakt van hoe het onderdeel geïmplementeerd is, hierdoor is het onderdeel altijd opnieuw te maken volgens dezelfde specificaties.
 
 Projectorganisatie
 ------------------
@@ -78,7 +78,7 @@ Hieronder staan alle partijen met uitgelegd wat hun rol is binnen de scope van h
 
 | Rol | Uitgevoerd door |
 |---|---|
-| De opdrachtgever heeft als rol om akkoord te geven bij het beginnen van het project, hij zal contact hebben met het projectteam om het status van het project bij te houden en zal aan het einde van het project traject goedkeuring geven van het eindproduct. | `geen`  |
+| De opdrachtgever heeft als rol om akkoord te geven bij het beginnen van het project, hij zal contact hebben met het projectteam om het status van het project bij te houden en zal aan het einde van het project traject goedkeuring geven van het eindproduct. | `Hugo Arends`  |
 
 ### Project ondersteuning
 
