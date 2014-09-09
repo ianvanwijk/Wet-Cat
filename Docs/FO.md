@@ -6,6 +6,7 @@ Het eindproduct dat opgeleverd gaat worden moet voldoen aan een aantal eisen van
 
 * Het programma moet stabiel werken
 * Het programma mag niet crashen zonder foutmelding en crashrapport
+* Het systeem hoefd een kat niet te herkennen in het donker
 
 ### User
 
@@ -23,8 +24,10 @@ Hieronder worden de verschillende eisen vanuit het oogpunt van de user beschreve
 | F1-2 | De turret is te calibreren door de hoeken van de tuin te specificeren via de computer | M |
 | F1-3 | De "Danger Zones" moeten verwijderbaar zijn met een symbool | S |
 | F1-4 | De "Danger Zones" moeten worden onthouden, zelfs als de applicatie afgesloten word | M |
-| F1-5 | Het systeem is via het internet te beheren | C |
-| F1-6 | Het beeld dat de camera ziet is te zien op de laptop waar de software op gedraait word | C |
+| F1-5 | De "Danger Zones" kunnen worden vergeten als het programma stroom verliest | S |
+| F1-6 | Er kunnen maximaal 5 "Danger Zones" ingesteld worden | S |
+| F1-7 | Het systeem is via het internet te beheren | C |
+| F1-8 | Het beeld dat de camera ziet is te zien op de laptop waar de software op gedraait word | C |
 
 ### Systeem
 
