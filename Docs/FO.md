@@ -11,11 +11,11 @@ Het eindproduct dat opgeleverd gaat worden moet voldoen aan een aantal eisen van
 
 Hieronder worden de verschillende eisen vanuit het oogpunt van de user beschreven. In de derde kolom staat hoe belangrijk de issue is op basis van de MoSCoW methode.
 
-> De MoSCoW methode is een makkelijke manier om taken te sorteren op basis van hoe belangrijk ze zijn, binnen de MoSCoW methode zijn er vier niveaus van belangrijkheid waar een taak bij kan horen:
-> M - Must, deze taak moet gemaakt worden om het project af te ronden
-> S - Should, deze taak zou gemaakt moeten worden, maar bij tijdnood kan deze taak afvallen
-> C - Could, deze taak zou graag gemaakt worden, maar alleen als er tijd over is
-> W - Won't, deze taak word niet gemaakt, wel is het belangrijk om hierover na te denken voor de toekomst
+> De MoSCoW methode is een makkelijke manier om taken te sorteren op basis van hoe belangrijk ze zijn, binnen de MoSCoW methode zijn er vier niveaus van belangrijkheid waar een taak bij kan horen:<br/>
+> M - Must, deze taak moet gemaakt worden om het project af te ronden<br/>
+> S - Should, deze taak zou gemaakt moeten worden, maar bij tijdnood kan deze taak afvallen<br/>
+> C - Could, deze taak zou graag gemaakt worden, maar alleen als er tijd over is<br/>
+> W - Won't, deze taak word niet gemaakt, wel is het belangrijk om hierover na te denken voor de toekomst<br/>
 
 | ID   | Overzicht | MoSCoW |
 |:----:|-----------|--------|
