@@ -52,13 +52,15 @@ De software bestaat uit drie delen, het Image Processing programma, het Aiming p
 
 ### Wet-Cat Image Processing
 
-De Wet-Cat Image Processing software is de software die, met behulp van de OpenCV libraries, de beelden van de camera zal gaan behandelen en de relevante informatie hieruit haalt. Deze software is te verdelen in vijf onderdelen.
+De Wet-Cat Image Processing software is de software die, met behulp van de OpenCV libraries, de beelden van de camera zal gaan behandelen en de relevante informatie hieruit haalt. Deze software is te verdelen in zeven onderdelen.
 
 * Acquisition
 * Enhancement
 * Segmentation
 * Feature extraction
 * Classification
+* Command
+* Communication
 
 Elk deel zal in een apparte bundle gemaakt worden, deze bundle zal makkelijk te configureren zijn volgens een standaard manier.
 
@@ -73,6 +75,10 @@ Elk deel zal in een apparte bundle gemaakt worden, deze bundle zal makkelijk te 
 #### Feature extraction
 
 #### Classification
+
+#### Command
+
+#### Communication
 
 ### Wet-Cat Aiming
 
