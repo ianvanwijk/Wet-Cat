@@ -19,6 +19,7 @@ De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit
 Omdat we verschillende dingen gaan herkennen, zijn er verschillende markers gemaakt die het makkelijk maken om de verschillende objecten te herkennen. Er zijn vier verschillende markers die de hoeken van een "Danger Zone" aangeven en er zijn zes verschillende markers die de verschillende katten aangeven. Deze markers zullen op een dobbelsteem worden geplakt om zo aan te geven welke kat het is. Per kat zal de laser iets anders doen. de commando's staat in het hoofdstuk 'Turret' beschreven. Verder staan hieronder de verschillende markers die door het systeem moeten worden herkend.
 
 ![symbolen](/Docs/images/symbolen.png)
+![symbolen_cats](/Docs/images/symbolen_cats.png)
 
 ### Laptop
 
@@ -50,6 +51,28 @@ Op het moment dat de benodigdheden aanwezig zijn kan er gebouwd worden. Om de tu
 De software bestaat uit drie delen, het Image Processing programma, het Aiming programma en de communicatie daartussen. Hieronder wordt in detail behandeld hoe deze drie in elkaar steken en hoe de software is ontworpen.
 
 ### Wet-Cat Image Processing
+
+De Wet-Cat Image Processing software is de software die, met behulp van de OpenCV libraries, de beelden van de camera zal gaan behandelen en de relevante informatie hieruit haalt. Deze software is te verdelen in vijf onderdelen.
+
+* Acquisition
+* Enhancement
+* Segmentation
+* Feature extraction
+* Classification
+
+Elk deel zal in een apparte bundle gemaakt worden, deze bundle zal makkelijk te configureren zijn volgens een standaard manier.
+
+> default manier van configureren
+
+#### Acquisition
+
+#### Enhancement
+
+#### Segmentation
+
+#### Feature extraction
+
+#### Classification
 
 ### Wet-Cat Aiming
 
