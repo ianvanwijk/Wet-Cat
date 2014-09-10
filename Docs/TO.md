@@ -63,12 +63,29 @@ De Wet-Cat Image Processing software is de software die, met behulp van de OpenC
 * Communication
 
 Elk gedeelte zal een interface krijgen waarmee gecommuniceerd kan worden, op deze manier zijn de delen onafhankelijk van elkaar te gebruiken. Deze structuur is gekozen voor maximale uitbreidbaarheid.
+Ook zal er een data klasse komen waarin alles word bijgehouden dat nodig is voor een frame, van acquisitie tot communicatie. Hierdoor is het makkelijk om data door te geven tussen de verschillende delen.
+De data klasse ziet er als volgd uit.
 
-> default structuur van een onderdel
+![dataclass](/Docs/images/dataclass.png)
+
+Per onderdeel word de volgende structuur gehanteerd.
+
+![structuur](/Docs/images/structuur.png)
+
+Hieronder word per onderdeel de structuur verduidelijkt.
 
 #### Acquisition
 
+Een acquisitie deel zal vanuit een camera het beeld ophalen en teruggeven. Afhankelijk van wat voor camera gebruikt word en wat voor instellingen gedaan moeten worden kunnen er verschillende acquisitie delen worden gebruikt. In eerste instantie zal er een "Simple Acquisition" deel gemaakt worden dat vanuit de standaard windows camera het beeld pakt dat gebruikt gaat worden. Hieronder staat de klassediagram van de "Simple Acquisitor".
+
+![simple_acquisitor](/Docs/images/simple_acquisitor.png)
+
 #### Enhancement
+
+Een Enhancement deel is het deel dat een frame, dat uit de Acquisition stap komt, gaat verbeteren door met filters het beeld te bewerken. Omdat het enhancement is opgebouwd in delen is het dus mogelijk om meerdere enhancements achter elkaar uit te voeren, op deze manier is het makkelijk om verschillende filters te gebruiken in deze stap.
+Hieronder staat de klassediagram van een enhancement deel.
+
+![simple_enhancer](/Docs/images/simple_enhancer.png)
 
 #### Segmentation
 
