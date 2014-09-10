@@ -78,7 +78,7 @@ Hieronder word per onderdeel de structuur verduidelijkt.
 
 Een acquisitie deel zal vanuit een camera het beeld ophalen en teruggeven. Afhankelijk van wat voor camera gebruikt word en wat voor instellingen gedaan moeten worden kunnen er verschillende acquisitie delen worden gebruikt. In eerste instantie zal er een "Simple Acquisition" deel gemaakt worden dat vanuit de standaard windows camera het beeld pakt dat gebruikt gaat worden. Hieronder staat de klassediagram van de "Simple Acquisitor".
 
-![simple_acquisitor](/Docs/images/simple_acquisitor.png)
+![simple_acquisitor](/Docs/images/simple_acquirer.png)
 
 #### Enhancement
 
