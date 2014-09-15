@@ -89,15 +89,42 @@ Hieronder staat de klassediagram van een enhancement deel.
 
 #### Segmentation
 
+Bij het segmenteren zal er uit het frame, dat optioneel door de enhancement stap gegaan is, belangrijke segmenten gehaald worden. Denk hieraan aan het herkennen van alle ronde voorwerpen om hierna te kijken of een van deze voorwerpen het voorwerp is dat we nodig hebben.
+Hieronder staat de klassediagram van een segmentator.
+
+![simple_segmenter](/Docs/images/simple_segmenter.png)
+
 #### Feature extraction
+
+Om erachter te komen welke segmenten de segementen zijn die nodig zijn voor de applicatie worden de eigenschappen van alle segmenten bepaald. Dit gebeurd door een feature extractor. Doorgaans geeft dit deel een array met features terug.
+Hironder staat de klassediagram van een feature extractor.
+
+![simple_feature_extractor](/Docs/images/simple_feature_extractor.png)
 
 #### Classification
 
+Als alle eigenschappen van ieder segment bepaald zijn kunnen de segmenten worden geklassificeerd met een classifier. Dit deel zal een naam geven aan elk belangrijk object. Alle segmenten die niet aan de eisen voldoen om geklassificeerd te worden worden op non-actief gezet.
+Hieronde staat de klassediagram van een classifier.
+
+![simple_classifier](/Docs/images/simple_classifier.png)
+
 #### Command
+
+Het commando blok is het eerste blok dat niet meer bij het vision gedeelte hoord. Dit blok zal bepalen welk object het belangrijkste is op dit moment (als er meerdere objecten zijn) en zal een commando aan het object binden. Dit commando zal dan moeten worden uitgevoegd, als het uitvoeren van een commando klaar is zal er een feedback moeten zijn zodat het command deel weer een nieuw commando mag geven.
+Hieronder staat de klassediagram van een commander.
+
+![simple_commander](/Docs/images/simple_commander.png)
 
 #### Communication
 
+Als laatse deel van de Wet-Cat Image Processing Softwate is er een communicatie deel, dit deel zal het commando vertalen naar een commando voor de turret. Ook zal dit blok worden gebruikt voor directe communicatie met de turret op het moment dat er gecalibreerd word.
+Hieronder staat een klassediagram van een communicator.
+
+![simple_communicator](/Docs/images/simple_communicator.png)
+
 ### Wet-Cat Aiming
+
+De Wet-Cat Aiming Software is de software die op de microcontroller voor de turret gaat draaien. Deze software zal worden geschreven in C++ en word op een '' gedraaid. 
 
 ### Protocollen
 
