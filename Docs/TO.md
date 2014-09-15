@@ -92,7 +92,7 @@ Hieronder staat de klassediagram van een enhancement deel.
 Bij het segmenteren zal er uit het frame, dat optioneel door de enhancement stap gegaan is, belangrijke segmenten gehaald worden. Denk hieraan aan het herkennen van alle ronde voorwerpen om hierna te kijken of een van deze voorwerpen het voorwerp is dat we nodig hebben.
 Hieronder staat de klassediagram van een segmentator.
 
-![simple_segmenter](/Docs/images/simple_segmenter.png)
+![simple_segmentor](/Docs/images/simple_segmentor.png)
 
 #### Feature extraction
 
