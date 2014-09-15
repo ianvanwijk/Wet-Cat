@@ -124,7 +124,7 @@ Hieronder staat een klassediagram van een communicator.
 
 ### Wet-Cat Aiming
 
-De Wet-Cat Aiming Software is de software die op de microcontroller voor de turret gaat draaien. Deze software zal worden geschreven in C++ en word op een '' gedraaid. 
+De Wet-Cat Aiming Software is de software die op de microcontroller voor de turret gaat draaien. Deze software zal worden geschreven in C++ en word op een STM32F4Discovery gedraaid. Hieronder staat een overzicht van alle hardware die nodig is om de turret te kunnen maken. 
 
 |Onderdeel|Artikel nr.|Aantal|Prijs (EUR)|
 |---|---|---|---|
@@ -138,6 +138,20 @@ De Wet-Cat Aiming Software is de software die op de microcontroller voor de turr
 |Servo Shaft Attachment - Hitec Standard|ROB-12464|2|12,33|
 |   |   |<b>Totaal:</b>|59,62|
 
+Een aantal onderdelen hiervan zullen we proberen om op een CNC machine te laten maken, deze onderdelen zijn
+`Shaft`, `Set Screw Hub` en `Servo Shaft Attachment`
+Als deze onderdelen op de CNC machine gemaakt kunnen worden zal dit erg veel kosten schelen.
+
 ### Protocollen
 
-## Conclusie
+### Code Guidelines
+
+Binnen dit project gaan we C++ code schrijven, om te zorgen dat alle code gelijk blijft zijn er een aantal richtlijnen waaraan de code moet voldoen. Dit zorgd voor een overzichtelijke en nette code.
+Hieronder staat een lijst met richtlijnen
+
+| Richtlijn | Toepassing | Voorbeeld |
+|---|---|---|
+| Klasse namen met hoofdletter | Binnen een Klasse | `class Test` |
+| Functies in camelcase | Alle code | `public void getAllVariablesFromClass()` |
+| Variablen namen in camelcase | Alle code | `public thisIsAVariable;` |
+| Parameters met hoofdletters en in camelcase | Alle code | `Public void function(int AnInteger, string ABigStringAsParameter)` |
