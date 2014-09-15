@@ -126,6 +126,18 @@ Hieronder staat een klassediagram van een communicator.
 
 De Wet-Cat Aiming Software is de software die op de microcontroller voor de turret gaat draaien. Deze software zal worden geschreven in C++ en word op een '' gedraaid. 
 
+|Onderdeel|Artikel nr.|Aantal|Prijs (EUR)|
+|---|---|---|---|
+|Servo - HiTec HS-422 (Standard Size)|ROB-11884|2|15,36|
+|Magnet Square|COM-08643|4|4,63|
+|Laser Card Module|COM-00594|1|5,36|
+|Machine Screw - Socket Head (6-32 ; 7/16"; 25 pack)|ROB-12485|1|1,61|
+|Ball Bearing - Flanged (1/4" Bore, 1/2" OD, 2-Pack)|ROB-13012|2|3,38|
+|Shaft - Solid (Stainless; 1/2"D x 2"L)|ROB-12212|1|1,54|
+|Set Screw Hub - 1/2" Bore|ROB-12494|4|15,41|
+|Servo Shaft Attachment - Hitec Standard|ROB-12464|2|12,33|
+|   |   |<b>Totaal:</b>|59,62|
+
 ### Protocollen
 
 ## Conclusie
