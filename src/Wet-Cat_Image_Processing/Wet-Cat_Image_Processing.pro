@@ -19,7 +19,11 @@ SOURCES += main.cpp\
     Acquirer/SimpleAcquirer.cpp \
     Enhancer/Enhancers/DummyEnhancer.cpp \
     Segmenter/Segmenters/DummySegmenter.cpp \
-    Segmenter/SimpleSegmenter.cpp
+    Segmenter/SimpleSegmenter.cpp \
+    Extractor/Extractors/DummyExtractor.cpp \
+    Extractor/SimpleExtractor.cpp \
+    Enhancer/Enhancers/ThresholdEnhancer.cpp \
+    Enhancer/Enhancers/GrayScaleEnhancer.cpp
 
 HEADERS  += \
     Enhancer/IEnhancer.h \
@@ -31,7 +35,12 @@ HEADERS  += \
     WetCatImageProcessing.h \
     Segmenter/Segmenters/DummySegmenter.h \
     Segmenter/ISegmenter.h \
-    Segmenter/SimpleSegmenter.h
+    Segmenter/SimpleSegmenter.h \
+    Extractor/Extractors/DummyExtractor.h \
+    Extractor/IExtractor.h \
+    Extractor/SimpleExtractor.h \
+    Enhancer/Enhancers/ThresholdEnhancer.h \
+    Enhancer/Enhancers/GrayScaleEnhancer.h
 
 FORMS    += wetcatimageprocessing.ui
 

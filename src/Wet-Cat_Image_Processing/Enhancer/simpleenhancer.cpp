@@ -17,7 +17,8 @@ bool SimpleEnhancer::execute(Image* image)
 
 bool SimpleEnhancer::configure()
 {
-    this->enhancers.push_back(new DummyEnhancer());
+    this->enhancers.push_back(new GrayScaleEnhancer());
+    this->enhancers.push_back(new ThresholdEnhancer(100, 255));
 
     this->configured = true;
     return true;

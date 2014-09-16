@@ -3,6 +3,8 @@
 
 #include "../IExecutable.h"
 #include "Enhancers/DummyEnhancer.h"
+#include "Enhancers/GrayScaleEnhancer.h"
+#include "Enhancers/ThresholdEnhancer.h"
 
 class SimpleEnhancer : IExecutable
 {

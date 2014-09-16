@@ -6,7 +6,10 @@ INPUT(
 ./release\SimpleAcquirer.o
 ./release\DummyEnhancer.o
 ./release\DummySegmenter.o
-./release\Segmentation.o
 ./release\SimpleSegmenter.o
+./release\DummyExtractor.o
+./release\SimpleExtractor.o
+./release\ThresholdEnhancer.o
+./release\GrayScaleEnhancer.o
 ./release\moc_WetCatImageProcessing.o
 );
