@@ -44,20 +44,22 @@ OBJECTS_DIR   = release
 ####### Files
 
 SOURCES       = ..\Wet-Cat_Image_Processing\main.cpp \
-		..\Wet-Cat_Image_Processing\wetcatimageprocessing.cpp \
-		..\Wet-Cat_Image_Processing\image.cpp \
-		..\Wet-Cat_Image_Processing\Acquirer\simpleacquirer.cpp \
-		..\Wet-Cat_Image_Processing\Enhancer\simpleenhancer.cpp \
-		..\Wet-Cat_Image_Processing\Enhancer\enhancement.cpp \
-		..\Wet-Cat_Image_Processing\Enhancer\Enhancers\dummyenhancer.cpp release\moc_wetcatimageprocessing.cpp
+		..\Wet-Cat_Image_Processing\Enhancer\SimpleEnhancer.cpp \
+		..\Wet-Cat_Image_Processing\WetCatImageProcessing.cpp \
+		..\Wet-Cat_Image_Processing\Image.cpp \
+		..\Wet-Cat_Image_Processing\Acquirer\SimpleAcquirer.cpp \
+		..\Wet-Cat_Image_Processing\Enhancer\Enhancers\DummyEnhancer.cpp \
+		..\Wet-Cat_Image_Processing\Segmenter\Segmenters\DummySegmenter.cpp \
+		..\Wet-Cat_Image_Processing\Segmenter\SimpleSegmenter.cpp release\moc_WetCatImageProcessing.cpp
 OBJECTS       = release/main.o \
-		release/wetcatimageprocessing.o \
-		release/image.o \
-		release/simpleacquirer.o \
-		release/simpleenhancer.o \
-		release/enhancement.o \
-		release/dummyenhancer.o \
-		release/moc_wetcatimageprocessing.o
+		release/SimpleEnhancer.o \
+		release/WetCatImageProcessing.o \
+		release/Image.o \
+		release/SimpleAcquirer.o \
+		release/DummyEnhancer.o \
+		release/DummySegmenter.o \
+		release/SimpleSegmenter.o \
+		release/moc_WetCatImageProcessing.o
 
 DIST          = 
 QMAKE_TARGET  = Wet-Cat_Image_Processing
@@ -98,7 +100,7 @@ dist:
 	$(ZIP) Wet-Cat_Image_Processing.zip $(SOURCES) $(DIST) ..\Wet-Cat_Image_Processing\Wet-Cat_Image_Processing.pro ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\spec_pre.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\qdevice.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\device_config.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\common\shell-win32.conf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\qconfig.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_clucene_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_declarative.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_declarative_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_enginio.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_enginio_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_platformsupport_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_script.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_script_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_webkit.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_webkit_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_webkitwidgets.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\qt_functions.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\qt_config.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\win32\qt_config.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\win32-g++\qmake.conf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\spec_post.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\exclusive_builds.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\default_pre.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\win32\default_pre.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\resolve_config.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\exclusive_builds_post.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\default_post.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\build_pass.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\win32\rtti.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\precompile_header.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\warn_on.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\qt.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\resources.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\moc.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\win32\opengl.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\uic.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\win32\windows.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\testcase_targets.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\exceptions.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\yacc.prf ..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\features\lex.prf ..\Wet-Cat_Image_Processing\Wet-Cat_Image_Processing.pro C:/Applications/Qt/5.3/mingw482_32/lib/qtmain.prl C:/Applications/Qt/5.3/mingw482_32/lib/Qt5Core.prl C:/Applications/Qt/5.3/mingw482_32/lib/Qt5Widgets.prl C:/Applications/Qt/5.3/mingw482_32/lib/Qt5Gui.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\wetcatimageprocessing.o release\image.o release\simpleacquirer.o release\simpleenhancer.o release\enhancement.o release\dummyenhancer.o release\moc_wetcatimageprocessing.o
+	-$(DEL_FILE) release\main.o release\SimpleEnhancer.o release\WetCatImageProcessing.o release\Image.o release\SimpleAcquirer.o release\DummyEnhancer.o release\DummySegmenter.o release\SimpleSegmenter.o release\moc_WetCatImageProcessing.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -114,10 +116,10 @@ compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: release/moc_wetcatimageprocessing.cpp
+compiler_moc_header_make_all: release/moc_WetCatImageProcessing.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_wetcatimageprocessing.cpp
-release/moc_wetcatimageprocessing.cpp: ../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow \
+	-$(DEL_FILE) release\moc_WetCatImageProcessing.cpp
+release/moc_WetCatImageProcessing.cpp: ../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qmainwindow.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qwindowdefs.h \
@@ -220,7 +222,7 @@ release/moc_wetcatimageprocessing.cpp: ../../../../Applications/Qt/5.3/mingw482_
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
-		../Wet-Cat_Image_Processing/image.h \
+		../Wet-Cat_Image_Processing/Image.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
@@ -248,10 +250,16 @@ release/moc_wetcatimageprocessing.cpp: ../../../../Applications/Qt/5.3/mingw482_
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
-		../Wet-Cat_Image_Processing/Acquirer/simpleacquirer.h \
-		../Wet-Cat_Image_Processing/iexecutable.h \
-		../Wet-Cat_Image_Processing/wetcatimageprocessing.h
-	C:\Applications\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Applications/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/SVN/Wet-Cat/src/Wet-Cat_Image_Processing -IC:/Applications/Qt/Tools/OpenCV/include -IC:/Applications/Qt/5.3/mingw482_32/include -IC:/Applications/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Applications/Qt/5.3/mingw482_32/include/QtGui -IC:/Applications/Qt/5.3/mingw482_32/include/QtCore -I. ..\Wet-Cat_Image_Processing\wetcatimageprocessing.h -o release\moc_wetcatimageprocessing.cpp
+		../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
+		../Wet-Cat_Image_Processing/IExecutable.h \
+		../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
+		../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
+		../Wet-Cat_Image_Processing/WetCatImageProcessing.h
+	C:\Applications\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Applications/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/SVN/Wet-Cat/src/Wet-Cat_Image_Processing -IC:/Applications/Qt/Tools/OpenCV/include -IC:/Applications/Qt/5.3/mingw482_32/include -IC:/Applications/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Applications/Qt/5.3/mingw482_32/include/QtGui -IC:/Applications/Qt/5.3/mingw482_32/include/QtCore -I. ..\Wet-Cat_Image_Processing\WetCatImageProcessing.h -o release\moc_WetCatImageProcessing.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -377,7 +385,7 @@ release/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
-		../Wet-Cat_Image_Processing/image.h \
+		../Wet-Cat_Image_Processing/Image.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
@@ -405,8 +413,14 @@ release/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
-		../Wet-Cat_Image_Processing/Acquirer/simpleacquirer.h \
-		../Wet-Cat_Image_Processing/iexecutable.h \
+		../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
+		../Wet-Cat_Image_Processing/IExecutable.h \
+		../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
+		../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
@@ -416,7 +430,41 @@ release/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Wet-Cat_Image_Processing\main.cpp
 
-release/wetcatimageprocessing.o: ../Wet-Cat_Image_Processing/wetcatimageprocessing.cpp ../Wet-Cat_Image_Processing/wetcatimageprocessing.h \
+release/SimpleEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.h \
+		../Wet-Cat_Image_Processing/IExecutable.h \
+		../Wet-Cat_Image_Processing/Image.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\SimpleEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\SimpleEnhancer.cpp
+
+release/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing.cpp ../Wet-Cat_Image_Processing/wetcatimageprocessing.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qmainwindow.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qwidget.h \
@@ -520,7 +568,7 @@ release/wetcatimageprocessing.o: ../Wet-Cat_Image_Processing/wetcatimageprocessi
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qtouchdevice.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
-		../Wet-Cat_Image_Processing/image.h \
+		../Wet-Cat_Image_Processing/Image.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
@@ -548,8 +596,14 @@ release/wetcatimageprocessing.o: ../Wet-Cat_Image_Processing/wetcatimageprocessi
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
-		../Wet-Cat_Image_Processing/Acquirer/simpleacquirer.h \
-		../Wet-Cat_Image_Processing/iexecutable.h \
+		../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
+		../Wet-Cat_Image_Processing/IExecutable.h \
+		../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
+		../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
 		ui_wetcatimageprocessing.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QVariant \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
@@ -592,9 +646,9 @@ release/wetcatimageprocessing.o: ../Wet-Cat_Image_Processing/wetcatimageprocessi
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QToolBar \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbar.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QWidget
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\wetcatimageprocessing.o ..\Wet-Cat_Image_Processing\wetcatimageprocessing.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\WetCatImageProcessing.o ..\Wet-Cat_Image_Processing\WetCatImageProcessing.cpp
 
-release/image.o: ../Wet-Cat_Image_Processing/image.cpp ../Wet-Cat_Image_Processing/image.h \
+release/Image.o: ../Wet-Cat_Image_Processing/Image.cpp ../Wet-Cat_Image_Processing/Image.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
@@ -622,11 +676,11 @@ release/image.o: ../Wet-Cat_Image_Processing/image.cpp ../Wet-Cat_Image_Processi
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\image.o ..\Wet-Cat_Image_Processing\image.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\Image.o ..\Wet-Cat_Image_Processing\Image.cpp
 
-release/simpleacquirer.o: ../Wet-Cat_Image_Processing/Acquirer/simpleacquirer.cpp ../Wet-Cat_Image_Processing/Acquirer/simpleacquirer.h \
-		../Wet-Cat_Image_Processing/iexecutable.h \
-		../Wet-Cat_Image_Processing/image.h \
+release/SimpleAcquirer.o: ../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.cpp ../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
+		../Wet-Cat_Image_Processing/IExecutable.h \
+		../Wet-Cat_Image_Processing/Image.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
@@ -654,11 +708,75 @@ release/simpleacquirer.o: ../Wet-Cat_Image_Processing/Acquirer/simpleacquirer.cp
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\simpleacquirer.o ..\Wet-Cat_Image_Processing\Acquirer\simpleacquirer.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\SimpleAcquirer.o ..\Wet-Cat_Image_Processing\Acquirer\SimpleAcquirer.cpp
 
-release/simpleenhancer.o: ../Wet-Cat_Image_Processing/Enhancer/simpleenhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/simpleenhancer.h \
-		../Wet-Cat_Image_Processing/iexecutable.h \
-		../Wet-Cat_Image_Processing/image.h \
+release/DummyEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
+		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
+		../Wet-Cat_Image_Processing/Image.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\DummyEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\Enhancers\DummyEnhancer.cpp
+
+release/DummySegmenter.o: ../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.cpp ../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
+		../Wet-Cat_Image_Processing/Image.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
+		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\DummySegmenter.o ..\Wet-Cat_Image_Processing\Segmenter\Segmenters\DummySegmenter.cpp
+
+release/SimpleSegmenter.o: ../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.cpp ../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.h \
+		../Wet-Cat_Image_Processing/IExecutable.h \
+		../Wet-Cat_Image_Processing/Image.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
@@ -686,46 +804,12 @@ release/simpleenhancer.o: ../Wet-Cat_Image_Processing/Enhancer/simpleenhancer.cp
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
 		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
-		../Wet-Cat_Image_Processing/Enhancer/enhancement.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\simpleenhancer.o ..\Wet-Cat_Image_Processing\Enhancer\simpleenhancer.cpp
+		../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
+		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\SimpleSegmenter.o ..\Wet-Cat_Image_Processing\Segmenter\SimpleSegmenter.cpp
 
-release/enhancement.o: ../Wet-Cat_Image_Processing/Enhancer/enhancement.cpp ../Wet-Cat_Image_Processing/Enhancer/enhancement.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\enhancement.o ..\Wet-Cat_Image_Processing\Enhancer\enhancement.cpp
-
-release/dummyenhancer.o: ../Wet-Cat_Image_Processing/Enhancer/Enhancers/dummyenhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/Enhancers/dummyenhancer.h \
-		../Wet-Cat_Image_Processing/Enhancer/ienhancer.h \
-		../Wet-Cat_Image_Processing/image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dummyenhancer.o ..\Wet-Cat_Image_Processing\Enhancer\Enhancers\dummyenhancer.cpp
-
-release/moc_wetcatimageprocessing.o: release/moc_wetcatimageprocessing.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_wetcatimageprocessing.o release\moc_wetcatimageprocessing.cpp
+release/moc_WetCatImageProcessing.o: release/moc_WetCatImageProcessing.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_WetCatImageProcessing.o release\moc_WetCatImageProcessing.cpp
 
 ####### Install
 

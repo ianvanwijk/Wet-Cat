@@ -6,7 +6,9 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     ui(new Ui::WetCatImageProcessing)
 {
     ui->setupUi(this);
-    this->acquirer = new simpleAcquirer();
+    this->acquirer = new SimpleAcquirer();
+    this->enhancer = new SimpleEnhancer();
+    this->segmenter = new SimpleSegmenter();
     this->image = new Image();
 }
 
@@ -18,25 +20,6 @@ WetCatImageProcessing::~WetCatImageProcessing()
 
 void WetCatImageProcessing::on_BT_Acquire_clicked()
 {
-    acquire();
-}
-
-void WetCatImageProcessing::acquire()
-{
-    this->image = new Image();
-    if(this->acquirer->isConfigured())
-    {
-        if(!this->acquirer->execute(this->image))
-        {
-            info.append(QString("error acquirering from acquirer!"));
-            ui->statusBar->showMessage(info);
-        }
-    }
-    else
-    {
-        info.append(QString("not configured"));
-        ui->statusBar->showMessage(info);
-    }
 }
 
 void WetCatImageProcessing::on_BT_Configure_clicked()
@@ -54,13 +37,54 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
         info.append(QString("already configured"));
         ui->statusBar->showMessage(info);
     }
+    if(!this->enhancer->isConfigured())
+    {
+        if(!this->enhancer->configure())
+        {
+            info.append(QString("error configuring enhancer!"));
+            ui->statusBar->showMessage(info);
+        }
+    }
+    else
+    {
+        info.append(QString("already configured"));
+        ui->statusBar->showMessage(info);
+    }
+    if(!this->segmenter->isConfigured())
+    {
+        if(!this->segmenter->configure())
+        {
+            info.append(QString("error configuring segmenter!"));
+            ui->statusBar->showMessage(info);
+        }
+    }
+    else
+    {
+        info.append(QString("already configured"));
+        ui->statusBar->showMessage(info);
+    }
 }
 
 void WetCatImageProcessing::on_BT_Show_clicked()
 {
-    if(this->acquirer->isConfigured())
+    this->image = new Image();
+    if(this->acquirer->isConfigured() && this->enhancer->isConfigured() && this->segmenter->isConfigured())
     {
-        acquire();
+        if(!this->acquirer->execute(this->image))
+        {
+            info.append(QString("error acquirering from acquirer!"));
+            ui->statusBar->showMessage(info);
+        }
+        if(!this->enhancer->execute(this->image))
+        {
+            info.append(QString("error enhancing image!"));
+            ui->statusBar->showMessage(info);
+        }
+        if(!this->segmenter->execute(this->image))
+        {
+            info.append(QString("error segmenting image!"));
+            ui->statusBar->showMessage(info);
+        }
         destroyAllWindows();
         namedWindow("Snapshot",1);
         imshow("Snapshot", this->image->getFrame());

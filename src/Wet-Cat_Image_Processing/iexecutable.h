@@ -1,7 +1,7 @@
 #ifndef IEXECUTABLE_H
 #define IEXECUTABLE_H
 
-#include "image.h"
+#include "Image.h"
 
 class IExecutable
 {

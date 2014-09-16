@@ -1,22 +1,29 @@
-#include "simpleenhancer.h"
+#include "SimpleEnhancer.h"
 
-simpleEnhancer::simpleEnhancer()
+SimpleEnhancer::SimpleEnhancer()
 {
     this->configured = false;
 }
 
-bool simpleEnhancer::execute(Image* image)
+bool SimpleEnhancer::execute(Image* image)
 {
-    return false;
+    unsigned i = 0;
+    for(i = 0; i < this->enhancers.size(); i++)
+    {
+        enhancers[i]->enhance(image);
+    }
+    return true;
 }
 
-bool simpleEnhancer::configure()
+bool SimpleEnhancer::configure()
 {
+    this->enhancers.push_back(new DummyEnhancer());
+
     this->configured = true;
     return true;
 }
 
-bool simpleEnhancer::isConfigured()
+bool SimpleEnhancer::isConfigured()
 {
     return this->configured;
 }

@@ -1,7 +1,7 @@
 #ifndef IENHANCER_H
 #define IENHANCER_H
 
-#include "../image.h"
+#include "../Image.h"
 
 class IEnhancer
 {

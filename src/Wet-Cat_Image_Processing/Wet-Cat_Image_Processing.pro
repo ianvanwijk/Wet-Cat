@@ -13,21 +13,25 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        wetcatimageprocessing.cpp \
-    image.cpp \
-    Acquirer/simpleacquirer.cpp \
-    Enhancer/simpleenhancer.cpp \
-    Enhancer/enhancement.cpp \
-    Enhancer/Enhancers/dummyenhancer.cpp
+    Enhancer/SimpleEnhancer.cpp \
+    WetCatImageProcessing.cpp \
+    Image.cpp \
+    Acquirer/SimpleAcquirer.cpp \
+    Enhancer/Enhancers/DummyEnhancer.cpp \
+    Segmenter/Segmenters/DummySegmenter.cpp \
+    Segmenter/SimpleSegmenter.cpp
 
-HEADERS  += wetcatimageprocessing.h \
-    iexecutable.h \
-    image.h \
-    Acquirer/simpleacquirer.h \
-    Enhancer/simpleenhancer.h \
-    Enhancer/enhancement.h \
-    Enhancer/ienhancer.h \
-    Enhancer/Enhancers/dummyenhancer.h
+HEADERS  += \
+    Enhancer/IEnhancer.h \
+    Enhancer/SimpleEnhancer.h \
+    Enhancer/Enhancers/DummyEnhancer.h \
+    IExecutable.h \
+    Acquirer/SimpleAcquirer.h \
+    Image.h \
+    WetCatImageProcessing.h \
+    Segmenter/Segmenters/DummySegmenter.h \
+    Segmenter/ISegmenter.h \
+    Segmenter/SimpleSegmenter.h
 
 FORMS    += wetcatimageprocessing.ui
 

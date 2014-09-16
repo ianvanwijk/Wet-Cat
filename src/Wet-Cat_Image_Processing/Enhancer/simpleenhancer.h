@@ -1,18 +1,19 @@
 #ifndef SIMPLEENHANCER_H
 #define SIMPLEENHANCER_H
 
-#include "../iexecutable.h"
-#include "enhancement.h"
+#include "../IExecutable.h"
+#include "Enhancers/DummyEnhancer.h"
 
-class simpleEnhancer : IExecutable
+class SimpleEnhancer : IExecutable
 {
 public:
-    simpleEnhancer();
+    SimpleEnhancer();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();
 private:
     bool configured;
+    std::vector<IEnhancer*> enhancers;
 };
 
 #endif // SIMPLEENHANCER_H

@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\SimpleEnhancer.o
+./debug\WetCatImageProcessing.o
+./debug\Image.o
+./debug\SimpleAcquirer.o
+./debug\DummyEnhancer.o
+./debug\DummySegmenter.o
+./debug\Segmentation.o
+./debug\SimpleSegmenter.o
+./debug\moc_WetCatImageProcessing.o
+);

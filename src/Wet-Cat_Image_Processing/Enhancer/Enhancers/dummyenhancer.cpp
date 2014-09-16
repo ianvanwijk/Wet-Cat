@@ -1,10 +1,13 @@
-#include "dummyenhancer.h"
+#include "DummyEnhancer.h"
 
-dummyEnhancer::dummyEnhancer()
+DummyEnhancer::DummyEnhancer()
 {
 }
 
-bool dummyEnhancer::enhance(Image *image)
+bool DummyEnhancer::enhance(Image *image)
 {
+    Mat gray;
+    cvtColor(image->getFrame(), gray, CV_RGB2GRAY);
+    image->setFrame(gray);
     return true;
 }

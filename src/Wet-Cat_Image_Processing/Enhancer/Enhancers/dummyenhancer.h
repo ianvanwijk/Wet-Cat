@@ -1,13 +1,17 @@
 #ifndef DUMMYENHANCER_H
 #define DUMMYENHANCER_H
 
-#include "../ienhancer.h"
+#include "../IEnhancer.h"
 
-class dummyEnhancer : IEnhancer
+using namespace cv;
+
+class DummyEnhancer : public IEnhancer
 {
 public:
-    dummyEnhancer();
+    DummyEnhancer();
     virtual bool enhance(Image *image);
+private:
+
 };
 
 #endif // DUMMYENHANCER_H

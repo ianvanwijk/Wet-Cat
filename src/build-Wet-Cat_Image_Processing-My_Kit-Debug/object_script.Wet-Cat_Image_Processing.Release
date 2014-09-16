@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\SimpleEnhancer.o
+./release\WetCatImageProcessing.o
+./release\Image.o
+./release\SimpleAcquirer.o
+./release\DummyEnhancer.o
+./release\DummySegmenter.o
+./release\Segmentation.o
+./release\SimpleSegmenter.o
+./release\moc_WetCatImageProcessing.o
+);

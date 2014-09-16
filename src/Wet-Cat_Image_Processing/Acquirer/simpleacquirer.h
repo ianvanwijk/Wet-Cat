@@ -1,13 +1,13 @@
 #ifndef SIMPLEACQUIRER_H
 #define SIMPLEACQUIRER_H
 
-#include "../iexecutable.h"
+#include "../IExecutable.h"
 
-class simpleAcquirer : IExecutable
+class SimpleAcquirer : IExecutable
 {
 public:
-    simpleAcquirer();
-    ~simpleAcquirer();
+    SimpleAcquirer();
+    ~SimpleAcquirer();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();

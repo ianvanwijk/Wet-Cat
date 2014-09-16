@@ -1,16 +1,16 @@
-#include "simpleacquirer.h"
+#include "SimpleAcquirer.h"
 
-simpleAcquirer::simpleAcquirer()
+SimpleAcquirer::SimpleAcquirer()
 {
     this->configured = false;
 }
 
-simpleAcquirer::~simpleAcquirer()
+SimpleAcquirer::~SimpleAcquirer()
 {
     cam->release();
 }
 
-bool simpleAcquirer::execute(Image* image)
+bool SimpleAcquirer::execute(Image* image)
 {
     if(cam->isOpened())
     {
@@ -22,14 +22,14 @@ bool simpleAcquirer::execute(Image* image)
     return false;
 }
 
-bool simpleAcquirer::configure()
+bool SimpleAcquirer::configure()
 {
     cam = new VideoCapture(0);
     this->configured = true;
     return true;
 }
 
-bool simpleAcquirer::isConfigured()
+bool SimpleAcquirer::isConfigured()
 {
     return this->configured;
 }

@@ -2,8 +2,10 @@
 #define WETCATIMAGEPROCESSING_H
 
 #include <QMainWindow>
-#include "image.h"
-#include "Acquirer/simpleacquirer.h"
+#include "Image.h"
+#include "Acquirer/SimpleAcquirer.h"
+#include "Enhancer/SimpleEnhancer.h"
+#include "Segmenter/SimpleSegmenter.h"
 
 namespace Ui {
 class WetCatImageProcessing;
@@ -29,7 +31,9 @@ private:
     Ui::WetCatImageProcessing *ui;
     QString info;
     Image* image;
-    simpleAcquirer* acquirer;
+    SimpleAcquirer* acquirer;
+    SimpleEnhancer* enhancer;
+    SimpleSegmenter* segmenter;
 };
 
 #endif // WETCATIMAGEPROCESSING_H
