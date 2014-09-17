@@ -11,5 +11,8 @@ INPUT(
 ./debug\SimpleExtractor.o
 ./debug\ThresholdEnhancer.o
 ./debug\GrayScaleEnhancer.o
+./debug\SimpleClassifier.o
+./debug\SimpleCommander.o
+./debug\SimpleCommunicator.o
 ./debug\moc_WetCatImageProcessing.o
 );

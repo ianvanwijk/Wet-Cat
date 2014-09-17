@@ -23,7 +23,10 @@ SOURCES += main.cpp\
     Extractor/Extractors/DummyExtractor.cpp \
     Extractor/SimpleExtractor.cpp \
     Enhancer/Enhancers/ThresholdEnhancer.cpp \
-    Enhancer/Enhancers/GrayScaleEnhancer.cpp
+    Enhancer/Enhancers/GrayScaleEnhancer.cpp \
+    Classifier/SimpleClassifier.cpp \
+    Commander/SimpleCommander.cpp \
+    Communicator/SimpleCommunicator.cpp
 
 HEADERS  += \
     Enhancer/IEnhancer.h \
@@ -40,7 +43,10 @@ HEADERS  += \
     Extractor/IExtractor.h \
     Extractor/SimpleExtractor.h \
     Enhancer/Enhancers/ThresholdEnhancer.h \
-    Enhancer/Enhancers/GrayScaleEnhancer.h
+    Enhancer/Enhancers/GrayScaleEnhancer.h \
+    Classifier/SimpleClassifier.h \
+    Commander/SimpleCommander.h \
+    Communicator/SimpleCommunicator.h
 
 FORMS    += wetcatimageprocessing.ui
 

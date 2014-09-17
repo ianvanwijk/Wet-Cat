@@ -11,5 +11,8 @@ INPUT(
 ./release\SimpleExtractor.o
 ./release\ThresholdEnhancer.o
 ./release\GrayScaleEnhancer.o
+./release\SimpleClassifier.o
+./release\SimpleCommander.o
+./release\SimpleCommunicator.o
 ./release\moc_WetCatImageProcessing.o
 );

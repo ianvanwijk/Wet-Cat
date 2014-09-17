@@ -6,6 +6,10 @@
 #include "Acquirer/SimpleAcquirer.h"
 #include "Enhancer/SimpleEnhancer.h"
 #include "Segmenter/SimpleSegmenter.h"
+#include "Extractor/SimpleExtractor.h"
+#include "Classifier/SimpleClassifier.h"
+#include "Communicator/SimpleCommunicator.h"
+#include "Commander/SimpleCommander.h"
 
 namespace Ui {
 class WetCatImageProcessing;
@@ -34,6 +38,10 @@ private:
     SimpleAcquirer* acquirer;
     SimpleEnhancer* enhancer;
     SimpleSegmenter* segmenter;
+    SimpleExtractor* extractor;
+    SimpleClassifier* classifier;
+    SimpleCommunicator* communicator;
+    SimpleCommander* commander;
 };
 
 #endif // WETCATIMAGEPROCESSING_H
