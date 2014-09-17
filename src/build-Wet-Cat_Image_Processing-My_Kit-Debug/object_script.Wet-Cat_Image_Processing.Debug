@@ -14,5 +14,7 @@ INPUT(
 ./debug\SimpleClassifier.o
 ./debug\SimpleCommander.o
 ./debug\SimpleCommunicator.o
+./debug\Blob.o
+./debug\DetectBlobSegmenter.o
 ./debug\moc_WetCatImageProcessing.o
 );

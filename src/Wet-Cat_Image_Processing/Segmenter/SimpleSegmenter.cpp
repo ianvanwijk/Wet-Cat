@@ -17,7 +17,7 @@ bool SimpleSegmenter::execute(Image* image)
 
 bool SimpleSegmenter::configure()
 {
-    //this->segmenters.push_back(new DummySegmenter(100, 255));
+    this->segmenters.push_back(new DetectBlobSegmenter());
     this->configured = true;
     return true;
 }

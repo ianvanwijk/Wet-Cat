@@ -26,7 +26,9 @@ SOURCES += main.cpp\
     Enhancer/Enhancers/GrayScaleEnhancer.cpp \
     Classifier/SimpleClassifier.cpp \
     Commander/SimpleCommander.cpp \
-    Communicator/SimpleCommunicator.cpp
+    Communicator/SimpleCommunicator.cpp \
+    Blob.cpp \
+    Segmenter/Segmenters/DetectBlobSegmenter.cpp
 
 HEADERS  += \
     Enhancer/IEnhancer.h \
@@ -46,7 +48,9 @@ HEADERS  += \
     Enhancer/Enhancers/GrayScaleEnhancer.h \
     Classifier/SimpleClassifier.h \
     Commander/SimpleCommander.h \
-    Communicator/SimpleCommunicator.h
+    Communicator/SimpleCommunicator.h \
+    Blob.h \
+    Segmenter/Segmenters/DetectBlobSegmenter.h
 
 FORMS    += wetcatimageprocessing.ui
 

@@ -2,12 +2,17 @@
 
 Image::Image()
 {
-    this->blobs = new Vector<Mat>();
+    this->blobs = new Vector<Blob>();
 }
 
 Mat Image::getFrame()
 {
     return this->frame;
+}
+
+Mat Image::getImage()
+{
+    return this->image;
 }
 
 bool Image::setFrame(Mat Frame)
@@ -16,18 +21,24 @@ bool Image::setFrame(Mat Frame)
     return true;
 }
 
-Vector<Mat>* Image::getBlobs()
+bool Image::setImage(Mat Image)
+{
+    this->image = Image;
+    return true;
+}
+
+Vector<Blob>* Image::getBlobs()
 {
     return this->blobs;
 }
 
-bool Image::setBlobs(Vector<Mat>* Blobs)
+bool Image::setBlobs(Vector<Blob>* Blobs)
 {
     this->blobs = Blobs;
     return true;
 }
 
-bool Image::addBlob(Mat Blob)
+bool Image::addBlob(Blob Blob)
 {
     this->blobs->push_back(Blob);
     return true;
@@ -35,6 +46,7 @@ bool Image::addBlob(Mat Blob)
 
 bool Image::clearBlobs()
 {
-    this->blobs = new Vector<Mat>();
+    delete this->blobs;
+    this->blobs = new Vector<Blob>();
     return true;
 }
