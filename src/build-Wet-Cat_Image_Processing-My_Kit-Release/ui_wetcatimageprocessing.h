@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -34,9 +33,6 @@ public:
     QSlider *VS_threshold;
     QSlider *VS_minSize;
     QSlider *VS_maxSize;
-    QLabel *LB_threshold;
-    QLabel *LB_minSize;
-    QLabel *LB_maxSize;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -45,7 +41,7 @@ public:
     {
         if (WetCatImageProcessing->objectName().isEmpty())
             WetCatImageProcessing->setObjectName(QStringLiteral("WetCatImageProcessing"));
-        WetCatImageProcessing->resize(198, 372);
+        WetCatImageProcessing->resize(105, 300);
         centralWidget = new QWidget(WetCatImageProcessing);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         BT_Configure = new QPushButton(centralWidget);
@@ -62,31 +58,22 @@ public:
         VS_threshold->setOrientation(Qt::Vertical);
         VS_minSize = new QSlider(centralWidget);
         VS_minSize->setObjectName(QStringLiteral("VS_minSize"));
-        VS_minSize->setGeometry(QRect(80, 80, 22, 160));
+        VS_minSize->setGeometry(QRect(40, 80, 22, 160));
         VS_minSize->setMinimum(1);
         VS_minSize->setMaximum(10000);
         VS_minSize->setValue(6000);
         VS_minSize->setOrientation(Qt::Vertical);
         VS_maxSize = new QSlider(centralWidget);
         VS_maxSize->setObjectName(QStringLiteral("VS_maxSize"));
-        VS_maxSize->setGeometry(QRect(160, 80, 22, 160));
+        VS_maxSize->setGeometry(QRect(70, 80, 22, 160));
         VS_maxSize->setMinimum(1);
         VS_maxSize->setMaximum(10000);
         VS_maxSize->setValue(10000);
         VS_maxSize->setOrientation(Qt::Vertical);
-        LB_threshold = new QLabel(centralWidget);
-        LB_threshold->setObjectName(QStringLiteral("LB_threshold"));
-        LB_threshold->setGeometry(QRect(10, 250, 46, 13));
-        LB_minSize = new QLabel(centralWidget);
-        LB_minSize->setObjectName(QStringLiteral("LB_minSize"));
-        LB_minSize->setGeometry(QRect(80, 250, 46, 13));
-        LB_maxSize = new QLabel(centralWidget);
-        LB_maxSize->setObjectName(QStringLiteral("LB_maxSize"));
-        LB_maxSize->setGeometry(QRect(160, 250, 46, 13));
         WetCatImageProcessing->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(WetCatImageProcessing);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 198, 21));
+        menuBar->setGeometry(QRect(0, 0, 105, 21));
         WetCatImageProcessing->setMenuBar(menuBar);
         mainToolBar = new QToolBar(WetCatImageProcessing);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -105,9 +92,6 @@ public:
         WetCatImageProcessing->setWindowTitle(QApplication::translate("WetCatImageProcessing", "WetCatImageProcessing", 0));
         BT_Configure->setText(QApplication::translate("WetCatImageProcessing", "Configure", 0));
         BT_Show->setText(QApplication::translate("WetCatImageProcessing", "Show", 0));
-        LB_threshold->setText(QApplication::translate("WetCatImageProcessing", "100", 0));
-        LB_minSize->setText(QApplication::translate("WetCatImageProcessing", "6000", 0));
-        LB_maxSize->setText(QApplication::translate("WetCatImageProcessing", "10000", 0));
     } // retranslateUi
 
 };

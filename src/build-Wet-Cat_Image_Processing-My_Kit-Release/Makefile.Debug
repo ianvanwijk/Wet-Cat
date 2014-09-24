@@ -110,7 +110,7 @@ $(DESTDIR_TARGET): ui_wetcatimageprocessing.h $(OBJECTS)
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.Wet-Cat_Image_Processing.Debug  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ CONFIG+=debug -o Makefile.Debug ..\Wet-Cat_Image_Processing\Wet-Cat_Image_Processing.pro
+	@$(QMAKE) -spec win32-g++ -o Makefile.Debug ..\Wet-Cat_Image_Processing\Wet-Cat_Image_Processing.pro
 
 qmake_all: FORCE
 
@@ -676,48 +676,7 @@ debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
-		ui_wetcatimageprocessing.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QVariant \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qaction.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qactiongroup.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qeventloop.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qdesktopwidget.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qguiapplication.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qinputmethod.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QButtonGroup \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qbuttongroup.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QHeaderView \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qheaderview.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractitemview.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qframe.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qabstractitemmodel.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qitemselectionmodel.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstyleoption.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractspinbox.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qvalidator.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qregularexpression.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qslider.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstyle.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QMenuBar \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qmenubar.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qmenu.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QPushButton \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QSlider \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QStatusBar \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QToolBar \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbar.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QWidget
+		ui_wetcatimageprocessing.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\WetCatImageProcessing.o ..\Wet-Cat_Image_Processing\WetCatImageProcessing.cpp
 
 debug/Image.o: ../Wet-Cat_Image_Processing/Image.cpp ../Wet-Cat_Image_Processing/Image.h \

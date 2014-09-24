@@ -286,9 +286,13 @@ release/moc_WetCatImageProcessing.cpp: ../../../../Applications/Qt/5.3/mingw482_
 		../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAbstractSlider \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QTimer \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qtimer.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
 		../Wet-Cat_Image_Processing/WetCatImageProcessing.h
 	C:\Applications\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Applications/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/SVN/Wet-Cat/src/Wet-Cat_Image_Processing -IC:/SVN/Wet-Cat/src/OpenCV/include -IC:/Applications/Qt/5.3/mingw482_32/include -IC:/Applications/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Applications/Qt/5.3/mingw482_32/include/QtGui -IC:/Applications/Qt/5.3/mingw482_32/include/QtCore -I. ..\Wet-Cat_Image_Processing\WetCatImageProcessing.h -o release\moc_WetCatImageProcessing.cpp
 
@@ -462,9 +466,13 @@ release/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing
 		../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAbstractSlider \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QTimer \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qtimer.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
@@ -511,7 +519,7 @@ release/SimpleEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.cp
 		../Wet-Cat_Image_Processing/Enhancer/Enhancers/ThresholdEnhancer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\SimpleEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\SimpleEnhancer.cpp
 
-release/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing.cpp ../Wet-Cat_Image_Processing/wetcatimageprocessing.h \
+release/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing.cpp ../Wet-Cat_Image_Processing/WetCatImageProcessing.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qmainwindow.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qwidget.h \
@@ -661,9 +669,13 @@ release/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessi
 		../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAbstractSlider \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QTimer \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qtimer.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
 		ui_wetcatimageprocessing.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QVariant \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
@@ -691,7 +703,6 @@ release/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessi
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qvalidator.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qregularexpression.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qslider.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstyle.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
@@ -701,6 +712,7 @@ release/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessi
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QPushButton \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QSlider \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QStatusBar \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QToolBar \

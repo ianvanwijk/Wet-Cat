@@ -161,16 +161,19 @@ void WetCatImageProcessing::on_BT_Show_clicked()
 void WetCatImageProcessing::on_VS_threshold_valueChanged(int value)
 {
     this->enhancer->setConfiguration(value);
+    this->ui->LB_threshold->setText(QString::number(value));
 }
 
 void WetCatImageProcessing::on_VS_minSize_valueChanged(int value)
 {
     this->minArea = value;
     this->segmenter->setConfiguration(this->minArea, this->maxArea);
+    this->ui->LB_minSize->setText(QString::number(value));
 }
 
 void WetCatImageProcessing::on_VS_maxSize_valueChanged(int value)
 {
     this->maxArea = value;
     this->segmenter->setConfiguration(this->minArea, this->maxArea);
+    this->ui->LB_maxSize->setText(QString::number(value));
 }
