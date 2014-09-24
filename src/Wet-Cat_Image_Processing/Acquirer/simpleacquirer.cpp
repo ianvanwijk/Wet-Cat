@@ -1,4 +1,5 @@
 #include "SimpleAcquirer.h"
+#include "Defines.h"
 
 SimpleAcquirer::SimpleAcquirer()
 {
@@ -8,6 +9,7 @@ SimpleAcquirer::SimpleAcquirer()
 SimpleAcquirer::~SimpleAcquirer()
 {
     cam->release();
+    delete cam;
 }
 
 bool SimpleAcquirer::execute(Image* image)
@@ -27,7 +29,7 @@ bool SimpleAcquirer::execute(Image* image)
 
 bool SimpleAcquirer::configure()
 {
-    cam = new VideoCapture(1);
+    cam = new VideoCapture(CAMERA);
     this->configured = true;
     return true;
 }

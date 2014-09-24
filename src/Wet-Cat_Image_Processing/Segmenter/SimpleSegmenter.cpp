@@ -5,6 +5,14 @@ SimpleSegmenter::SimpleSegmenter()
     this->configured = false;
 }
 
+SimpleSegmenter::~SimpleSegmenter()
+{
+    while(this->segmenters.size() != 0)
+    {
+        this->segmenters.pop_back();
+    }
+}
+
 bool SimpleSegmenter::execute(Image* image)
 {
     unsigned i = 0;
@@ -34,4 +42,5 @@ bool SimpleSegmenter::setConfiguration(int minArea, int maxArea)
         this->segmenters.pop_back();
     }
     this->segmenters.push_back(new DetectBlobSegmenter(minArea, maxArea));
+    return true;
 }

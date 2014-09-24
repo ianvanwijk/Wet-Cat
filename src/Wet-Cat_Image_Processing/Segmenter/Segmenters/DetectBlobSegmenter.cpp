@@ -1,4 +1,5 @@
 #include "DetectBlobSegmenter.h"
+#include "Defines.h"
 
 DetectBlobSegmenter::DetectBlobSegmenter(int MinArea, int MaxArea)
 {
@@ -27,10 +28,10 @@ bool DetectBlobSegmenter::segment(Image *image)
         blob->setSize(keypoints[i].size);
         for(j = 0; j < image->getOldBlobs().size(); j ++)
         {
-            if(blob->getPosX() < image->getOldBlob(j)->getPosX() + 1 &&
-               blob->getPosX() > image->getOldBlob(j)->getPosX() - 1 &&
-               blob->getPosY() < image->getOldBlob(j)->getPosY() + 1 &&
-               blob->getPosY() > image->getOldBlob(j)->getPosY() - 1)
+            if(blob->getPosX() < image->getOldBlob(j)->getPosX() + MAX_MOVEMENT &&
+               blob->getPosX() > image->getOldBlob(j)->getPosX() - MAX_MOVEMENT &&
+               blob->getPosY() < image->getOldBlob(j)->getPosY() + MAX_MOVEMENT &&
+               blob->getPosY() > image->getOldBlob(j)->getPosY() - MAX_MOVEMENT)
             {
                 delete blob;
                 blob = image->getOldBlob(j);

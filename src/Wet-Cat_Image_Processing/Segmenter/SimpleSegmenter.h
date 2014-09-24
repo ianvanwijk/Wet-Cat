@@ -9,6 +9,7 @@ class SimpleSegmenter : IExecutable
 {
 public:
     SimpleSegmenter();
+    virtual ~SimpleSegmenter();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();

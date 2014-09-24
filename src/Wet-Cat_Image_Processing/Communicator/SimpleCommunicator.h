@@ -12,6 +12,7 @@ public:
     bool isConfigured();
     bool isExecuting();
     bool stopExecuting();
+    bool draw(int status, Mat* image, Blob* blob);
 private:
     bool executing;
     bool configured;

@@ -23,6 +23,8 @@ public:
     int getStatus();
     bool setStatus(int Status);
     bool addStatus(int i);
+    int getType();
+    bool setType(int Type);
 private:
     float posX;
     float posY;
@@ -30,6 +32,7 @@ private:
     int nrOfHoles;
     Mat image;
     int status;
+    int type;
 };
 
 #endif // BLOB_H

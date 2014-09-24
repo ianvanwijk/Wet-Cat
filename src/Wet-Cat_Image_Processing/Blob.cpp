@@ -81,3 +81,14 @@ bool Blob::addStatus(int i)
     this->status += i;
     return true;
 }
+
+int Blob::getType()
+{
+    return this->type;
+}
+
+bool Blob::setType(int Type)
+{
+    this->type = Type;
+    return true;
+}

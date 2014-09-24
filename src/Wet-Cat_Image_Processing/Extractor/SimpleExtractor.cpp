@@ -5,6 +5,14 @@ SimpleExtractor::SimpleExtractor()
     this->configured = false;
 }
 
+SimpleExtractor::~SimpleExtractor()
+{
+    while(this->extractors.size() != 0)
+    {
+        this->extractors.pop_back();
+    }
+}
+
 bool SimpleExtractor::execute(Image* image)
 {
     unsigned i = 0;
