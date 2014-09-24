@@ -2,6 +2,12 @@
 
 Blob::Blob()
 {
+    this->status = 0;
+}
+
+Blob::~Blob()
+{
+
 }
 
 bool Blob::setPosX(float PosX)
@@ -57,4 +63,21 @@ bool Blob::setImage(Mat Image)
 Mat Blob::getImage()
 {
     return this->image;
+}
+
+int Blob::getStatus()
+{
+    return this->status;
+}
+
+bool Blob::setStatus(int Status)
+{
+    this->status = Status;
+    return true;
+}
+
+bool Blob::addStatus(int i)
+{
+    this->status += i;
+    return true;
 }

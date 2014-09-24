@@ -7,7 +7,14 @@ SimpleClassifier::SimpleClassifier()
 
 bool SimpleClassifier::execute(Image *image)
 {
-    return true;
+    unsigned i = 0;
+    for(i = 0; i < image->getBlobs().size(); i++)
+    {
+        if(image->getBlob(i)->getStatus() < 10)
+        {
+            image->getBlob(i)->addStatus(1);
+        }
+    }
 }
 
 bool SimpleClassifier::configure()

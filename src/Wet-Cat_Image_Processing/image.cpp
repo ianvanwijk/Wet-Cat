@@ -54,7 +54,38 @@ Blob* Image::getBlob(int i)
     return blob;
 }
 
+Vector<Blob*> Image::getOldBlobs()
+{
+    return this->oldBlobs;
+}
+
 bool Image::clearBlobs()
 {
+    while(this->blobs.size() != 0)
+    {
+        this->blobs.pop_back();
+    }
+    return true;
+}
+
+bool Image::setOldBlobs(Vector<Blob *> Blobs)
+{
+    this->clearOldBlobs();
+    this->oldBlobs = Blobs;
+    return true;
+}
+
+Blob* Image::getOldBlob(int i)
+{
+    Blob* blob = this->blobs[i];
+    return blob;
+}
+
+bool Image::clearOldBlobs()
+{
+    while(this->oldBlobs.size() != 0)
+    {
+        this->oldBlobs.pop_back();
+    }
     return true;
 }

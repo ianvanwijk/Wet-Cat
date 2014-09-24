@@ -20,11 +20,16 @@ public:
     bool addBlob(Blob* Blob);
     Blob* getBlob(int i);
     bool clearBlobs();
+    Vector<Blob*> getOldBlobs();
+    bool setOldBlobs(Vector<Blob*> Blobs);
+    Blob* getOldBlob(int i);
+    bool clearOldBlobs();
 
 private:
     Mat frame;
     Mat image;
     Vector<Blob*> blobs;
+    Vector<Blob*> oldBlobs;
 };
 
 #endif // IMAGE_H

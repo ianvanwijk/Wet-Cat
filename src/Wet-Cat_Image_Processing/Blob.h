@@ -20,12 +20,16 @@ public:
     int getNrOfHoles();
     bool setImage(Mat Image);
     Mat getImage();
+    int getStatus();
+    bool setStatus(int Status);
+    bool addStatus(int i);
 private:
     float posX;
     float posY;
     float size;
     int nrOfHoles;
     Mat image;
+    int status;
 };
 
 #endif // BLOB_H

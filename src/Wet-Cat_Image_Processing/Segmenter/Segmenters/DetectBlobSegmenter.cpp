@@ -17,6 +17,7 @@ bool DetectBlobSegmenter::segment(Image *image)
     blobDetector->detect(image->getFrame(), keypoints);
 
     unsigned i = 0;
+    unsigned j = 0;
     for(i = 0; i < keypoints.size(); i++)
     {
         Blob* blob = new Blob();
@@ -24,6 +25,18 @@ bool DetectBlobSegmenter::segment(Image *image)
         blob->setPosX(keypoints[i].pt.x);
         blob->setPosY(keypoints[i].pt.y);
         blob->setSize(keypoints[i].size);
+        for(j = 0; j < image->getOldBlobs().size(); j ++)
+        {
+            if(blob->getPosX() < image->getOldBlob(j)->getPosX() + 1 &&
+               blob->getPosX() > image->getOldBlob(j)->getPosX() - 1 &&
+               blob->getPosY() < image->getOldBlob(j)->getPosY() + 1 &&
+               blob->getPosY() > image->getOldBlob(j)->getPosY() - 1)
+            {
+                delete blob;
+                blob = image->getOldBlob(j);
+                break;
+            }
+        }
         image->addBlob(blob);
     }
 

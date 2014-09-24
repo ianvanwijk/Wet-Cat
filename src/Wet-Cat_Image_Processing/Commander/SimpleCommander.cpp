@@ -10,7 +10,16 @@ bool SimpleCommander::execute(Image *image)
 {
     if(!this->simpleCommunicator->isExecuting())
     {
-        //set next command
+        unsigned i = 0;
+        for(i = 0; i < image->getBlobs().size(); i++)
+        {
+            std::cout << image->getBlob(i)->getStatus() << std::endl;
+            if(image->getBlob(i)->getStatus() >= 10 && image->getBlob(i)->getStatus() < 20)
+            {
+                image->getBlob(i)->setStatus(11);
+                break;
+            }
+        }
     }
     return true;
 }

@@ -31,8 +31,8 @@ WetCatImageProcessing::~WetCatImageProcessing()
 
 void WetCatImageProcessing::updateTimer()
 {
-    delete this->image;
-    this->image = new Image();
+    this->image->setOldBlobs(this->image->getBlobs());
+    this->image->clearBlobs();
     uint secs = this->elapsedTimer->nsecsElapsed();
     if(this->acquirer->isConfigured() && this->enhancer->isConfigured() && this->segmenter->isConfigured() && this->extractor->isConfigured() && this->classifier->isConfigured() && this->commander->isConfigured() && this->communicator->isConfigured())
     {
@@ -153,7 +153,7 @@ void WetCatImageProcessing::on_BT_Show_clicked()
 {
     if(this->acquirer->isConfigured() && this->enhancer->isConfigured() && this->segmenter->isConfigured() && this->extractor->isConfigured() && this->classifier->isConfigured() && this->commander->isConfigured() && this->communicator->isConfigured())
     {
-        this->timer->start(33);
+        this->timer->start(1000/24);
         this->elapsedTimer->start();
     }
 }
