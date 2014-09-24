@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -29,6 +30,9 @@ public:
     QWidget *centralWidget;
     QPushButton *BT_Configure;
     QPushButton *BT_Show;
+    QSlider *VS_threshold;
+    QSlider *VS_minSize;
+    QSlider *VS_maxSize;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -37,7 +41,7 @@ public:
     {
         if (WetCatImageProcessing->objectName().isEmpty())
             WetCatImageProcessing->setObjectName(QStringLiteral("WetCatImageProcessing"));
-        WetCatImageProcessing->resize(400, 300);
+        WetCatImageProcessing->resize(105, 300);
         centralWidget = new QWidget(WetCatImageProcessing);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         BT_Configure = new QPushButton(centralWidget);
@@ -46,10 +50,30 @@ public:
         BT_Show = new QPushButton(centralWidget);
         BT_Show->setObjectName(QStringLiteral("BT_Show"));
         BT_Show->setGeometry(QRect(10, 40, 75, 23));
+        VS_threshold = new QSlider(centralWidget);
+        VS_threshold->setObjectName(QStringLiteral("VS_threshold"));
+        VS_threshold->setGeometry(QRect(10, 80, 22, 160));
+        VS_threshold->setMaximum(255);
+        VS_threshold->setValue(100);
+        VS_threshold->setOrientation(Qt::Vertical);
+        VS_minSize = new QSlider(centralWidget);
+        VS_minSize->setObjectName(QStringLiteral("VS_minSize"));
+        VS_minSize->setGeometry(QRect(40, 80, 22, 160));
+        VS_minSize->setMinimum(1);
+        VS_minSize->setMaximum(10000);
+        VS_minSize->setValue(6000);
+        VS_minSize->setOrientation(Qt::Vertical);
+        VS_maxSize = new QSlider(centralWidget);
+        VS_maxSize->setObjectName(QStringLiteral("VS_maxSize"));
+        VS_maxSize->setGeometry(QRect(70, 80, 22, 160));
+        VS_maxSize->setMinimum(1);
+        VS_maxSize->setMaximum(10000);
+        VS_maxSize->setValue(10000);
+        VS_maxSize->setOrientation(Qt::Vertical);
         WetCatImageProcessing->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(WetCatImageProcessing);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 21));
+        menuBar->setGeometry(QRect(0, 0, 105, 21));
         WetCatImageProcessing->setMenuBar(menuBar);
         mainToolBar = new QToolBar(WetCatImageProcessing);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

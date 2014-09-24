@@ -9,17 +9,21 @@ class Blob
 {
 public:
     Blob();
-    bool setPosX(int PosX);
-    int getPosX();
-    bool setPosY(int PosY);
-    int getPosY();
+    ~Blob();
+    bool setPosX(float PosX);
+    float getPosX();
+    bool setPosY(float PosY);
+    float getPosY();
+    bool setSize(float Size);
+    float getSize();
     bool setNrOfHoles(int NrOfHoles);
     int getNrOfHoles();
     bool setImage(Mat Image);
     Mat getImage();
 private:
-    int posX;
-    int posY;
+    float posX;
+    float posY;
+    float size;
     int nrOfHoles;
     Mat image;
 };

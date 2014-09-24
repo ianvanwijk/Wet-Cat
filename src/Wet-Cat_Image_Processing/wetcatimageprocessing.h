@@ -10,6 +10,9 @@
 #include "Classifier/SimpleClassifier.h"
 #include "Communicator/SimpleCommunicator.h"
 #include "Commander/SimpleCommander.h"
+#include <QAbstractSlider>
+#include <QTimer>
+#include <QElapsedTimer>
 
 namespace Ui {
 class WetCatImageProcessing;
@@ -30,6 +33,14 @@ private slots:
 
     void on_BT_Show_clicked();
 
+    void updateTimer();
+
+    void on_VS_threshold_valueChanged(int value);
+
+    void on_VS_minSize_valueChanged(int value);
+
+    void on_VS_maxSize_valueChanged(int value);
+
 private:
     void acquire();
     Ui::WetCatImageProcessing *ui;
@@ -42,6 +53,11 @@ private:
     SimpleClassifier* classifier;
     SimpleCommunicator* communicator;
     SimpleCommander* commander;
+    QTimer* timer;
+    QElapsedTimer* elapsedTimer;
+
+    int minArea;
+    int maxArea;
 };
 
 #endif // WETCATIMAGEPROCESSING_H

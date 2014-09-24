@@ -15,6 +15,8 @@ bool SimpleAcquirer::execute(Image* image)
     if(cam->isOpened())
     {
         Mat frame;
+        image->setFrame(frame);
+        image->setImage(frame);
         cam->read(frame);
         image->setFrame(frame);
         image->setImage(frame);

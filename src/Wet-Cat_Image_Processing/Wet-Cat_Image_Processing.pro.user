@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.2.0, 2014-09-22T10:39:50. -->
+<!-- Written by QtCreator 3.2.0, 2014-09-24T10:13:49. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -111,7 +111,7 @@
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
-     <value type="QString">PATH=C:\Applications\Qt\5.3\mingw482_32\bin;C:\Applications\Qt\Tools\mingw482_32\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\php;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Applications\TortoiseSVN\bin;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Applications\D\dmd2\windows\bin;C:\Applications\TortoiseGit\bin;C:\php;C:\Applications\Make\bin;..\OpenCV\bin</value>
+     <value type="QString">PATH=C:\Applications\Qt\5.3\mingw482_32\bin;C:\Applications\Qt\Tools\mingw482_32\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\php;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Applications\TortoiseSVN\bin;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Applications\D\dmd2\windows\bin;C:\Applications\TortoiseGit\bin;C:\php;C:\Applications\Make\bin;..\OpenCV\bin;..\CVBlob\bin</value>
     </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Debug</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
