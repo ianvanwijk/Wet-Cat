@@ -54,7 +54,7 @@ HEADERS  += \
 
 FORMS    += wetcatimageprocessing.ui
 
-INCLUDEPATH += "C:/Applications/Qt/Tools/OpenCV/include"
+INCLUDEPATH += "../OpenCV/include"
 
 LIBS += "../OpenCV/bin/libopencv_core249.dll"       \
         "../OpenCV/bin/libopencv_highgui249.dll"    \
@@ -67,4 +67,4 @@ LIBS += "../OpenCV/bin/libopencv_core249.dll"       \
         "../OpenCV/bin/libopencv_legacy249.dll"    \
         "../OpenCV/bin/libopencv_ml249.dll"    \
         "../OpenCV/bin/libopencv_objdetect249.dll"    \
-        "C:/Applications/Qt/Tools/OpenCV/bin/libopencv_video249.dll"
+        "../OpenCV/bin/libopencv_video249.dll"
