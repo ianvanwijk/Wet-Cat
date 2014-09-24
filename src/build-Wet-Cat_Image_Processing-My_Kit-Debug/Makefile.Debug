@@ -14,10 +14,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -pipe -fno-keep-inline-dllexport -g -Wall -Wextra $(DEFINES)
 CXXFLAGS      = -pipe -fno-keep-inline-dllexport -g -frtti -Wall -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\Wet-Cat_Image_Processing -I"..\..\..\..\Applications\Qt\Tools\OpenCV\include" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include\QtWidgets" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include\QtGui" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include\QtCore" -I"debug" -I"." -I"." -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\win32-g++"
+INCPATH       = -I..\Wet-Cat_Image_Processing -I"..\OpenCV\include" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include\QtWidgets" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include\QtGui" -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\include\QtCore" -I"debug" -I"." -I"." -I"..\..\..\..\Applications\Qt\5.3\mingw482_32\mkspecs\win32-g++"
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lglu32 -lopengl32 -lgdi32 -luser32 -lmingw32 -LC:/Applications/Qt/5.3/mingw482_32/lib -lqtmaind -LC:\mingw482\mingw32\lib -LC:\Utils\icu32_52_1_mingw482\lib -LC:\utils\postgresql\pgsql\lib -LC:\utils\mysql\mysql\lib -LC:\opensll\lib -LC:\Applications\Qt\5.3\mingw482_32/lib ../OpenCV/bin/libopencv_core249.dll ../OpenCV/bin/libopencv_highgui249.dll ../OpenCV/bin/libopencv_imgproc249.dll ../OpenCV/bin/libopencv_features2d249.dll ../OpenCV/bin/libopencv_calib3d249.dll ../OpenCV/bin/libopencv_contrib249.dll ../OpenCV/bin/libopencv_flann249.dll ../OpenCV/bin/libopencv_gpu249.dll ../OpenCV/bin/libopencv_legacy249.dll ../OpenCV/bin/libopencv_ml249.dll ../OpenCV/bin/libopencv_objdetect249.dll C:/Applications/Qt/Tools/OpenCV/bin/libopencv_video249.dll -lQt5Widgetsd -lQt5Guid -lQt5Cored 
+LIBS        =        -lglu32 -lopengl32 -lgdi32 -luser32 -lmingw32 -LC:/Applications/Qt/5.3/mingw482_32/lib -lqtmaind -LC:\mingw482\mingw32\lib -LC:\Utils\icu32_52_1_mingw482\lib -LC:\utils\postgresql\pgsql\lib -LC:\utils\mysql\mysql\lib -LC:\opensll\lib -LC:\Applications\Qt\5.3\mingw482_32/lib ../OpenCV/bin/libopencv_core249.dll ../OpenCV/bin/libopencv_highgui249.dll ../OpenCV/bin/libopencv_imgproc249.dll ../OpenCV/bin/libopencv_features2d249.dll ../OpenCV/bin/libopencv_calib3d249.dll ../OpenCV/bin/libopencv_contrib249.dll ../OpenCV/bin/libopencv_flann249.dll ../OpenCV/bin/libopencv_gpu249.dll ../OpenCV/bin/libopencv_legacy249.dll ../OpenCV/bin/libopencv_ml249.dll ../OpenCV/bin/libopencv_objdetect249.dll ../OpenCV/bin/libopencv_video249.dll -lQt5Widgetsd -lQt5Guid -lQt5Cored 
 QMAKE         = C:\Applications\Qt\5.3\mingw482_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -241,33 +241,33 @@ debug/moc_WetCatImageProcessing.cpp: ../../../../Applications/Qt/5.3/mingw482_32
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
@@ -286,8 +286,15 @@ debug/moc_WetCatImageProcessing.cpp: ../../../../Applications/Qt/5.3/mingw482_32
 		../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAbstractSlider \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qtimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
 		../Wet-Cat_Image_Processing/WetCatImageProcessing.h
-	C:\Applications\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Applications/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/SVN/Wet-Cat/src/Wet-Cat_Image_Processing -IC:/Applications/Qt/Tools/OpenCV/include -IC:/Applications/Qt/5.3/mingw482_32/include -IC:/Applications/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Applications/Qt/5.3/mingw482_32/include/QtGui -IC:/Applications/Qt/5.3/mingw482_32/include/QtCore -I. ..\Wet-Cat_Image_Processing\WetCatImageProcessing.h -o debug\moc_WetCatImageProcessing.cpp
+	C:\Applications\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Applications/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/SVN/Wet-Cat/src/Wet-Cat_Image_Processing -IC:/SVN/Wet-Cat/src/OpenCV/include -IC:/Applications/Qt/5.3/mingw482_32/include -IC:/Applications/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Applications/Qt/5.3/mingw482_32/include/QtGui -IC:/Applications/Qt/5.3/mingw482_32/include/QtCore -I. ..\Wet-Cat_Image_Processing\WetCatImageProcessing.h -o debug\moc_WetCatImageProcessing.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -414,33 +421,33 @@ debug/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing/w
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
@@ -459,6 +466,13 @@ debug/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing/w
 		../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAbstractSlider \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qtimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qcoreapplication.h \
@@ -471,33 +485,33 @@ debug/main.o: ../Wet-Cat_Image_Processing/main.cpp ../Wet-Cat_Image_Processing/w
 debug/SimpleEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
 		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
@@ -505,7 +519,7 @@ debug/SimpleEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/SimpleEnhancer.cpp 
 		../Wet-Cat_Image_Processing/Enhancer/Enhancers/ThresholdEnhancer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SimpleEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\SimpleEnhancer.cpp
 
-debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing.cpp ../Wet-Cat_Image_Processing/wetcatimageprocessing.h \
+debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing.cpp ../Wet-Cat_Image_Processing/WetCatImageProcessing.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qmainwindow.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qwidget.h \
@@ -610,33 +624,33 @@ debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabwidget.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qicon.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
@@ -655,6 +669,13 @@ debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing
 		../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAbstractSlider \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qtimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qbasictimer.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QElapsedTimer \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qelapsedtimer.h \
 		ui_wetcatimageprocessing.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/QVariant \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
@@ -682,7 +703,6 @@ debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtGui/qvalidator.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtCore/qregularexpression.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qslider.h \
-		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractslider.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstyle.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qtabbar.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qrubberband.h \
@@ -692,6 +712,7 @@ debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QPushButton \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
+		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QSlider \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QStatusBar \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
 		../../../../Applications/Qt/5.3/mingw482_32/include/QtWidgets/QToolBar \
@@ -700,165 +721,165 @@ debug/WetCatImageProcessing.o: ../Wet-Cat_Image_Processing/WetCatImageProcessing
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\WetCatImageProcessing.o ..\Wet-Cat_Image_Processing\WetCatImageProcessing.cpp
 
 debug/Image.o: ../Wet-Cat_Image_Processing/Image.cpp ../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Image.o ..\Wet-Cat_Image_Processing\Image.cpp
 
 debug/SimpleAcquirer.o: ../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.cpp ../Wet-Cat_Image_Processing/Acquirer/SimpleAcquirer.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SimpleAcquirer.o ..\Wet-Cat_Image_Processing\Acquirer\SimpleAcquirer.cpp
 
 debug/DummyEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/Enhancers/DummyEnhancer.h \
 		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\DummyEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\Enhancers\DummyEnhancer.cpp
 
 debug/DummySegmenter.o: ../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.cpp ../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
 		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\DummySegmenter.o ..\Wet-Cat_Image_Processing\Segmenter\Segmenters\DummySegmenter.cpp
 
 debug/SimpleSegmenter.o: ../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.cpp ../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Segmenter/Segmenters/DummySegmenter.h \
 		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
@@ -868,66 +889,66 @@ debug/SimpleSegmenter.o: ../Wet-Cat_Image_Processing/Segmenter/SimpleSegmenter.c
 debug/DummyExtractor.o: ../Wet-Cat_Image_Processing/Extractor/Extractors/DummyExtractor.cpp ../Wet-Cat_Image_Processing/Extractor/Extractors/DummyExtractor.h \
 		../Wet-Cat_Image_Processing/Extractor/IExtractor.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\DummyExtractor.o ..\Wet-Cat_Image_Processing\Extractor\Extractors\DummyExtractor.cpp
 
 debug/SimpleExtractor.o: ../Wet-Cat_Image_Processing/Extractor/SimpleExtractor.cpp ../Wet-Cat_Image_Processing/Extractor/SimpleExtractor.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Extractor/Extractors/DummyExtractor.h \
 		../Wet-Cat_Image_Processing/Extractor/IExtractor.h
@@ -936,132 +957,132 @@ debug/SimpleExtractor.o: ../Wet-Cat_Image_Processing/Extractor/SimpleExtractor.c
 debug/ThresholdEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/Enhancers/ThresholdEnhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/Enhancers/ThresholdEnhancer.h \
 		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ThresholdEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\Enhancers\ThresholdEnhancer.cpp
 
 debug/GrayScaleEnhancer.o: ../Wet-Cat_Image_Processing/Enhancer/Enhancers/GrayScaleEnhancer.cpp ../Wet-Cat_Image_Processing/Enhancer/Enhancers/GrayScaleEnhancer.h \
 		../Wet-Cat_Image_Processing/Enhancer/IEnhancer.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GrayScaleEnhancer.o ..\Wet-Cat_Image_Processing\Enhancer\Enhancers\GrayScaleEnhancer.cpp
 
 debug/SimpleClassifier.o: ../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.cpp ../Wet-Cat_Image_Processing/Classifier/SimpleClassifier.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SimpleClassifier.o ..\Wet-Cat_Image_Processing\Classifier\SimpleClassifier.cpp
 
 debug/SimpleCommander.o: ../Wet-Cat_Image_Processing/Commander/SimpleCommander.cpp ../Wet-Cat_Image_Processing/Commander/SimpleCommander.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h \
 		../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SimpleCommander.o ..\Wet-Cat_Image_Processing\Commander\SimpleCommander.cpp
@@ -1069,96 +1090,96 @@ debug/SimpleCommander.o: ../Wet-Cat_Image_Processing/Commander/SimpleCommander.c
 debug/SimpleCommunicator.o: ../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.cpp ../Wet-Cat_Image_Processing/Communicator/SimpleCommunicator.h \
 		../Wet-Cat_Image_Processing/IExecutable.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SimpleCommunicator.o ..\Wet-Cat_Image_Processing\Communicator\SimpleCommunicator.cpp
 
 debug/Blob.o: ../Wet-Cat_Image_Processing/Blob.cpp ../Wet-Cat_Image_Processing/Blob.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Blob.o ..\Wet-Cat_Image_Processing\Blob.cpp
 
 debug/DetectBlobSegmenter.o: ../Wet-Cat_Image_Processing/Segmenter/Segmenters/DetectBlobSegmenter.cpp ../Wet-Cat_Image_Processing/Segmenter/Segmenters/DetectBlobSegmenter.h \
 		../Wet-Cat_Image_Processing/Segmenter/ISegmenter.h \
 		../Wet-Cat_Image_Processing/Image.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/opencv.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/core.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/version.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/operations.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/core/mat.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/miniflann.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/defines.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/flann/config.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/types_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/imgproc/imgproc.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/photo/photo_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/video.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/tracking.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/video/background_segm.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/features2d/features2d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/objdetect/objdetect.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/calib3d/calib3d.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/ml/ml.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui_c.h \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/highgui/highgui.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/contrib.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/retina.hpp \
-		../../../../Applications/Qt/Tools/OpenCV/include/opencv2/contrib/openfabmap.hpp \
+		../OpenCV/include/opencv2/opencv.hpp \
+		../OpenCV/include/opencv2/core/core_c.h \
+		../OpenCV/include/opencv2/core/types_c.h \
+		../OpenCV/include/opencv2/core/core.hpp \
+		../OpenCV/include/opencv2/core/version.hpp \
+		../OpenCV/include/opencv2/core/operations.hpp \
+		../OpenCV/include/opencv2/core/mat.hpp \
+		../OpenCV/include/opencv2/flann/miniflann.hpp \
+		../OpenCV/include/opencv2/flann/defines.h \
+		../OpenCV/include/opencv2/flann/config.h \
+		../OpenCV/include/opencv2/imgproc/imgproc_c.h \
+		../OpenCV/include/opencv2/imgproc/types_c.h \
+		../OpenCV/include/opencv2/imgproc/imgproc.hpp \
+		../OpenCV/include/opencv2/photo/photo.hpp \
+		../OpenCV/include/opencv2/photo/photo_c.h \
+		../OpenCV/include/opencv2/video/video.hpp \
+		../OpenCV/include/opencv2/video/tracking.hpp \
+		../OpenCV/include/opencv2/video/background_segm.hpp \
+		../OpenCV/include/opencv2/features2d/features2d.hpp \
+		../OpenCV/include/opencv2/objdetect/objdetect.hpp \
+		../OpenCV/include/opencv2/calib3d/calib3d.hpp \
+		../OpenCV/include/opencv2/ml/ml.hpp \
+		../OpenCV/include/opencv2/highgui/highgui_c.h \
+		../OpenCV/include/opencv2/highgui/highgui.hpp \
+		../OpenCV/include/opencv2/contrib/contrib.hpp \
+		../OpenCV/include/opencv2/contrib/retina.hpp \
+		../OpenCV/include/opencv2/contrib/openfabmap.hpp \
 		../Wet-Cat_Image_Processing/Blob.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\DetectBlobSegmenter.o ..\Wet-Cat_Image_Processing\Segmenter\Segmenters\DetectBlobSegmenter.cpp
 

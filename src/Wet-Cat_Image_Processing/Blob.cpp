@@ -4,26 +4,37 @@ Blob::Blob()
 {
 }
 
-bool Blob::setPosX(int PosX)
+bool Blob::setPosX(float PosX)
 {
     this->posX = PosX;
     return true;
 }
 
-int Blob::getPosX()
+float Blob::getPosX()
 {
     return this->posX;
 }
 
-bool Blob::setPosY(int PosY)
+bool Blob::setPosY(float PosY)
 {
     this->posY = PosY;
     return true;
 }
 
-int Blob::getPosY()
+float Blob::getPosY()
 {
     return this->posY;
+}
+
+bool Blob::setSize(float Size)
+{
+    this->size = Size;
+    return true;
+}
+
+float Blob::getSize()
+{
+    return this->size;
 }
 
 bool Blob::setNrOfHoles(int NrOfHoles)

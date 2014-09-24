@@ -13,6 +13,7 @@ public:
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();
+    bool setConfiguration(int threshold);
 private:
     bool configured;
     std::vector<IEnhancer*> enhancers;
