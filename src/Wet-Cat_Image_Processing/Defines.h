@@ -11,6 +11,8 @@
 
 #define FPS 2
 
-#define CAMERA 1
+#define CAMERA 0
+
+#define PORT 1661
 
 #endif // DEFINES_H

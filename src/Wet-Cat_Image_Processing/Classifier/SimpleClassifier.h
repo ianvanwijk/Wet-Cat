@@ -9,6 +9,7 @@ class SimpleClassifier : IExecutable
 {
 public:
     SimpleClassifier();
+    virtual ~SimpleClassifier();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();

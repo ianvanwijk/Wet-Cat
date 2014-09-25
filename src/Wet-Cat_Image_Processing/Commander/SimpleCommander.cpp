@@ -7,6 +7,11 @@ SimpleCommander::SimpleCommander(SimpleCommunicator* simpleCommunicator)
     this->configured = false;
 }
 
+SimpleCommander::~SimpleCommander()
+{
+
+}
+
 bool SimpleCommander::execute(Image *image)
 {
     if(!this->simpleCommunicator->isExecuting())

@@ -6,6 +6,11 @@ SimpleClassifier::SimpleClassifier()
     this->configured = false;
 }
 
+SimpleClassifier::~SimpleClassifier()
+{
+
+}
+
 bool SimpleClassifier::execute(Image *image)
 {
     unsigned i = 0;

@@ -33,8 +33,7 @@ bool DetectBlobSegmenter::segment(Image *image)
                blob->getPosY() < image->getOldBlob(j)->getPosY() + MAX_MOVEMENT &&
                blob->getPosY() > image->getOldBlob(j)->getPosY() - MAX_MOVEMENT)
             {
-                delete blob;
-                blob = image->getOldBlob(j);
+                blob->setStatus(image->getOldBlob(j)->getStatus());
                 break;
             }
         }

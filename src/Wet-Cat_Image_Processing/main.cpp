@@ -1,4 +1,4 @@
-#include "wetcatimageprocessing.h"
+#include "WetCatImageProcessing.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

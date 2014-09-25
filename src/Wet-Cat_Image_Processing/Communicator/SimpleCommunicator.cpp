@@ -1,10 +1,24 @@
 #include "SimpleCommunicator.h"
 #include "Defines.h"
 
+void* checkExecuting(void *communicator);
+
 SimpleCommunicator::SimpleCommunicator()
 {
     this->configured = false;
     this->executing = false;
+    this->serialPort = new QSerialPort();
+    this->serialPort->setPortName("COM2");
+    this->stopThread = false;
+    //start thread and use checkExecuting for function
+}
+
+SimpleCommunicator::~SimpleCommunicator()
+{
+    this->stopThread = true;
+    std::cout << "ending thread" << std::endl;
+    pthread_join(this->thread, NULL);
+    std::cout << "thread ended" << std::endl;
 }
 
 bool SimpleCommunicator::execute(Image *image)
@@ -22,27 +36,30 @@ bool SimpleCommunicator::execute(Image *image)
         {
             if(image->getBlob(i)->getStatus() == ACTION_READY || image->getBlob(i)->getStatus() == ACTION_EXECUTE)
             {
-                //test if all colors work
-                if(image->getBlob(i)->getStatus() == ACTION_EXECUTE)
-                {
-                    image->getBlob(i)->setStatus(ACTION_DONE);
-                }
-                //
                 Action = true;
-                this->executing = true;
                 if(image->getBlob(i)->getStatus() == ACTION_READY)
                 {
-                    //send action to turret (type and location)
+                    this->executing = true;
+                    char data[3];
+                    data[0] = image->getBlob(i)->getType();
+                    data[1] = image->getBlob(i)->getPosX();
+                    data[2] = image->getBlob(i)->getPosY();
+                    this->serialPort->write(data, 3);
                     image->getBlob(i)->setStatus(ACTION_EXECUTE);
                 }
                 //check if turret is done
-                /*
-                 * if turret is done
-                 * image->getBlob(i)->setStatus(ACTION_DONE);
-                 */
+                if(!this->executing)
+                {
+                    image->getBlob(i)->setStatus(ACTION_DONE);
+                }
             }
-            if(!Action)
+            if(!Action && image->getBlob(i)->getStatus() != ACTION_DONE)
             {
+                char data[3];
+                data[0] = 0;
+                data[1] = 0;
+                data[2] = 0;
+                this->serialPort->write(data, 3);
                 this->stopExecuting();
                 //send stop command to turret, target is gone or moved!
             }
@@ -85,12 +102,26 @@ bool SimpleCommunicator::draw(int status, Mat* image, Blob* blob)
 void* checkExecuting(void* communicator)
 {
     SimpleCommunicator* simpleCommunicator = (SimpleCommunicator*) communicator;
-    while(true)
+    char data[6];
+    data[5] = '\0';
+    while(!simpleCommunicator->stopThread)
     {
+        std::cout << "thread tick" << std::endl;
+        while(!simpleCommunicator->isExecuting() && !simpleCommunicator->stopThread);
         if(simpleCommunicator->isExecuting())
         {
-            //wait for feedback from turret
-            simpleCommunicator->stopExecuting();
+            std::cout << "thread is executing" << std::endl;
+            while(simpleCommunicator->serialPort->peek(data, 5) != 5 && !simpleCommunicator->stopThread);
+            if(simpleCommunicator->serialPort->peek(data, 5) >= 5)
+            {
+                simpleCommunicator->serialPort->read(data, 5);
+                std::cout << "Received: " << data << std::endl;
+                if(data[0] == 'd' && data[1] == 'o' && data[2] == 'n' && data[3] == 'e' && data[4] == ';')
+                {
+                    std::cout << "same" << std::endl;
+                    simpleCommunicator->stopExecuting();
+                }
+            }
         }
     }
     return NULL;
@@ -98,6 +129,8 @@ void* checkExecuting(void* communicator)
 
 bool SimpleCommunicator::configure()
 {
+    this->serialPort->open(QIODevice::ReadWrite);
+    pthread_create(&this->thread, NULL, checkExecuting, (void*) this);
     this->configured = true;
     return true;
 }
