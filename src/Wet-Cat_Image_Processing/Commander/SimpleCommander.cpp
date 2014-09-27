@@ -1,9 +1,15 @@
 #include "SimpleCommander.h"
+#include "Defines.h"
 
 SimpleCommander::SimpleCommander(SimpleCommunicator* simpleCommunicator)
 {
     this->simpleCommunicator = simpleCommunicator;
     this->configured = false;
+}
+
+SimpleCommander::~SimpleCommander()
+{
+
 }
 
 bool SimpleCommander::execute(Image *image)
@@ -13,10 +19,9 @@ bool SimpleCommander::execute(Image *image)
         unsigned i = 0;
         for(i = 0; i < image->getBlobs().size(); i++)
         {
-            std::cout << image->getBlob(i)->getStatus() << std::endl;
-            if(image->getBlob(i)->getStatus() >= 10 && image->getBlob(i)->getStatus() < 20)
+            if(image->getBlob(i)->getStatus() == SEEN)
             {
-                image->getBlob(i)->setStatus(11);
+                image->getBlob(i)->setStatus(ACTION_READY);
                 break;
             }
         }

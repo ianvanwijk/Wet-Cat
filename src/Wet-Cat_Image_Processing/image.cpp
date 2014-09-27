@@ -7,6 +7,7 @@ Image::Image()
 Image::~Image()
 {
     this->clearBlobs();
+    this->clearOldBlobs();
 }
 
 Mat Image::getFrame()

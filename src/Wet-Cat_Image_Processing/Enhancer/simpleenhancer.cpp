@@ -5,6 +5,14 @@ SimpleEnhancer::SimpleEnhancer()
     this->configured = false;
 }
 
+SimpleEnhancer::~SimpleEnhancer()
+{
+    while(this->enhancers.size() != 0)
+    {
+        this->enhancers.pop_back();
+    }
+}
+
 bool SimpleEnhancer::execute(Image* image)
 {
     unsigned i = 0;
@@ -37,4 +45,5 @@ bool SimpleEnhancer::setConfiguration(int threshold)
     }
     this->enhancers.push_back(new GrayScaleEnhancer);
     this->enhancers.push_back(new ThresholdEnhancer(threshold, 255));
+    return true;
 }

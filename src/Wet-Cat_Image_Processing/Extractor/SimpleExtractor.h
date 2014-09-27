@@ -8,6 +8,7 @@ class SimpleExtractor : IExecutable
 {
 public:
     SimpleExtractor();
+    virtual ~SimpleExtractor();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();

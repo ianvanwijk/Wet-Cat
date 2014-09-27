@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -50,7 +51,8 @@ HEADERS  += \
     Commander/SimpleCommander.h \
     Communicator/SimpleCommunicator.h \
     Blob.h \
-    Segmenter/Segmenters/DetectBlobSegmenter.h
+    Segmenter/Segmenters/DetectBlobSegmenter.h \
+    Defines.h
 
 FORMS    += wetcatimageprocessing.ui
 

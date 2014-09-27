@@ -7,7 +7,7 @@ class SimpleAcquirer : IExecutable
 {
 public:
     SimpleAcquirer();
-    ~SimpleAcquirer();
+    virtual ~SimpleAcquirer();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();

@@ -1,5 +1,6 @@
 #include "WetCatImageProcessing.h"
 #include "ui_wetcatimageprocessing.h"
+#include "Defines.h"
 
 WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     QMainWindow(parent),
@@ -26,6 +27,16 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
 WetCatImageProcessing::~WetCatImageProcessing()
 {
     destroyAllWindows();
+    delete this->acquirer;
+    delete this->enhancer;
+    delete this->segmenter;
+    delete this->extractor;
+    delete this->classifier;
+    delete this->commander;
+    delete this->communicator;
+    delete this->image;
+    delete this->timer;
+    delete this->elapsedTimer;
     delete ui;
 }
 
@@ -153,7 +164,7 @@ void WetCatImageProcessing::on_BT_Show_clicked()
 {
     if(this->acquirer->isConfigured() && this->enhancer->isConfigured() && this->segmenter->isConfigured() && this->extractor->isConfigured() && this->classifier->isConfigured() && this->commander->isConfigured() && this->communicator->isConfigured())
     {
-        this->timer->start(1000/24);
+        this->timer->start(1000/FPS);
         this->elapsedTimer->start();
     }
 }

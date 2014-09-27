@@ -8,6 +8,7 @@ class SimpleCommander : IExecutable
 {
 public:
     SimpleCommander(SimpleCommunicator* simpleCommunicator);
+    virtual ~SimpleCommander();
     bool execute(Image *image);
     bool configure();
     bool isConfigured();

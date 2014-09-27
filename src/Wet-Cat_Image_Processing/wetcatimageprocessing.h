@@ -24,7 +24,7 @@ class WetCatImageProcessing : public QMainWindow
 
 public:
     explicit WetCatImageProcessing(QWidget *parent = 0);
-    ~WetCatImageProcessing();
+    virtual ~WetCatImageProcessing();
 
 private slots:
     void on_BT_Acquire_clicked();

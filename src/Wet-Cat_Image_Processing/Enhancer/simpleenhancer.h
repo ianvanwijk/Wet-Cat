@@ -10,6 +10,7 @@ class SimpleEnhancer : IExecutable
 {
 public:
     SimpleEnhancer();
+    virtual ~SimpleEnhancer();
     virtual bool execute(Image* image);
     virtual bool configure();
     virtual bool isConfigured();
