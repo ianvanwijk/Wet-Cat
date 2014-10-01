@@ -54,7 +54,6 @@ HEADERS  += \
     Segmenter/Segmenters/DetectBlobSegmenter.h \
     Defines.h
 
-FORMS    += wetcatimageprocessing.ui
 
 INCLUDEPATH += "../OpenCV/include"
 
@@ -69,4 +68,7 @@ LIBS += "../OpenCV/bin/libopencv_core249.dll"       \
         "../OpenCV/bin/libopencv_legacy249.dll"    \
         "../OpenCV/bin/libopencv_ml249.dll"    \
         "../OpenCV/bin/libopencv_objdetect249.dll"    \
-        "../OpenCV/bin/libopencv_video249.dll"
+        "../OpenCV/bin/libopencv_video249.dll"      \
+        "../CVBlob/bin/libcvblob.dll"
+
+FORMS    += wetcatimageprocessing.ui
