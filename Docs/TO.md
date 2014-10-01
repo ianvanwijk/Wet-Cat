@@ -144,6 +144,50 @@ Als deze onderdelen op de CNC machine gemaakt kunnen worden zal dit erg veel kos
 
 ### Protocollen
 
+#### Image Processing <-> Aiming
+
+Om de Wet-Cat Image Processing (WCIP) en de Wet-Cat Aiming (WCA) software met elkaar te laten communiceren is er een protocol opgesteld waaraan voldaan moet worden. Om het protocol inzichtelijk te houden hebben we per functionaliteit een commando gedefineerd.
+
+##### STOP
+
+Dit is een commando dat aangeeft dat de turret per direct moet stoppen waar hij mee bezig is en naar zijn standaard positie moet terugkeren. Dit commando word, bijvoorbeeld, gebruikt op het moment dat de kat die gedetecteerd werd weg springt. Als de turret op dat moment nog aan het schieten is zal deze moeten stoppen.
+
+Het commando ziet er als volgd uit:
+
+`#000;`
+
+##### AIM & FIRE
+
+Dit commando geeft de coordinaten van het doel door en geeft het commando om te schieten door. Het commando om te schieten hangt af van de verschillende soorten doelen, de coordinaten zullen tussen 0 en 800 vallen.
+
+Het commando ziet er als volgd uit, met X als X coordinaat, Y als Y coordinaat en Z als schiet commando:
+
+`#X,Y,Z;`
+
+##### DONE
+
+Het `Done` commando is het commando dat de WCA terug geeft aan de WCIP op het moment dat hij klaar is met schieten, na dit commando weet de WCIP dat de WCA weer vrij is om op een ander doel te schieten.
+
+Het commando ziet er als volgd uit:
+
+`#done;`
+
+##### MOVEMENT
+
+Ook is er een commando om de WCA handmatig te verstellen. Dit is nodig om deze te callibreren, het commando gaat weer van X en Y waardes uit, alleen dit keer zijn dit het aantal punten dat de turret naar links(positief) of naar rechts(negatief) moet bewegen, hetzelfde geld voor naar boven en onder op de Y as.
+
+Het commando ziet er als volgd uit, met X als X coordinaat en Y als Y coordinaat:
+
+`#X,Y;`
+
+##### SET
+
+Als laatste is er een commando om de hoeken van het bereik van de WCA te bepalen. Ook dit is om de WCA te calibreren. Op het moment dat er een hoek word ingesteld zal het huidige punt het maximale punt worden in die richting. Er zijn twee punten te calibreren: links-boven en rechts-onder.
+
+Het commando ziet er als volgd uit, met X als hoek waar 0 links-boven is en 1 rechts-onder:
+
+`#X;`
+
 ### Code Guidelines
 
 Binnen dit project gaan we C++ code schrijven, om te zorgen dat alle code gelijk blijft zijn er een aantal richtlijnen waaraan de code moet voldoen. Dit zorgd voor een overzichtelijke en nette code.

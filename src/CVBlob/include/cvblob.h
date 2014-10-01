@@ -37,7 +37,7 @@
 #include <limits>
 
 #if (defined(_WIN32) || defined(__WIN32__) || defined(__TOS_WIN__) || defined(__WINDOWS__) || (defined(__APPLE__) & defined(__MACH__)))
-#include <cv.h>
+#include <opencv/cv.h>
 #else
 #include <opencv/cv.h>
 #endif
@@ -536,9 +536,9 @@ extern "C" {
   /// \fn cvUpdateTracks(CvBlobs const &b, CvTracks &t, const double thDistance, const unsigned int thInactive, const unsigned int thActive=0)
   /// \brief Updates list of tracks based on current blobs.
   /// Tracking based on:
-  /// A. Senior, A. Hampapur, Y-L Tian, L. Brown, S. Pankanti, R. Bolle. Appearance Models for
-  /// Occlusion Handling. Second International workshop on Performance Evaluation of Tracking and
-  /// Surveillance Systems & CVPR'01. December, 2001.
+  /// A. Senior, A. Hampapur, Y-L Tian, L. Brown, S. Pankanti, R. Bolle. Appearance Models for
+  /// Occlusion Handling. Second International workshop on Performance Evaluation of Tracking and
+  /// Surveillance Systems & CVPR'01. December, 2001.
   /// (http://www.research.ibm.com/peoplevision/PETS2001.pdf)
   /// \param b List of blobs.
   /// \param t List of tracks.

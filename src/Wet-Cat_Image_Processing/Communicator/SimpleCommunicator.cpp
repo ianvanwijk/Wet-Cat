@@ -8,7 +8,8 @@ SimpleCommunicator::SimpleCommunicator()
     this->configured = false;
     this->executing = false;
     this->serialPort = new QSerialPort();
-    this->serialPort->setPortName("COM2");
+    this->serialPort->setPortName(COMPORT);
+    this->serialPort->setBaudRate(BAUDRATE);
     this->stopThread = false;
     //start thread and use checkExecuting for function
 }

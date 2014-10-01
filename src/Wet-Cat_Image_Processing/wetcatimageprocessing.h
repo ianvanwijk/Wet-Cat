@@ -58,6 +58,8 @@ private:
 
     int minArea;
     int maxArea;
+
+    bool load();
 };
 
 #endif // WETCATIMAGEPROCESSING_H
