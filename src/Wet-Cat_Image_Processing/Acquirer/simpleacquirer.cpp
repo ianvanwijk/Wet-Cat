@@ -29,6 +29,7 @@ bool SimpleAcquirer::execute(Image* image)
 
 bool SimpleAcquirer::configure()
 {
+    cam = new VideoCapture(0);
     cam = new VideoCapture(CAMERA);
     this->configured = true;
     return true;
