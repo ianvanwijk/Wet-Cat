@@ -4,6 +4,16 @@
 //blob movement possibility
 #define MAX_MOVEMENT 75
 
+//blob types
+#define CAT1 1
+#define CAT2 2
+#define CAT3 3
+#define DANGER1 4
+#define DANGER2 5
+#define DANGER3 6
+#define DANGER4 7
+#define REMOVE 8
+#define NONE 0
 
 //blob statuses
 #define FIRST_SEEN 1
