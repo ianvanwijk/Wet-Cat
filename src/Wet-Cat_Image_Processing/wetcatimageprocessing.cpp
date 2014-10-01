@@ -22,6 +22,20 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     connect(this->timer, SIGNAL(timeout()), this, SLOT(updateTimer()));
     namedWindow("Frame", WINDOW_OPENGL);
     namedWindow("Image", WINDOW_OPENGL);
+    namedWindow("Debug", WINDOW_OPENGL);
+}
+
+bool WetCatImageProcessing::load()
+{
+    Image* image = new Image();
+    image->setFrame(imread("C:/mask5.bmp"));
+    image->setImage(imread("C:/mask5.bmp"));
+    this->enhancer->execute(image);
+    this->classifier->load(image);
+    image->setFrame(imread("C:/mask3.bmp"));
+    image->setImage(imread("C:/mask3.bmp"));
+    this->enhancer->execute(image);
+    return this->classifier->load(image);
 }
 
 WetCatImageProcessing::~WetCatImageProcessing()
@@ -158,6 +172,7 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
             ui->statusBar->showMessage(info);
         }
     }
+    load();
 }
 
 void WetCatImageProcessing::on_BT_Show_clicked()
