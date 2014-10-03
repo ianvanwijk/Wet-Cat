@@ -3,6 +3,9 @@
 
 #include "../IExecutable.h"
 #include "Extractors/DummyExtractor.h"
+#include <QStringList>
+#include <QString>
+#include <QFile>
 
 class SimpleExtractor : IExecutable
 {
@@ -11,6 +14,7 @@ public:
     virtual ~SimpleExtractor();
     virtual bool execute(Image* image);
     virtual bool configure();
+    virtual bool configure(QString configurationFile);
     virtual bool isConfigured();
 private:
     bool configured;

@@ -12,6 +12,7 @@ public:
     virtual ~SimpleClassifier();
     virtual bool execute(Image* image);
     virtual bool configure();
+    virtual bool configure(QString configurationFile);
     virtual bool isConfigured();
 private:
     bool configured;

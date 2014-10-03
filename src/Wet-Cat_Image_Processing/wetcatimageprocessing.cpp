@@ -108,7 +108,7 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
 {
     if(!this->acquirer->isConfigured())
     {
-        if(!this->acquirer->configure())
+        if(!this->acquirer->configure("acquirer.dat"))
         {
             info.append(QString("error configuring acquirer!"));
             ui->statusBar->showMessage(info);
@@ -116,7 +116,7 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
     }
     if(!this->enhancer->isConfigured())
     {
-        if(!this->enhancer->configure())
+        if(!this->enhancer->configure("enhancer.dat"))
         {
             info.append(QString("error configuring enhancer!"));
             ui->statusBar->showMessage(info);
@@ -124,7 +124,7 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
     }
     if(!this->segmenter->isConfigured())
     {
-        if(!this->segmenter->configure())
+        if(!this->segmenter->configure("segmenter.dat"))
         {
             info.append(QString("error configuring segmenter!"));
             ui->statusBar->showMessage(info);
@@ -132,7 +132,7 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
     }
     if(!this->extractor->isConfigured())
     {
-        if(!this->extractor->configure())
+        if(!this->extractor->configure("extractor.dat"))
         {
             info.append(QString("error configuring extractor!"));
             ui->statusBar->showMessage(info);
@@ -156,7 +156,7 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
     }
     if(!this->communicator->isConfigured())
     {
-        if(!this->communicator->configure())
+        if(!this->communicator->configure("communicator.dat"))
         {
             info.append(QString("error configuring communicator!"));
             ui->statusBar->showMessage(info);

@@ -8,8 +8,6 @@ SimpleCommunicator::SimpleCommunicator()
     this->configured = false;
     this->executing = false;
     this->serialPort = new QSerialPort();
-    this->serialPort->setPortName(COMPORT);
-    this->serialPort->setBaudRate(BAUDRATE);
     this->stopThread = false;
     //start thread and use checkExecuting for function
 }
@@ -130,6 +128,25 @@ void* checkExecuting(void* communicator)
 
 bool SimpleCommunicator::configure()
 {
+    this->serialPort->setPortName(COMPORT);
+    this->serialPort->setBaudRate(BAUDRATE);
+    this->serialPort->open(QIODevice::ReadWrite);
+    pthread_create(&this->thread, NULL, checkExecuting, (void*) this);
+    this->configured = true;
+    return true;
+}
+
+bool SimpleCommunicator::configure(QString configurationFile)
+{
+    QFile file(configurationFile);
+    if(!file.open(QIODevice::ReadWrite))
+    {
+        return configure();
+    }
+    QString string = file.readLine();
+    this->serialPort->setPortName(string.split("=").back());
+    string = file.readLine();
+    this->serialPort->setBaudRate(string.split("=").back().toInt());
     this->serialPort->open(QIODevice::ReadWrite);
     pthread_create(&this->thread, NULL, checkExecuting, (void*) this);
     this->configured = true;

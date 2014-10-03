@@ -35,6 +35,11 @@ bool SimpleCommander::configure()
     return true;
 }
 
+bool SimpleCommander::configure(QString configurationFile)
+{
+    return configure();
+}
+
 bool SimpleCommander::isConfigured()
 {
     return this->configured;

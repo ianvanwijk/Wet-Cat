@@ -31,6 +31,27 @@ bool SimpleSegmenter::configure()
     return true;
 }
 
+bool SimpleSegmenter::configure(QString configurationFile)
+{
+    QFile file(configurationFile);
+    if(!file.open(QIODevice::ReadWrite))
+    {
+        return configure();
+    }
+    QString string = file.readLine();
+    if(string.split("=").back() == "true")
+    {
+        int min, max;
+        string = file.readLine();
+        min = string.split("=").back().toInt();
+        string = file.readLine();
+        max = string.split("=").back().toInt();
+        this->segmenters.push_back(new DetectBlobSegmenter(min, max));
+    }
+    this->configured = true;
+    return true;
+}
+
 bool SimpleSegmenter::isConfigured()
 {
     return this->configured;

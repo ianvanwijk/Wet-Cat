@@ -9,9 +9,10 @@ class SimpleCommander : IExecutable
 public:
     SimpleCommander(SimpleCommunicator* simpleCommunicator);
     virtual ~SimpleCommander();
-    bool execute(Image *image);
-    bool configure();
-    bool isConfigured();
+    virtual bool execute(Image *image);
+    virtual bool configure();
+    virtual bool configure(QString configurationFile);
+    virtual bool isConfigured();
 private:
     bool configured;
     SimpleCommunicator* simpleCommunicator;

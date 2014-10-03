@@ -33,6 +33,32 @@ bool SimpleEnhancer::configure()
     return true;
 }
 
+bool SimpleEnhancer::configure(QString configurationFile)
+{
+    QFile file(configurationFile);
+    if(!file.open(QIODevice::ReadWrite))
+    {
+        return configure();
+    }
+    QString string = file.readLine();
+    if(string.split("=").back() == "true")
+    {
+        this->enhancers.push_back(new GrayScaleEnhancer());
+    }
+    string = file.readLine();
+    if(string.split("=").back() == "true")
+    {
+        int start, max;
+        string = file.readLine();
+        start = string.split("=").back().toInt();
+        string = file.readLine();
+        max = string.split("=").back().toInt();
+        this->enhancers.push_back(new ThresholdEnhancer(start, max));
+    }
+    this->configured = true;
+    return true;
+}
+
 bool SimpleEnhancer::isConfigured()
 {
     return this->configured;

@@ -4,15 +4,19 @@
 #include "../IExecutable.h"
 #include <QtSerialPort/QSerialPort>
 #include <pthread.h>
+#include <QStringList>
+#include <QString>
+#include <QFile>
 
 class SimpleCommunicator : IExecutable
 {
 public:
     SimpleCommunicator();
     virtual ~SimpleCommunicator();
-    bool execute(Image *image);
-    bool configure();
-    bool isConfigured();
+    virtual bool execute(Image *image);
+    virtual bool configure();
+    virtual bool configure(QString configurationFile);
+    virtual bool isConfigured();
     bool isExecuting();
     bool stopExecuting();
     bool draw(int status, Mat* image, Blob* blob);

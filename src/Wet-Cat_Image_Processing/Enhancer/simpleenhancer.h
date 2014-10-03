@@ -5,6 +5,9 @@
 #include "Enhancers/DummyEnhancer.h"
 #include "Enhancers/GrayScaleEnhancer.h"
 #include "Enhancers/ThresholdEnhancer.h"
+#include <QStringList>
+#include <QString>
+#include <QFile>
 
 class SimpleEnhancer : IExecutable
 {
@@ -13,6 +16,7 @@ public:
     virtual ~SimpleEnhancer();
     virtual bool execute(Image* image);
     virtual bool configure();
+    virtual bool configure(QString configurationFile);
     virtual bool isConfigured();
     bool setConfiguration(int threshold);
 private:

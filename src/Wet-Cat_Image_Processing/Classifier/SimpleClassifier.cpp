@@ -66,6 +66,11 @@ bool SimpleClassifier::configure()
     return true;
 }
 
+bool SimpleClassifier::configure(QString configurationFile)
+{
+    return configure();
+}
+
 bool SimpleClassifier::isConfigured()
 {
     return this->configured;

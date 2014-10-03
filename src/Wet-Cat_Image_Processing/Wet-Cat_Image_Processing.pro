@@ -66,11 +66,11 @@ LIBS += "../OpenCV/bin/libopencv_core249.dll"       \
         "../OpenCV/bin/libopencv_features2d249.dll" \
         "../OpenCV/bin/libopencv_calib3d249.dll"    \
         "../OpenCV/bin/libopencv_contrib249.dll"    \
-        "../OpenCV/bin/libopencv_flann249.dll"    \
-        "../OpenCV/bin/libopencv_gpu249.dll"    \
-        "../OpenCV/bin/libopencv_legacy249.dll"    \
-        "../OpenCV/bin/libopencv_ml249.dll"    \
-        "../OpenCV/bin/libopencv_objdetect249.dll"    \
+        "../OpenCV/bin/libopencv_flann249.dll"      \
+        "../OpenCV/bin/libopencv_gpu249.dll"        \
+        "../OpenCV/bin/libopencv_legacy249.dll"     \
+        "../OpenCV/bin/libopencv_ml249.dll"         \
+        "../OpenCV/bin/libopencv_objdetect249.dll"  \
         "../OpenCV/bin/libopencv_video249.dll"      \
         "../CVBlob/bin/libcvblob.dll"
 

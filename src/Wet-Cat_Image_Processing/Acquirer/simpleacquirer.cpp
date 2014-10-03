@@ -29,8 +29,20 @@ bool SimpleAcquirer::execute(Image* image)
 
 bool SimpleAcquirer::configure()
 {
-    cam = new VideoCapture(0);
     cam = new VideoCapture(CAMERA);
+    this->configured = true;
+    return true;
+}
+
+bool SimpleAcquirer::configure(QString configurationFile)
+{
+    QFile file(configurationFile);
+    if(!file.open(QIODevice::ReadWrite))
+    {
+        return configure();
+    }
+    QString string = file.readLine();
+    cam = new VideoCapture(string.split("=").back().toInt());
     this->configured = true;
     return true;
 }
