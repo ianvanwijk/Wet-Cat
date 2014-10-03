@@ -6,6 +6,7 @@
 
 QT       += core gui
 QT       += serialport
+QT       += opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,7 +30,8 @@ SOURCES += main.cpp\
     Commander/SimpleCommander.cpp \
     Communicator/SimpleCommunicator.cpp \
     Blob.cpp \
-    Segmenter/Segmenters/DetectBlobSegmenter.cpp
+    Segmenter/Segmenters/DetectBlobSegmenter.cpp \
+    OpenCVViewer/cqtopencvviewergl.cpp
 
 HEADERS  += \
     Enhancer/IEnhancer.h \
@@ -52,7 +54,8 @@ HEADERS  += \
     Communicator/SimpleCommunicator.h \
     Blob.h \
     Segmenter/Segmenters/DetectBlobSegmenter.h \
-    Defines.h
+    Defines.h \
+    OpenCVViewer/cqtopencvviewergl.h
 
 
 INCLUDEPATH += "../OpenCV/include"

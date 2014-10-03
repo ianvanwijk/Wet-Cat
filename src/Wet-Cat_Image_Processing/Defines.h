@@ -1,6 +1,11 @@
 #ifndef DEFINES_H
 #define DEFINES_H
 
+#define START_MIN_AREA 6000
+#define START_MAX_AREA 10000
+#define START_THRESHOLD 100
+#define MAX_THRESHOLD 255
+
 //blob movement possibility
 #define MAX_MOVEMENT 75
 
@@ -26,7 +31,7 @@
 #define FPS 2
 
 //camera to use
-#define CAMERA 1
+#define CAMERA 0
 
 //UART settings
 #define COMPORT "COM2"

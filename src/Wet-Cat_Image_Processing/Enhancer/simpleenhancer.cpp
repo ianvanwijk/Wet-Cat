@@ -1,4 +1,5 @@
 #include "SimpleEnhancer.h"
+#include "../Defines.h"
 
 SimpleEnhancer::SimpleEnhancer()
 {
@@ -26,7 +27,7 @@ bool SimpleEnhancer::execute(Image* image)
 bool SimpleEnhancer::configure()
 {
     this->enhancers.push_back(new GrayScaleEnhancer());
-    this->enhancers.push_back(new ThresholdEnhancer(100, 255));
+    this->enhancers.push_back(new ThresholdEnhancer(START_THRESHOLD, MAX_THRESHOLD));
 
     this->configured = true;
     return true;
@@ -44,6 +45,6 @@ bool SimpleEnhancer::setConfiguration(int threshold)
         this->enhancers.pop_back();
     }
     this->enhancers.push_back(new GrayScaleEnhancer);
-    this->enhancers.push_back(new ThresholdEnhancer(threshold, 255));
+    this->enhancers.push_back(new ThresholdEnhancer(threshold, MAX_THRESHOLD));
     return true;
 }

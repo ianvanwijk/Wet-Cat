@@ -33,7 +33,7 @@ Mat DummyExtractor::getROI(Mat frame, Blob *blob)
     int posY = blob->getPosY();
     int size = blob->getSize();
     Rect regionOfInterest(posX - size, posY - size, size * 2, size * 2);
-    Mat frameCrop(image->getFrame(), ROI);
+    Mat frameCrop(frame, regionOfInterest);
     Mat frameRegion;
     frameCrop.copyTo(frameRegion);
     return frameRegion;

@@ -1,4 +1,5 @@
 #include "SimpleSegmenter.h"
+#include "../Defines.h"
 
 SimpleSegmenter::SimpleSegmenter()
 {
@@ -25,7 +26,7 @@ bool SimpleSegmenter::execute(Image* image)
 
 bool SimpleSegmenter::configure()
 {
-    this->segmenters.push_back(new DetectBlobSegmenter(6000, 10000));
+    this->segmenters.push_back(new DetectBlobSegmenter(START_MIN_AREA, START_MAX_AREA));
     this->configured = true;
     return true;
 }

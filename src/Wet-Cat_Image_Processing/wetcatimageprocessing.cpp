@@ -17,37 +17,30 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     this->image = new Image();
     this->timer = new QTimer(this);
     this->elapsedTimer = new QElapsedTimer();
-    this->minArea = 6000;
-    this->maxArea = 10000;
+    this->minArea = START_MIN_AREA;
+    this->maxArea = START_MAX_AREA;
     connect(this->timer, SIGNAL(timeout()), this, SLOT(updateTimer()));
-    namedWindow("Frame", WINDOW_OPENGL);
-    namedWindow("Image", WINDOW_OPENGL);
-    namedWindow("Debug", WINDOW_OPENGL);
-}
-
-bool WetCatImageProcessing::load()
-{
-    Image* image = new Image();
-    image->setFrame(imread("C:/mask5.bmp"));
-    image->setImage(imread("C:/mask5.bmp"));
-    this->enhancer->execute(image);
-    this->classifier->load(image);
-    image->setFrame(imread("C:/mask3.bmp"));
-    image->setImage(imread("C:/mask3.bmp"));
-    this->enhancer->execute(image);
-    return this->classifier->load(image);
+//    namedWindow("Frame", WINDOW_OPENGL);
+//    namedWindow("Image", WINDOW_OPENGL);
+//    namedWindow("Debug", WINDOW_OPENGL);
 }
 
 WetCatImageProcessing::~WetCatImageProcessing()
 {
-    destroyAllWindows();
-    delete this->acquirer;
-    delete this->enhancer;
-    delete this->segmenter;
-    delete this->extractor;
-    delete this->classifier;
-    delete this->commander;
-    delete this->communicator;
+    if(this->acquirer->isConfigured())
+        delete this->acquirer;
+    if(this->enhancer->isConfigured())
+        delete this->enhancer;
+    if(this->segmenter->isConfigured())
+        delete this->segmenter;
+    if(this->extractor->isConfigured())
+        delete this->extractor;
+    if(this->classifier->isConfigured())
+        delete this->classifier;
+    if(this->commander->isConfigured())
+        delete this->commander;
+    if(this->communicator->isConfigured())
+        delete this->communicator;
     delete this->image;
     delete this->timer;
     delete this->elapsedTimer;
@@ -96,10 +89,11 @@ void WetCatImageProcessing::updateTimer()
             info.append(QString("error communicating image!"));
             ui->statusBar->showMessage(info);
         }
-        imshow("Frame", this->image->getFrame());
-        updateWindow("Frame");
-        imshow("Image", this->image->getImage());
-        updateWindow("Image");
+        this->ui->OpenCVViewer->showImage(this->image->getImage());
+//        imshow("Frame", this->image->getFrame());
+//        updateWindow("Frame");
+//        imshow("Image", this->image->getImage());
+//        updateWindow("Image");
     }
     else
     {
@@ -108,10 +102,6 @@ void WetCatImageProcessing::updateTimer()
     }
     secs = this->elapsedTimer->nsecsElapsed() - secs;
     std::cout << secs/1000000 << std::endl;
-}
-
-void WetCatImageProcessing::on_BT_Acquire_clicked()
-{
 }
 
 void WetCatImageProcessing::on_BT_Configure_clicked()
@@ -172,7 +162,8 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
             ui->statusBar->showMessage(info);
         }
     }
-    load();
+    this->ui->BT_Configure->setEnabled(false);
+    this->ui->BT_Show->setEnabled(true);
 }
 
 void WetCatImageProcessing::on_BT_Show_clicked()
@@ -181,7 +172,20 @@ void WetCatImageProcessing::on_BT_Show_clicked()
     {
         this->timer->start(1000/FPS);
         this->elapsedTimer->start();
+        this->ui->BT_Show->setEnabled(false);
+        this->ui->BT_Add_Danger->setEnabled(true);
+        this->ui->BT_Remove_Danger->setEnabled(true);
     }
+}
+
+void WetCatImageProcessing::on_BT_Add_Danger_clicked()
+{
+
+}
+
+void WetCatImageProcessing::on_BT_Remove_Danger_clicked()
+{
+
 }
 
 void WetCatImageProcessing::on_VS_threshold_valueChanged(int value)

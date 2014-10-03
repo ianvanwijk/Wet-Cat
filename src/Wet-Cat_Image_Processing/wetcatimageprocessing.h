@@ -2,17 +2,17 @@
 #define WETCATIMAGEPROCESSING_H
 
 #include <QMainWindow>
+#include <QAbstractSlider>
+#include <QElapsedTimer>
+#include <QTimer>
 #include "Image.h"
 #include "Acquirer/SimpleAcquirer.h"
 #include "Enhancer/SimpleEnhancer.h"
 #include "Segmenter/SimpleSegmenter.h"
 #include "Extractor/SimpleExtractor.h"
+#include "Commander/SimpleCommander.h"
 #include "Classifier/SimpleClassifier.h"
 #include "Communicator/SimpleCommunicator.h"
-#include "Commander/SimpleCommander.h"
-#include <QAbstractSlider>
-#include <QTimer>
-#include <QElapsedTimer>
 
 namespace Ui {
 class WetCatImageProcessing;
@@ -27,39 +27,33 @@ public:
     virtual ~WetCatImageProcessing();
 
 private slots:
-    void on_BT_Acquire_clicked();
-
-    void on_BT_Configure_clicked();
-
-    void on_BT_Show_clicked();
-
     void updateTimer();
 
+    void on_BT_Configure_clicked();
+    void on_BT_Show_clicked();
+    void on_BT_Add_Danger_clicked();
+    void on_BT_Remove_Danger_clicked();
+
     void on_VS_threshold_valueChanged(int value);
-
     void on_VS_minSize_valueChanged(int value);
-
     void on_VS_maxSize_valueChanged(int value);
 
 private:
-    void acquire();
-    Ui::WetCatImageProcessing *ui;
     QString info;
     Image* image;
+    QTimer* timer;
     SimpleAcquirer* acquirer;
     SimpleEnhancer* enhancer;
     SimpleSegmenter* segmenter;
     SimpleExtractor* extractor;
+    SimpleCommander* commander;
     SimpleClassifier* classifier;
     SimpleCommunicator* communicator;
-    SimpleCommander* commander;
-    QTimer* timer;
+    Ui::WetCatImageProcessing *ui;
     QElapsedTimer* elapsedTimer;
 
     int minArea;
     int maxArea;
-
-    bool load();
 };
 
 #endif // WETCATIMAGEPROCESSING_H
