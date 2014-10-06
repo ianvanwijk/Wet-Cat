@@ -33,13 +33,14 @@ bool SimpleSegmenter::configure()
 
 bool SimpleSegmenter::configure(QString configurationFile)
 {
-    QFile file(configurationFile);
+    QFile file("Configuration/" + configurationFile);
     if(!file.open(QIODevice::ReadWrite))
     {
+        std::cout << "failed configuring segmenter" << std::endl;
         return configure();
     }
     QString string = file.readLine();
-    if(string.split("=").back() == "true")
+    if(string.split("=").back().toInt() == 1)
     {
         int min, max;
         string = file.readLine();

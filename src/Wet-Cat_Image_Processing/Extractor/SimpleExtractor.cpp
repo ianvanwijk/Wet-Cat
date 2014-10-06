@@ -32,13 +32,14 @@ bool SimpleExtractor::configure()
 
 bool SimpleExtractor::configure(QString configurationFile)
 {
-    QFile file(configurationFile);
+    QFile file("Configuration/" + configurationFile);
     if(!file.open(QIODevice::ReadWrite))
     {
+        std::cout << "failed configuring extractor" << std::endl;
         return configure();
     }
     QString string = file.readLine();
-    if(string.split("=").back() == "true")
+    if(string.split("=").back().toInt() == 1)
     {
         this->extractors.push_back(new DummyExtractor());
     }

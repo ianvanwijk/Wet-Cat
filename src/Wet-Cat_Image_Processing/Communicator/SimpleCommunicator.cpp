@@ -138,9 +138,10 @@ bool SimpleCommunicator::configure()
 
 bool SimpleCommunicator::configure(QString configurationFile)
 {
-    QFile file(configurationFile);
+    QFile file("Configuration/" + configurationFile);
     if(!file.open(QIODevice::ReadWrite))
     {
+        std::cout << "failed configuring communicator" << std::endl;
         return configure();
     }
     QString string = file.readLine();

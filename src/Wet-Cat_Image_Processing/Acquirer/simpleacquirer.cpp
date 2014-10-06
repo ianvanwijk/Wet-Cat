@@ -36,9 +36,10 @@ bool SimpleAcquirer::configure()
 
 bool SimpleAcquirer::configure(QString configurationFile)
 {
-    QFile file(configurationFile);
+    QFile file("Configuration/" + configurationFile);
     if(!file.open(QIODevice::ReadWrite))
     {
+        std::cout << "failed configuring acquirer" << std::endl;
         return configure();
     }
     QString string = file.readLine();

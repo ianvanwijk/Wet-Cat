@@ -28,25 +28,25 @@ bool SimpleEnhancer::configure()
 {
     this->enhancers.push_back(new GrayScaleEnhancer());
     this->enhancers.push_back(new ThresholdEnhancer(START_THRESHOLD, MAX_THRESHOLD));
-
     this->configured = true;
     return true;
 }
 
 bool SimpleEnhancer::configure(QString configurationFile)
 {
-    QFile file(configurationFile);
+    QFile file("Configuration/" + configurationFile);
     if(!file.open(QIODevice::ReadWrite))
     {
+        std::cout << "failed configuring enhancer" << std::endl;
         return configure();
     }
     QString string = file.readLine();
-    if(string.split("=").back() == "true")
+    if(string.split("=").back().toInt() == 1)
     {
         this->enhancers.push_back(new GrayScaleEnhancer());
     }
     string = file.readLine();
-    if(string.split("=").back() == "true")
+    if(string.split("=").back().toInt() == 1)
     {
         int start, max;
         string = file.readLine();
