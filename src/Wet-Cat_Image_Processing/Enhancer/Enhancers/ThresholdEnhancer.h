@@ -10,9 +10,9 @@ class ThresholdEnhancer : public IEnhancer
 public:
     ThresholdEnhancer(int Threshold, int Max);
     bool enhance(Image *image);
-private:
     int threshold;
     int max;
+private:
 };
 
 #endif // THRESHOLDENHANCER_H

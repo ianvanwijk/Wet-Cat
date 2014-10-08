@@ -26,6 +26,7 @@ bool SimpleEnhancer::execute(Image* image)
 
 bool SimpleEnhancer::configure()
 {
+    this->enhancers.push_back(new ResizeEnhancer(WIDTH, HEIGHT));
     this->enhancers.push_back(new GrayScaleEnhancer());
     this->enhancers.push_back(new ThresholdEnhancer(START_THRESHOLD, MAX_THRESHOLD));
     this->configured = true;
@@ -41,6 +42,16 @@ bool SimpleEnhancer::configure(QString configurationFile)
         return configure();
     }
     QString string = file.readLine();
+    if(string.split("=").back().toInt() == 1)
+    {
+        int width, height;
+        string = file.readLine();
+        width = string.split("=").back().toInt();
+        string = file.readLine();
+        height = string.split("=").back().toInt();
+        this->enhancers.push_back(new ResizeEnhancer(width, height));
+    }
+    string = file.readLine();
     if(string.split("=").back().toInt() == 1)
     {
         this->enhancers.push_back(new GrayScaleEnhancer());
@@ -66,11 +77,6 @@ bool SimpleEnhancer::isConfigured()
 
 bool SimpleEnhancer::setConfiguration(int threshold)
 {
-    while(this->enhancers.size() != 0)
-    {
-        this->enhancers.pop_back();
-    }
-    this->enhancers.push_back(new GrayScaleEnhancer);
-    this->enhancers.push_back(new ThresholdEnhancer(threshold, MAX_THRESHOLD));
+    dynamic_cast<ThresholdEnhancer*>(this->enhancers[1])->threshold = threshold;
     return true;
 }

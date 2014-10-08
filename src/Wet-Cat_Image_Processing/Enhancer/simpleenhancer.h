@@ -5,6 +5,7 @@
 #include "Enhancers/DummyEnhancer.h"
 #include "Enhancers/GrayScaleEnhancer.h"
 #include "Enhancers/ThresholdEnhancer.h"
+#include "Enhancers/ResizeEnhancer.h"
 #include <QStringList>
 #include <QString>
 #include <QFile>

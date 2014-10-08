@@ -20,9 +20,7 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     this->minArea = START_MIN_AREA;
     this->maxArea = START_MAX_AREA;
     connect(this->timer, SIGNAL(timeout()), this, SLOT(updateTimer()));
-//    namedWindow("Frame", WINDOW_OPENGL);
-//    namedWindow("Image", WINDOW_OPENGL);
-//    namedWindow("Debug", WINDOW_OPENGL);
+    namedWindow("Debug", WINDOW_OPENGL);
 }
 
 WetCatImageProcessing::~WetCatImageProcessing()
@@ -90,10 +88,8 @@ void WetCatImageProcessing::updateTimer()
             ui->statusBar->showMessage(info);
         }
         this->ui->OpenCVViewer->showImage(this->image->getImage());
-//        imshow("Frame", this->image->getFrame());
-//        updateWindow("Frame");
-//        imshow("Image", this->image->getImage());
-//        updateWindow("Image");
+        imshow("Debug", this->image->getFrame());
+        updateWindow("Debug");
     }
     else
     {

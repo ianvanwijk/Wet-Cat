@@ -11,6 +11,7 @@ public:
 private:
     int minArea;
     int maxArea;
+    SimpleBlobDetector* blobDetector;
 };
 
 #endif // DETECTBLOBSEGMENTER_H

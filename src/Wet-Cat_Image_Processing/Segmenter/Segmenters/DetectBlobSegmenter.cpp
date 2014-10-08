@@ -10,12 +10,18 @@ DetectBlobSegmenter::DetectBlobSegmenter(int MinArea, int MaxArea)
 bool DetectBlobSegmenter::segment(Image *image)
 {
     SimpleBlobDetector::Params params;
+    params.minDistBetweenBlobs = 50.0f;
+    params.filterByInertia = false;
+    params.filterByConvexity = false;
+    params.filterByColor = false;
+    params.filterByCircularity = false;
     params.filterByArea = true;
     params.minArea = this->minArea;
     params.maxArea = this->maxArea;
     SimpleBlobDetector* blobDetector = new SimpleBlobDetector(params);
     std::vector<KeyPoint> keypoints;
     blobDetector->detect(image->getFrame(), keypoints);
+    delete blobDetector;
 
     unsigned i = 0;
     unsigned j = 0;

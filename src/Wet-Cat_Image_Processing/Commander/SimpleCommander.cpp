@@ -32,7 +32,8 @@ bool SimpleCommander::execute(Image *image)
         {
             for(i = 0; i < image->getBlobs().size(); i++)
             {
-                if(image->getBlob(i)->getStatus() == SEEN)
+                if(image->getBlob(i)->getStatus() == SEEN &&
+                   image->getBlob(i)->getType() >= CAT1 && image->getBlob(i)->getType() <= CAT3)
                 {
                     image->getBlob(i)->setStatus(ACTION_READY);
                     break;
