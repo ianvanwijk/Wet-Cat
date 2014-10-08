@@ -12,6 +12,7 @@ bool ThresholdEnhancer::enhance(Image *image)
     {
         Mat thresholdImage;
         cv::threshold(image->getFrame(), thresholdImage, this->threshold, this->max, THRESH_BINARY);
+        cv::erode(thresholdImage, thresholdImage, Mat());
         image->setFrame(thresholdImage);
         return true;
     }

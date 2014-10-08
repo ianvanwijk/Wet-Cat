@@ -1,0 +1,5 @@
+Resize=0
+GrayScale=1
+Threshold=1
+Start=150
+Max=255

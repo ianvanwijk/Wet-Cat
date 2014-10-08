@@ -27,10 +27,14 @@
 #define ACTION_EXECUTE 4
 #define ACTION_DONE 5
 
+//default image size
+#define WIDTH 640
+#define HEIGHT 480
+
 //fps of timertick (2 fps, = 500ms)
 #define FPS 2
 
-//camera to use
+//default camera to use
 #define CAMERA 0
 
 //UART settings

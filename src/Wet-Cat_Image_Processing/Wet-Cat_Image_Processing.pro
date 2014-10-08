@@ -32,7 +32,8 @@ SOURCES += main.cpp\
     Blob.cpp \
     Segmenter/Segmenters/DetectBlobSegmenter.cpp \
     OpenCVViewer/cqtopencvviewergl.cpp \
-    DangerZone.cpp
+    DangerZone.cpp \
+    Enhancer/Enhancers/ResizeEnhancer.cpp
 
 HEADERS  += \
     Enhancer/IEnhancer.h \
@@ -57,7 +58,8 @@ HEADERS  += \
     Segmenter/Segmenters/DetectBlobSegmenter.h \
     Defines.h \
     OpenCVViewer/cqtopencvviewergl.h \
-    DangerZone.h
+    DangerZone.h \
+    Enhancer/Enhancers/ResizeEnhancer.h
 
 
 INCLUDEPATH += "../OpenCV/include"
