@@ -12,7 +12,6 @@ public:
     ArucoSegmenter();
     virtual bool segment(Image *image);
     aruco::MarkerDetector* MDetector;
-    vector<aruco::Marker> Markers;
 };
 
 #endif // ARUCOSEGMENTER_H

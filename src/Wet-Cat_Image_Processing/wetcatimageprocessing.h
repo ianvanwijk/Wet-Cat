@@ -51,9 +51,6 @@ private:
     SimpleCommunicator* communicator;
     Ui::WetCatImageProcessing *ui;
     QElapsedTimer* elapsedTimer;
-
-    int minArea;
-    int maxArea;
 };
 
 #endif // WETCATIMAGEPROCESSING_H

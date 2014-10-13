@@ -42,8 +42,11 @@ bool SimpleCommunicator::execute(Image *image)
                     char data[3];
                     data[0] = image->getBlob(i)->getType();
                     data[1] = image->getBlob(i)->getPosX();
+                    data[2] = image->getBlob(i)->getPosX();
                     data[2] = image->getBlob(i)->getPosY();
-                    //this->serialPort->write(data, 3);
+                    data[2] = image->getBlob(i)->getPosY();
+                    //send command to turret, cat found!
+                    this->serialPort->write(data, 5);
                     image->getBlob(i)->setStatus(ACTION_EXECUTE);
                 }
                 //check if turret is done
@@ -58,7 +61,7 @@ bool SimpleCommunicator::execute(Image *image)
                 data[0] = 0;
                 data[1] = 0;
                 data[2] = 0;
-                //this->serialPort->write(data, 3);
+                this->serialPort->write(data, 3);
                 this->stopExecuting();
                 //send stop command to turret, target is gone or moved!
             }
@@ -72,6 +75,7 @@ bool SimpleCommunicator::execute(Image *image)
 
 bool SimpleCommunicator::draw(int status, Mat* image, Blob* blob)
 {
+    Mat frame = *image;
     Scalar red(0, 0, 255); //red
     Scalar green(0, 255, 0); //green
     Scalar blue(255, 0, 0); //blue
@@ -86,17 +90,18 @@ bool SimpleCommunicator::draw(int status, Mat* image, Blob* blob)
 
     if(status == ACTION_EXECUTE)
     {
-        rectangle(*image, p1, p2, red);
+        blob->getMarker().draw(frame, red, 2, false);
     }
     else if(status == ACTION_DONE)
     {
-        rectangle(*image, p1, p2, blue);
+        blob->getMarker().draw(frame, blue, 2, false);
     }
     else
     {
-        rectangle(*image, p1, p2, green);
+        blob->getMarker().draw(frame, green, 2, false);
     }
-    putText(*image, QString::number(number).toStdString(), p1, FONT_HERSHEY_SCRIPT_SIMPLEX, 2, Scalar::all(0));
+    *image = frame;
+    putText(*image, QString::number(number).toStdString(), p1, FONT_HERSHEY_SCRIPT_SIMPLEX, 2, Scalar::all(255));
     return true;
 }
 

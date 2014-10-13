@@ -6,7 +6,7 @@
 class DetectBlobSegmenter : public ISegmenter
 {
 public:
-    DetectBlobSegmenter(int MinArea, int MaxArea);
+    DetectBlobSegmenter();
     virtual bool segment(Image *image);
 private:
     int minArea;

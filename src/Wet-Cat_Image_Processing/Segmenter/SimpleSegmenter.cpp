@@ -26,7 +26,7 @@ bool SimpleSegmenter::execute(Image* image)
 
 bool SimpleSegmenter::configure()
 {
-    this->segmenters.push_back(new DetectBlobSegmenter(START_MIN_AREA, START_MAX_AREA));
+    this->segmenters.push_back(new DetectBlobSegmenter());
     this->configured = true;
     return true;
 }
@@ -47,12 +47,7 @@ bool SimpleSegmenter::configure(QString configurationFile)
     string = file.readLine();
     if(string.split("=").back().toInt() == 1)
     {
-        int min, max;
-        string = file.readLine();
-        min = string.split("=").back().toInt();
-        string = file.readLine();
-        max = string.split("=").back().toInt();
-        this->segmenters.push_back(new DetectBlobSegmenter(min, max));
+        this->segmenters.push_back(new DetectBlobSegmenter());
     }
     this->configured = true;
     return true;
@@ -61,14 +56,4 @@ bool SimpleSegmenter::configure(QString configurationFile)
 bool SimpleSegmenter::isConfigured()
 {
     return this->configured;
-}
-
-bool SimpleSegmenter::setConfiguration(int minArea, int maxArea)
-{
-    while(this->segmenters.size() != 0)
-    {
-        this->segmenters.pop_back();
-    }
-    this->segmenters.push_back(new DetectBlobSegmenter(minArea, maxArea));
-    return true;
 }

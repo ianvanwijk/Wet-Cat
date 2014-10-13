@@ -17,10 +17,7 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     this->image = new Image();
     this->timer = new QTimer(this);
     this->elapsedTimer = new QElapsedTimer();
-    this->minArea = START_MIN_AREA;
-    this->maxArea = START_MAX_AREA;
     connect(this->timer, SIGNAL(timeout()), this, SLOT(updateTimer()));
-    namedWindow("Debug", WINDOW_OPENGL);
 }
 
 WetCatImageProcessing::~WetCatImageProcessing()
@@ -176,30 +173,22 @@ void WetCatImageProcessing::on_BT_Show_clicked()
 
 void WetCatImageProcessing::on_BT_Add_Danger_clicked()
 {
-
+    this->commander->addDangerZone();
 }
 
 void WetCatImageProcessing::on_BT_Remove_Danger_clicked()
 {
-
+    this->commander->removeDangerZone();
 }
 
 void WetCatImageProcessing::on_VS_threshold_valueChanged(int value)
 {
-    this->enhancer->setConfiguration(value);
-    this->ui->LB_threshold->setText(QString::number(value));
 }
 
 void WetCatImageProcessing::on_VS_minSize_valueChanged(int value)
 {
-    this->minArea = value;
-    this->segmenter->setConfiguration(this->minArea, this->maxArea);
-    this->ui->LB_minSize->setText(QString::number(value));
 }
 
 void WetCatImageProcessing::on_VS_maxSize_valueChanged(int value)
 {
-    this->maxArea = value;
-    this->segmenter->setConfiguration(this->minArea, this->maxArea);
-    this->ui->LB_maxSize->setText(QString::number(value));
 }

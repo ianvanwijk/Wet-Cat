@@ -2,7 +2,10 @@
 
 DangerZone::DangerZone()
 {
-
+    this->P1 = new QPoint(10, 10);
+    this->P2 = new QPoint(10, 20);
+    this->P3 = new QPoint(20, 20);
+    this->P4 = new QPoint(20, 10);
 }
 
 DangerZone::DangerZone(QPoint* P1, QPoint* P2, QPoint* P3, QPoint* P4)
@@ -67,6 +70,23 @@ bool DangerZone::setP4(QPoint* P4)
 
 bool DangerZone::isIn(QPoint* point)
 {
-    //check if point is in the dangerzone
-    return true;
+    int polySides = 4;
+    int i, j=polySides-1 ;
+    int polyY[4] = {P1->y(), P2->y(), P3->y(), P4->y()};
+    int polyX[4] = {P1->x(), P2->x(), P3->x(), P4->x()};
+    bool oddNodes = false;
+
+
+    for (i=0; i<polySides; i++)
+    {
+        if (polyY[i] < point->y() && polyY[j] >= point->y() ||  polyY[j] < point->y() && polyY[i] >= point->y())
+        {
+            if (polyX[i] + (point->y() - polyY[i]) / (polyY[j] - polyY[i]) * (polyX[j] - polyX[i]) < point->x())
+            {
+                oddNodes=!oddNodes;
+            }
+        }
+        j=i;
+    }
+    return oddNodes;
 }

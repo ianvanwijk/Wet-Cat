@@ -1,11 +1,6 @@
 #ifndef DEFINES_H
 #define DEFINES_H
 
-#define START_MIN_AREA 6000
-#define START_MAX_AREA 10000
-#define START_THRESHOLD 100
-#define MAX_THRESHOLD 255
-
 //blob movement possibility
 #define MAX_MOVEMENT 75
 
@@ -32,7 +27,7 @@
 #define HEIGHT 480
 
 //fps of timertick (2 fps, = 500ms)
-#define FPS 2
+#define FPS 5
 
 //default camera to use
 #define CAMERA 0

@@ -1,10 +1,8 @@
 #include "DetectBlobSegmenter.h"
 #include "Defines.h"
 
-DetectBlobSegmenter::DetectBlobSegmenter(int MinArea, int MaxArea)
+DetectBlobSegmenter::DetectBlobSegmenter()
 {
-    this->minArea = MinArea;
-    this->maxArea = MaxArea;
     SimpleBlobDetector::Params params;
     params.minDistBetweenBlobs = 50.0f;
     params.filterByInertia = false;
@@ -12,8 +10,6 @@ DetectBlobSegmenter::DetectBlobSegmenter(int MinArea, int MaxArea)
     params.filterByColor = false;
     params.filterByCircularity = false;
     params.filterByArea = true;
-    params.minArea = this->minArea;
-    params.maxArea = this->maxArea;
     blobDetector = new SimpleBlobDetector(params);
 }
 

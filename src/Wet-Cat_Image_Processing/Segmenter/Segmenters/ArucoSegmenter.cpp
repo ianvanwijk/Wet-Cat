@@ -7,15 +7,16 @@ ArucoSegmenter::ArucoSegmenter()
 
 bool ArucoSegmenter::segment(Image *image)
 {
-    imshow("Debug", image->getFrame());
-    this->MDetector->detect(image->getFrame(), this->Markers);
-    std::cout << this->Markers.size() << std::endl;
+    vector<Marker> markers;
+    Mat frame = image->getImage();
+    this->MDetector->detect(frame, markers);
+    std::cout << markers.size() << std::endl;
     unsigned i;
     unsigned j;
-    for(i = 0; i < this->Markers.size(); i++)
+    for(i = 0; i < markers.size(); i++)
     {
         Blob* blob = new Blob();
-        blob->setmarker(this->Markers[i]);
+        blob->setmarker(markers[i]);
         for(j = 0; j < image->getOldBlobs().size(); j++)
         {
             if(blob->getPosX() < image->getOldBlob(j)->getPosX() + MAX_MOVEMENT &&

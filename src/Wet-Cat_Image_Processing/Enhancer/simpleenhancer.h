@@ -19,7 +19,6 @@ public:
     virtual bool configure();
     virtual bool configure(QString configurationFile);
     virtual bool isConfigured();
-    bool setConfiguration(int threshold);
 private:
     bool configured;
     std::vector<IEnhancer*> enhancers;

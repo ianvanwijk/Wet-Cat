@@ -9,10 +9,8 @@ using namespace cv;
 class ThresholdEnhancer : public IEnhancer
 {
 public:
-    ThresholdEnhancer(int Threshold, int Max);
+    ThresholdEnhancer();
     bool enhance(Image *image);
-    int threshold;
-    int max;
 private:
 };
 

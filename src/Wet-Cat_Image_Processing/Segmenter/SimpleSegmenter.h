@@ -18,7 +18,6 @@ public:
     virtual bool configure();
     virtual bool configure(QString configurationFile);
     virtual bool isConfigured();
-    bool setConfiguration(int minArea, int maxArea);
 private:
     bool configured;
     std::vector<ISegmenter*> segmenters;
