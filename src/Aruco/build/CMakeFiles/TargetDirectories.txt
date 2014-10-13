@@ -1,0 +1,15 @@
+C:/Aruco/build/src/CMakeFiles/aruco.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_board_pix2meters.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_calibration.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_create_board.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_create_marker.dir
+C:/Aruco/build/utils_hrm/CMakeFiles/aruco_hrm_create_board.dir
+C:/Aruco/build/utils_hrm/CMakeFiles/aruco_hrm_create_dictionary.dir
+C:/Aruco/build/utils_hrm/CMakeFiles/aruco_hrm_test.dir
+C:/Aruco/build/utils_hrm/CMakeFiles/aruco_hrm_test_board.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_selectoptimalmarkers.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_simple.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_simple_board.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_test.dir
+C:/Aruco/build/utils/CMakeFiles/aruco_test_board.dir
+C:/Aruco/build/CMakeFiles/uninstall.dir

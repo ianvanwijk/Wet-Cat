@@ -53,7 +53,7 @@ Mat DummyExtractor::getROI(Mat frame, Blob *blob)
         int size = blob->getSize() + 2;
         if(posX - size < 0 || posY - size < 0 || posX + size > frame.rows || posY + size > frame.cols)
         {
-            size -= 2;
+            size = 1;
         }
         Rect regionOfInterest(posX - size, posY - size, size * 2, size * 2);
         Mat frameCrop(frame, regionOfInterest);
