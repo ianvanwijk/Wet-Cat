@@ -42,6 +42,11 @@ bool SimpleSegmenter::configure(QString configurationFile)
     QString string = file.readLine();
     if(string.split("=").back().toInt() == 1)
     {
+        this->segmenters.push_back(new ArucoSegmenter());
+    }
+    string = file.readLine();
+    if(string.split("=").back().toInt() == 1)
+    {
         int min, max;
         string = file.readLine();
         min = string.split("=").back().toInt();

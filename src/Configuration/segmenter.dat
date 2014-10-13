@@ -1,3 +1,4 @@
-DetectBlob=1
-Min=3000
-Max=40000
+Aruco=1
+DetectBlob=0
+Min=2700
+Max=6000

@@ -10,7 +10,6 @@ class DummyExtractor : public IExtractor
 public:
     DummyExtractor();
     virtual bool extract(Image *image);
-    Mat getROI(Mat frame, Blob* blob);
 };
 
 #endif // DUMMYEXTRACTOR_H

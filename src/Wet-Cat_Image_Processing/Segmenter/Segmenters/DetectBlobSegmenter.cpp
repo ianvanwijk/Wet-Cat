@@ -27,9 +27,6 @@ bool DetectBlobSegmenter::segment(Image *image)
     {
         Blob* blob = new Blob();
         blob->setImage(image->getFrame());
-        blob->setPosX(keypoints[i].pt.x);
-        blob->setPosY(keypoints[i].pt.y);
-        blob->setSize(keypoints[i].size);
         for(j = 0; j < image->getOldBlobs().size(); j ++)
         {
             if(blob->getPosX() < image->getOldBlob(j)->getPosX() + MAX_MOVEMENT &&

@@ -10,37 +10,19 @@ Blob::~Blob()
 
 }
 
-bool Blob::setPosX(float PosX)
-{
-    this->posX = PosX;
-    return true;
-}
-
 float Blob::getPosX()
 {
-    return this->posX;
-}
-
-bool Blob::setPosY(float PosY)
-{
-    this->posY = PosY;
-    return true;
+    return this->marker.getCenter().x;
 }
 
 float Blob::getPosY()
 {
-    return this->posY;
-}
-
-bool Blob::setSize(float Size)
-{
-    this->size = Size;
-    return true;
+    return this->marker.getCenter().y;
 }
 
 float Blob::getSize()
 {
-    return this->size;
+    return this->marker.size();
 }
 
 bool Blob::setNrOfHoles(int NrOfHoles)
@@ -51,7 +33,7 @@ bool Blob::setNrOfHoles(int NrOfHoles)
 
 int Blob::getNrOfHoles()
 {
-    return this->nrOfHoles;
+    return this->marker.id;
 }
 
 bool Blob::setImage(Mat Image)
@@ -90,5 +72,16 @@ int Blob::getType()
 bool Blob::setType(int Type)
 {
     this->type = Type;
+    return true;
+}
+
+Marker Blob::getMarker()
+{
+    return this->marker;
+}
+
+bool Blob::setmarker(Marker Marker)
+{
+    this->marker = Marker;
     return true;
 }

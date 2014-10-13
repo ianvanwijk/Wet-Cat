@@ -2,19 +2,18 @@
 #define BLOB_H
 
 #include <opencv2/opencv.hpp>
+#include <aruco/aruco.h>
 
 using namespace cv;
+using namespace aruco;
 
 class Blob
 {
 public:
     Blob();
     ~Blob();
-    bool setPosX(float PosX);
     float getPosX();
-    bool setPosY(float PosY);
     float getPosY();
-    bool setSize(float Size);
     float getSize();
     bool setNrOfHoles(int NrOfHoles);
     int getNrOfHoles();
@@ -25,14 +24,14 @@ public:
     bool addStatus(int i);
     int getType();
     bool setType(int Type);
+    Marker getMarker();
+    bool setmarker(Marker Marker);
 private:
-    float posX;
-    float posY;
-    float size;
     int nrOfHoles;
     Mat image;
     int status;
     int type;
+    Marker marker;
 };
 
 #endif // BLOB_H

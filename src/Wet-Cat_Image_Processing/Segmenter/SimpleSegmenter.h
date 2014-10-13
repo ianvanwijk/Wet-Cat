@@ -3,6 +3,7 @@
 
 #include "../IExecutable.h"
 #include "Segmenters/DummySegmenter.h"
+#include "Segmenters/ArucoSegmenter.h"
 #include "Segmenters/DetectBlobSegmenter.h"
 #include <QStringList>
 #include <QString>
