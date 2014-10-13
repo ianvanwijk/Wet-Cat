@@ -10,10 +10,10 @@ bool ThresholdEnhancer::enhance(Image *image)
 {
     try
     {
-        Mat thresholdImage;
-        cv::threshold(image->getFrame(), thresholdImage, this->threshold, this->max, THRESH_BINARY);
-        cv::erode(thresholdImage, thresholdImage, Mat());
-        image->setFrame(thresholdImage);
+        Mat thresholdImage, edges;
+        GaussianBlur(image->getFrame(), thresholdImage, Size(9, 9), 1.5, 1.5);
+        Canny(thresholdImage, edges, 0, 30, 3);
+        image->setFrame(edges);
         return true;
     }
     catch(Exception e)

@@ -2,6 +2,7 @@
 #define THRESHOLDENHANCER_H
 
 #include "../IEnhancer.h"
+#include <aruco/aruco.h>
 
 using namespace cv;
 

@@ -7,7 +7,9 @@ ArucoSegmenter::ArucoSegmenter()
 
 bool ArucoSegmenter::segment(Image *image)
 {
+    imshow("Debug", image->getFrame());
     this->MDetector->detect(image->getFrame(), this->Markers);
+    std::cout << this->Markers.size() << std::endl;
     unsigned i;
     unsigned j;
     for(i = 0; i < this->Markers.size(); i++)
