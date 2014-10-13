@@ -1,0 +1,15 @@
+C:/Aruco/build/share/aruco/arucoConfig.cmake
+C:/Aruco/build/lib/libaruco125.dll.a
+C:/Aruco/build/include/aruco/aruco.h
+C:/Aruco/build/include/aruco/arucofidmarkers.h
+C:/Aruco/build/include/aruco/ar_omp.h
+C:/Aruco/build/include/aruco/board.h
+C:/Aruco/build/include/aruco/boarddetector.h
+C:/Aruco/build/include/aruco/cameraparameters.h
+C:/Aruco/build/include/aruco/chromaticmask.h
+C:/Aruco/build/include/aruco/cvdrawingutils.h
+C:/Aruco/build/include/aruco/exports.h
+C:/Aruco/build/include/aruco/highlyreliablemarkers.h
+C:/Aruco/build/include/aruco/marker.h
+C:/Aruco/build/include/aruco/markerdetector.h
+C:/Aruco/build/include/aruco/subpixelcorner.h
