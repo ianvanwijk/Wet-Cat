@@ -62,6 +62,7 @@ bool SimpleCommunicator::execute(Image *image)
                 this->stopExecuting();
                 //send stop command to turret, target is gone or moved!
             }
+            std::cout << i << ", Holes: " << image->getBlob(i)->getNrOfHoles() << std::endl;
             this->draw(image->getBlob(i)->getStatus(), &keypointImage, image->getBlob(i));
         }
     }
@@ -71,9 +72,6 @@ bool SimpleCommunicator::execute(Image *image)
 
 bool SimpleCommunicator::draw(int status, Mat* image, Blob* blob)
 {
-    std::cout << "Type: " << blob->getType() << std::endl;
-    std::cout << "Holes: " << blob->getNrOfHoles() << std::endl;
-
     Scalar red(0, 0, 255); //red
     Scalar green(0, 255, 0); //green
     Scalar blue(255, 0, 0); //blue
@@ -84,6 +82,7 @@ bool SimpleCommunicator::draw(int status, Mat* image, Blob* blob)
     Point p2;
     p2.x = blob->getPosX() + blob->getSize();
     p2.y = blob->getPosY() + blob->getSize();
+    int number = blob->getNrOfHoles();
 
     if(status == ACTION_EXECUTE)
     {
@@ -97,6 +96,7 @@ bool SimpleCommunicator::draw(int status, Mat* image, Blob* blob)
     {
         rectangle(*image, p1, p2, green);
     }
+    putText(*image, QString::number(number).toStdString(), p1, FONT_HERSHEY_SCRIPT_SIMPLEX, 2, Scalar::all(0));
     return true;
 }
 

@@ -88,8 +88,8 @@ void WetCatImageProcessing::updateTimer()
             ui->statusBar->showMessage(info);
         }
         this->ui->OpenCVViewer->showImage(this->image->getImage());
-        imshow("Debug", this->image->getFrame());
-        updateWindow("Debug");
+        //imshow("Debug", this->image->getFrame());
+        //updateWindow("Debug");
     }
     else
     {

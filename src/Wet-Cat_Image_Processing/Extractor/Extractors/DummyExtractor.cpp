@@ -50,11 +50,10 @@ Mat DummyExtractor::getROI(Mat frame, Blob *blob)
         Mat frameRegion;
         int posX = blob->getPosX();
         int posY = blob->getPosY();
-        int size = blob->getSize() + 10;
+        int size = blob->getSize() + 2;
         if(posX - size < 0 || posY - size < 0 || posX + size > frame.rows || posY + size > frame.cols)
         {
-            frame.copyTo(frameRegion);
-            return frameRegion;
+            size -= 2;
         }
         Rect regionOfInterest(posX - size, posY - size, size * 2, size * 2);
         Mat frameCrop(frame, regionOfInterest);
