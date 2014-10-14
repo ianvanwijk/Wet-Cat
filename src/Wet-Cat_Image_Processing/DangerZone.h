@@ -2,6 +2,7 @@
 #define DANGERZONE_H
 
 #include <QPoint>
+#include "../OpenCV/include/opencv2/opencv.hpp"
 
 class DangerZone
 {
@@ -18,6 +19,7 @@ public:
     bool setP3(QPoint* P3);
     bool setP4(QPoint* P4);
     bool isIn(QPoint* point);
+    cv::Point getCVPoint(QPoint* point);
 private:
     QPoint* P1;
     QPoint* P2;

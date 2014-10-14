@@ -70,23 +70,41 @@ bool DangerZone::setP4(QPoint* P4)
 
 bool DangerZone::isIn(QPoint* point)
 {
-    int polySides = 4;
-    int i, j=polySides-1 ;
-    int polyY[4] = {P1->y(), P2->y(), P3->y(), P4->y()};
-    int polyX[4] = {P1->x(), P2->x(), P3->x(), P4->x()};
-    bool oddNodes = false;
+//    int polySides = 4;
+//    int i, j=polySides-1 ;
+//    int polyY[4] = {P1->y(), P2->y(), P3->y(), P4->y()};
+//    int polyX[4] = {P1->x(), P2->x(), P3->x(), P4->x()};
+//    bool oddNodes = false;
 
 
-    for (i=0; i<polySides; i++)
-    {
-        if (polyY[i] < point->y() && polyY[j] >= point->y() ||  polyY[j] < point->y() && polyY[i] >= point->y())
-        {
-            if (polyX[i] + (point->y() - polyY[i]) / (polyY[j] - polyY[i]) * (polyX[j] - polyX[i]) < point->x())
-            {
-                oddNodes=!oddNodes;
-            }
-        }
-        j=i;
-    }
-    return oddNodes;
+//    for (i=0; i<polySides; i++)
+//    {
+//        if (polyY[i] < point->y() && polyY[j] >= point->y() ||  polyY[j] < point->y() && polyY[i] >= point->y())
+//        {
+//            if (polyX[i] + (point->y() - polyY[i]) / (polyY[j] - polyY[i]) * (polyX[j] - polyX[i]) < point->x())
+//            {
+//                oddNodes=!oddNodes;
+//            }
+//        }
+//        j=i;
+//    }
+//    return oddNodes;
+    cv::Vector< cv::Point > contour;
+    contour.push_back(getCVPoint(P1));
+    contour.push_back(getCVPoint(P2));
+    contour.push_back(getCVPoint(P3));
+    contour.push_back(getCVPoint(P4));
+
+    return cv::pointPolygonTest(contour, getCVPoint(point), false) >= 0;
+}
+
+cv::Point DangerZone::getCVPoint(QPoint *point)
+{
+    cv::Point Point();
+    int x, y;
+    x = point->rx();
+    y = point->ry();
+    Point.x = x;
+    Point.y = y;
+    return Point;
 }
