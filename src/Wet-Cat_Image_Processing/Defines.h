@@ -27,7 +27,7 @@
 #define HEIGHT 480
 
 //fps of timertick (2 fps, = 500ms)
-#define FPS 5
+#define FPS 24
 
 //default camera to use
 #define CAMERA 0

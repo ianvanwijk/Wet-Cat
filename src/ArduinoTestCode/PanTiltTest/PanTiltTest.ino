@@ -1,11 +1,12 @@
 #include <Servo.h>
- 
+
 Servo servoTilt;
 Servo servoPan;
 int posTilt = 90;
 int posPan = 90;
 
 int pinLaser = 13;
+int laserOn = LOW;
 
 int coordinatesCalibration[4][4] = {
 	{ 0, 0, 0, 0 },
@@ -28,8 +29,9 @@ void setup()
 	servoTilt.write(posTilt);
 	servoPan.write(posPan);
 
+	pinMode(pinLaser, OUTPUT);
+	digitalWrite(pinLaser, laserOn);
 
-	
 	Serial.begin(9600);
 } 
 
@@ -94,19 +96,37 @@ void loop()
 		Serial.println("Left Bottom:");
 		printCoordinates(coordinatesCalibration[3][0], coordinatesCalibration[3][1]);
 		printCoordinates(coordinatesCalibration[3][2], coordinatesCalibration[3][3]);
-	}h
+	}
+
+	if(command == 'l') {
+		if(laserOn == LOW) {
+			laserOn = HIGH;
+			digitalWrite(pinLaser, laserOn);
+		}
+		else {
+			laserOn = LOW;
+			digitalWrite(pinLaser, laserOn);
+		}
+	}
 	
-//  if(command != -1)
-//    Serial.println(command, DEC);
-	
-	if(isDigit(command) {
+	if(isDigit(command)) {
 		commandString += (char) command;
 	}
 	
 	if(command == ';') {
-		Serial.println(";");
+//		Serial.println(";");
 		
 		totalCommand[commandPos] = commandString.toInt();
+
+		Serial.print(totalCommand[0], DEC);
+		Serial.print(',');
+		Serial.print(totalCommand[1], DEC);
+		Serial.print(',');
+		Serial.print(totalCommand[2], DEC);
+		Serial.println(';');
+
+		commandString = "";
+
 		commandPos = 0;
 	}
 	else {
@@ -115,10 +135,12 @@ void loop()
 				Serial.println("error;");
 				totalCommand[0] = 0;
 			}
-			Serial.print(",");
+//			Serial.print(",");
 			
 			totalCommand[commandPos] = commandString.toInt();
 			commandPos++;
+
+			commandString = "";
 		}
 		return; 
 	}
@@ -172,3 +194,4 @@ void printCoordinates(int pX, int pY) {
 		Serial.print(pY, DEC);
 		Serial.println(") ");
 }
+

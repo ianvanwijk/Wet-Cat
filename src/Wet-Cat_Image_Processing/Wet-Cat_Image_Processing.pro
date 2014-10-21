@@ -64,36 +64,38 @@ HEADERS  += \
     Segmenter/Segmenters/ArucoSegmenter.h
 
 
-INCLUDEPATH += "../OpenCV/include" \
-               "../Aruco/Build/include"
+#INCLUDEPATH += "../OpenCV/include" \
+#               "../Aruco/Build/include"
 
-LIBS += "../OpenCV/bin/libopencv_core249.dll"       \
-        "../OpenCV/bin/libopencv_highgui249.dll"    \
-        "../OpenCV/bin/libopencv_imgproc249.dll"    \
-        "../OpenCV/bin/libopencv_features2d249.dll" \
-        "../OpenCV/bin/libopencv_calib3d249.dll"    \
-        "../OpenCV/bin/libopencv_contrib249.dll"    \
-        "../OpenCV/bin/libopencv_flann249.dll"      \
-        "../OpenCV/bin/libopencv_gpu249.dll"        \
-        "../OpenCV/bin/libopencv_legacy249.dll"     \
-        "../OpenCV/bin/libopencv_ml249.dll"         \
-        "../OpenCV/bin/libopencv_objdetect249.dll"  \
-        "../OpenCV/bin/libopencv_video249.dll"      \
-        "../Aruco/build/bin/libaruco125.dll"
+#LIBS += "../OpenCV/bin/libopencv_core249.dll"       \
+#        "../OpenCV/bin/libopencv_highgui249.dll"    \
+#        "../OpenCV/bin/libopencv_imgproc249.dll"    \
+#        "../OpenCV/bin/libopencv_features2d249.dll" \
+#        "../OpenCV/bin/libopencv_calib3d249.dll"    \
+#        "../OpenCV/bin/libopencv_contrib249.dll"    \
+#        "../OpenCV/bin/libopencv_flann249.dll"      \
+#        "../OpenCV/bin/libopencv_gpu249.dll"        \
+#        "../OpenCV/bin/libopencv_legacy249.dll"     \
+#        "../OpenCV/bin/libopencv_ml249.dll"         \
+#        "../OpenCV/bin/libopencv_objdetect249.dll"  \
+#        "../OpenCV/bin/libopencv_video249.dll"      \
+#        "../Aruco/build/bin/libaruco125.dll"
 
-#INCLUDEPATH += C:\OpenCV\build\install\include
+INCLUDEPATH += C:\OpenCV\build\install\include \
+               C:\Aruco\build\include
 
-#LIBS += C:\OpenCV\build\install\x64\mingw\bin\libopencv_core249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_highgui249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_imgproc249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_features2d249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_calib3d249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_contrib249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_flann249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_gpu249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_legacy249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_ml249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_objdetect249.dll \
-#        C:\OpenCV\build\install\x64\mingw\bin\libopencv_video249.dll
+LIBS += C:\OpenCV\build\install\x64\mingw\bin\libopencv_core249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_highgui249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_imgproc249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_features2d249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_calib3d249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_contrib249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_flann249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_gpu249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_legacy249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_ml249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_objdetect249.dll \
+        C:\OpenCV\build\install\x64\mingw\bin\libopencv_video249.dll \
+        C:\Aruco\build\bin\libaruco125.dll
 
 FORMS    += wetcatimageprocessing.ui
