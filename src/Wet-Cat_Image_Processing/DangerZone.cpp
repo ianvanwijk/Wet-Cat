@@ -89,18 +89,26 @@ bool DangerZone::isIn(QPoint* point)
 //        j=i;
 //    }
 //    return oddNodes;
-    cv::Vector< cv::Point > contour;
+    std::vector< cv::Point > contour;
     contour.push_back(getCVPoint(P1));
     contour.push_back(getCVPoint(P2));
     contour.push_back(getCVPoint(P3));
     contour.push_back(getCVPoint(P4));
 
-    return cv::pointPolygonTest(contour, getCVPoint(point), false) >= 0;
+    try
+    {
+        return cv::pointPolygonTest(contour, getCVPoint(point), false) >= 0;
+    }
+    catch(std::exception e)
+    {
+        std::cout << "Error: " << e.what() << std::endl;
+        return false;
+    }
 }
 
 cv::Point DangerZone::getCVPoint(QPoint *point)
 {
-    cv::Point Point();
+    cv::Point Point;
     int x, y;
     x = point->rx();
     y = point->ry();
