@@ -44,7 +44,6 @@ bool SimpleAcquirer::configure(QString configurationFile)
     }
     QString string = file.readLine();
     int camera = string.split("=").back().toInt();
-    std::cout << camera << std::endl;
     cam = new VideoCapture(camera);
     this->configured = true;
     return true;

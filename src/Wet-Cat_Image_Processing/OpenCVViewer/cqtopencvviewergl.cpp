@@ -3,6 +3,8 @@
 CQtOpenCVViewerGl::CQtOpenCVViewerGl(QWidget *parent) :
     QGLWidget(parent)
 {
+    m_mouseClick = false;
+
     mSceneChanged = false;
     mBgColor = QColor::fromRgb(150, 150, 150);
 
@@ -12,6 +14,21 @@ CQtOpenCVViewerGl::CQtOpenCVViewerGl(QWidget *parent) :
 
     mPosX = 0;
     mPosY = 0;
+}
+
+void CQtOpenCVViewerGl::mouseReleaseEvent(QMouseEvent *e)
+{
+    if((m_mouseClick) && (e->pos() == m_lastPoint))
+    {
+        emit mouseClickEvent();
+    }
+    m_mouseClick = false;
+}
+
+void CQtOpenCVViewerGl::mousePressEvent(QMouseEvent *e)
+{
+    m_lastPoint = e->pos();
+    m_mouseClick = true;
 }
 
 void CQtOpenCVViewerGl::initializeGL()

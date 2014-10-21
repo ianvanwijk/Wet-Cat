@@ -7,6 +7,7 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     ui(new Ui::WetCatImageProcessing)
 {
     ui->setupUi(this);
+    this->corner = LEFTTOP;
     this->acquirer = new SimpleAcquirer();
     this->enhancer = new SimpleEnhancer();
     this->segmenter = new SimpleSegmenter();
@@ -18,6 +19,7 @@ WetCatImageProcessing::WetCatImageProcessing(QWidget *parent) :
     this->timer = new QTimer(this);
     this->elapsedTimer = new QElapsedTimer();
     connect(this->timer, SIGNAL(timeout()), this, SLOT(updateTimer()));
+    connect(this->ui->OpenCVViewer, SIGNAL(mouseClickEvent()), this, SLOT(On_Image_Clicked()));
 }
 
 WetCatImageProcessing::~WetCatImageProcessing()
@@ -40,6 +42,18 @@ WetCatImageProcessing::~WetCatImageProcessing()
     delete this->timer;
     delete this->elapsedTimer;
     delete ui;
+}
+
+void WetCatImageProcessing::On_Image_Clicked()
+{
+    if(corner < DONE && communicator->isConfigured())
+    {
+        QString send;
+        send = QString::number(corner) + "," + QString::number(this->ui->OpenCVViewer->m_lastPoint.x()) + "," + QString::number(this->ui->OpenCVViewer->m_lastPoint.y()) + ";";
+        std::cout << send.toStdString() << std::endl;
+        corner++;
+        communicator->serialPort->write(send.toStdString().c_str());
+    }
 }
 
 void WetCatImageProcessing::updateTimer()
@@ -157,6 +171,10 @@ void WetCatImageProcessing::on_BT_Configure_clicked()
     }
     this->ui->BT_Configure->setEnabled(false);
     this->ui->BT_Show->setEnabled(true);
+    this->ui->BT_Up->setEnabled(true);
+    this->ui->BT_Down->setEnabled(true);
+    this->ui->BT_Left->setEnabled(true);
+    this->ui->BT_Right->setEnabled(true);
 }
 
 void WetCatImageProcessing::on_BT_Show_clicked()
@@ -181,14 +199,49 @@ void WetCatImageProcessing::on_BT_Remove_Danger_clicked()
     this->commander->removeDangerZone();
 }
 
-void WetCatImageProcessing::on_VS_threshold_valueChanged(int value)
+//up
+void WetCatImageProcessing::on_BT_Up_clicked()
 {
+    char send = 65;
+    this->communicator->serialPort->write(&send);
 }
 
-void WetCatImageProcessing::on_VS_minSize_valueChanged(int value)
+//down
+void WetCatImageProcessing::on_BT_Down_clicked()
 {
+    char send = 66;
+    this->communicator->serialPort->write(&send);
 }
 
-void WetCatImageProcessing::on_VS_maxSize_valueChanged(int value)
+//left
+void WetCatImageProcessing::on_BT_Left_clicked()
 {
+    char send = 68;
+    this->communicator->serialPort->write(&send);
+}
+
+//right
+void WetCatImageProcessing::on_BT_Right_clicked()
+{
+    char send = 67;
+    this->communicator->serialPort->write(&send);
+}
+
+void WetCatImageProcessing::keyPressEvent(QKeyEvent *e)
+{
+    switch(e->key())
+    {
+    case(Qt::Key_Up):
+        on_BT_Up_clicked();
+        break;
+    case(Qt::Key_Down):
+        on_BT_Down_clicked();
+        break;
+    case(Qt::Key_Left):
+        on_BT_Left_clicked();
+        break;
+    case(Qt::Key_Right):
+        on_BT_Right_clicked();
+        break;
+    }
 }

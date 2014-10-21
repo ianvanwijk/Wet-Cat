@@ -34,7 +34,6 @@ bool SimpleCommander::execute(Image *image)
             }
             if(countIn == 0 && dangerZones.size() != 0)
             {
-                std::cout << "set seen" << std::endl;
                 image->getBlob(i)->setStatus(SEEN);
             }
             else
@@ -113,7 +112,6 @@ bool SimpleCommander::execute(Image *image)
         }
         else
         {
-            std::cout << "no dangerzone" << std::endl;
             delete P1;
             delete P2;
             delete P3;
