@@ -5,6 +5,7 @@
 #include <QAbstractSlider>
 #include <QElapsedTimer>
 #include <QTimer>
+#include <QKeyEvent>
 #include "Image.h"
 #include "Acquirer/SimpleAcquirer.h"
 #include "Enhancer/SimpleEnhancer.h"
@@ -26,6 +27,10 @@ public:
     explicit WetCatImageProcessing(QWidget *parent = 0);
     virtual ~WetCatImageProcessing();
 
+private:
+    void keyPressEvent( QKeyEvent* e);
+    int corner;
+
 private slots:
     void updateTimer();
 
@@ -34,9 +39,15 @@ private slots:
     void on_BT_Add_Danger_clicked();
     void on_BT_Remove_Danger_clicked();
 
-    void on_VS_threshold_valueChanged(int value);
-    void on_VS_minSize_valueChanged(int value);
-    void on_VS_maxSize_valueChanged(int value);
+    void On_Image_Clicked();
+
+    void on_BT_Up_clicked();
+
+    void on_BT_Down_clicked();
+
+    void on_BT_Left_clicked();
+
+    void on_BT_Right_clicked();
 
 private:
     QString info;

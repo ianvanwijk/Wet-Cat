@@ -39,14 +39,10 @@ bool SimpleCommunicator::execute(Image *image)
                 if(image->getBlob(i)->getStatus() == ACTION_READY)
                 {
                     this->executing = true;
-                    char data[3];
-                    data[0] = image->getBlob(i)->getType();
-                    data[1] = image->getBlob(i)->getPosX();
-                    data[2] = image->getBlob(i)->getPosX();
-                    data[2] = image->getBlob(i)->getPosY();
-                    data[2] = image->getBlob(i)->getPosY();
+                    QString commando;
+                    commando = QString::number(image->getBlob(i)->getType()) + "," + QString::number(image->getBlob(i)->getPosX() + "," + QString::number(image->getBlob(i)->getPosY()) + ";";
                     //send command to turret, cat found!
-                    this->serialPort->write(data, 5);
+                    this->serialPort->write(commando.toStdString().c_str());
                     image->getBlob(i)->setStatus(ACTION_EXECUTE);
                 }
                 //check if turret is done
@@ -57,15 +53,11 @@ bool SimpleCommunicator::execute(Image *image)
             }
             if(!Action && image->getBlob(i)->getStatus() != ACTION_DONE)
             {
-                char data[3];
-                data[0] = 0;
-                data[1] = 0;
-                data[2] = 0;
-                this->serialPort->write(data, 3);
+                QString commando = "stop;";
+                this->serialPort->write(commando.toStdString().c_str());
                 this->stopExecuting();
                 //send stop command to turret, target is gone or moved!
             }
-            std::cout << i << ", Holes: " << image->getBlob(i)->getNrOfHoles() << std::endl;
             this->draw(image->getBlob(i)->getStatus(), &keypointImage, image->getBlob(i));
         }
     }
@@ -146,6 +138,7 @@ bool SimpleCommunicator::configure()
 
 bool SimpleCommunicator::configure(QString configurationFile)
 {
+    return this->configure();
     QFile file("Configuration/" + configurationFile);
     if(!file.open(QIODevice::ReadWrite))
     {

@@ -10,7 +10,6 @@ bool ArucoSegmenter::segment(Image *image)
     vector<Marker> markers;
     Mat frame = image->getImage();
     this->MDetector->detect(frame, markers);
-    std::cout << markers.size() << std::endl;
     unsigned i;
     unsigned j;
     for(i = 0; i < markers.size(); i++)

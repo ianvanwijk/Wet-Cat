@@ -2,6 +2,8 @@
 #define CQTOPENCVVIEWERGL_H
 
 #include <QtOpenGL/QGLWidget>
+#include <QWidget>
+#include <QMouseEvent>
 #include <opencv2/core/core.hpp>
 
 class CQtOpenCVViewerGl : public QGLWidget
@@ -11,12 +13,15 @@ public:
     explicit CQtOpenCVViewerGl(QWidget *parent = 0);
 
 signals:
+    void    mouseClickEvent();
     void    imageSizeChanged( int outW, int outH ); /// Used to resize the image outside the widget
 
 public slots:
     bool    showImage( cv::Mat image ); /// Used to set the image to be viewed
 
 protected:
+    void    mouseReleaseEvent(QMouseEvent * e);
+    void    mousePressEvent(QMouseEvent * e);
     void 	initializeGL(); /// OpenGL initialization
     void 	paintGL(); /// OpenGL Rendering
     void 	resizeGL(int width, int height);        /// Widget Resize Event
@@ -24,7 +29,13 @@ protected:
     void        updateScene();
     void        renderImage();
 
+public:
+    QPoint m_lastPoint;
+
 private:
+
+    bool m_mouseClick;
+
     bool        mSceneChanged;          /// Indicates when OpenGL view is to be redrawn
 
     QImage      mRenderQtImg;           /// Qt image to be rendered

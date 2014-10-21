@@ -22,6 +22,13 @@
 #define ACTION_EXECUTE 4
 #define ACTION_DONE 5
 
+//corners
+#define LEFTTOP 51
+#define RIGHTTOP 52
+#define RIGHTBOTTOM 53
+#define LEFTBOTTOM 54
+#define DONE 55
+
 //default image size
 #define WIDTH 640
 #define HEIGHT 480
