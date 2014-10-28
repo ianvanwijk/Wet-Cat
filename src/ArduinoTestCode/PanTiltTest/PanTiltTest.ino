@@ -9,10 +9,10 @@ int pinLaser = 13;
 int laserOn = LOW;
 
 int coordinatesCalibration[4][4] = {
-	{ 0, 0, 0, 0 },
-	{ 0, 0, 0, 0 },
-	{ 0, 0, 0, 0 },
-	{ 0, 0, 0, 0 }
+	{ 7, 44, 0, 0 },
+	{ 63, 49, 640, 0 },
+	{ 63, 77, 640, 480 },
+	{ 7, 66, 0, 300 }
 };
 
 int calibrateMode = 0;
@@ -33,6 +33,26 @@ void setup()
 	digitalWrite(pinLaser, laserOn);
 
 	Serial.begin(9600);
+
+	coordinatesCalibration[0][0] = 7;
+	coordinatesCalibration[0][1] = 44;
+	coordinatesCalibration[0][2] = 0;
+	coordinatesCalibration[0][3] = 0;
+
+	coordinatesCalibration[1][0] = 63;
+	coordinatesCalibration[1][1] = 49;
+	coordinatesCalibration[1][2] = 640;
+	coordinatesCalibration[1][3] = 0;
+
+	coordinatesCalibration[2][0] = 63;
+	coordinatesCalibration[2][1] = 77;
+	coordinatesCalibration[2][2] = 640;
+	coordinatesCalibration[2][3] = 480;
+
+	coordinatesCalibration[3][0] = 7;
+	coordinatesCalibration[3][1] = 66;
+	coordinatesCalibration[3][2] = 0;
+	coordinatesCalibration[3][3] = 300;
 } 
 
 void loop() 
@@ -118,16 +138,9 @@ void loop()
 		
 		totalCommand[commandPos] = commandString.toInt();
 
-		Serial.print(totalCommand[0], DEC);
-		Serial.print(',');
-		Serial.print(totalCommand[1], DEC);
-		Serial.print(',');
-		Serial.print(totalCommand[2], DEC);
-		Serial.println(';');
+		commandPos = 0;
 
 		commandString = "";
-
-		commandPos = 0;
 	}
 	else {
 		if(command == ',') {
@@ -145,7 +158,7 @@ void loop()
 		return; 
 	}
 	
-	// 3
+	// Marker 3
 	if(totalCommand[0] == 51) {
 		coordinatesCalibration[0][0] = posPan;
 		coordinatesCalibration[0][1] = posTilt;
@@ -155,7 +168,7 @@ void loop()
 		
 		Serial.println("done;");
 	}
-	// 4
+	// Marker 4
 	if(totalCommand[0] == 52) {
 		coordinatesCalibration[1][0] = posPan;
 		coordinatesCalibration[1][1] = posTilt;
@@ -165,7 +178,7 @@ void loop()
 		
 		Serial.println("done;");
 	}
-	// 5
+	// Marker 5
 	if(totalCommand[0] == 53) {
 		coordinatesCalibration[2][0] = posPan;
 		coordinatesCalibration[2][1] = posTilt;
@@ -175,7 +188,7 @@ void loop()
 		
 		Serial.println("done;");
 	}
-	// 6
+	// Marker 6
 	if(totalCommand[0] == 54) {
 		coordinatesCalibration[3][0] = posPan;
 		coordinatesCalibration[3][1] = posTilt;
@@ -185,13 +198,27 @@ void loop()
 		
 		Serial.println("done;");
 	}
+
+	// 1
+	if(totalCommand[0] == 1) {
+		setServoPos(totalCommand[1], totalCommand[2]);
+
+		Serial.println("done;");
+	}
 }
 
 void printCoordinates(int pX, int pY) {
-		Serial.print("( ");
-		Serial.print(pX, DEC);
-		Serial.print(", ");
-		Serial.print(pY, DEC);
-		Serial.println(") ");
+	Serial.print("( ");
+	Serial.print(pX, DEC);
+	Serial.print(", ");
+	Serial.print(pY, DEC);
+	Serial.println(") ");
 }
 
+void setServoPos(int pX, int pY) {
+	posPan = pX;
+	posTilt = pY;
+
+	servoPan.write(posPan);
+	servoTilt.write(posTilt);
+}
