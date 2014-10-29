@@ -40,7 +40,7 @@
 #define CAMERA 0
 
 //UART settings
-#define COMPORT "COM10"
+#define COMPORT "COM5"
 #define BAUDRATE 9600
 
 #endif // DEFINES_H

@@ -42,6 +42,7 @@ bool SimpleCommunicator::execute(Image *image)
                     QString commando;
                     commando = QString::number(image->getBlob(i)->getType()) + "," + QString::number( (int) image->getBlob(i)->getPosX()) + "," + QString::number( (int) image->getBlob(i)->getPosY()) + ";";
                     //send command to turret, cat found!
+                    std::cout << commando.toStdString() << std::endl;
                     this->serialPort->write(commando.toStdString().c_str());
                     image->getBlob(i)->setStatus(ACTION_EXECUTE);
                 }
