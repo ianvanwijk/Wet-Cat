@@ -10,7 +10,7 @@ Onder hardware worden de verschillende fysieke benodigdheden voor het project be
 
 ### Camera opstelling
 
-De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit van de beelden die de camera zal bieden. Hieronder is schematisch een tekening te zien van het prototype van de Wet-Cat, met deze opstelling zijn we van plan te gaan presenteren op het moment dat we het project moeten opleveren.
+De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit van de beelden die de camera zal bieden. Hieronder is schematisch een tekening te zien van het prototype van de Wet-Cat, met deze opstelling zijn we van plan te gaan presenteren op het moment dat we het project moeten opleveren.  De camera zal in de opstelling maximaal 2 meter van de “tuin” verwijderd staan. Omdat anders de verschillende objecten niet herkend kan worden.
 
 ![opstelling](/Docs/images/opstelling.png)
 
@@ -18,7 +18,14 @@ De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit
 
 Omdat we verschillende dingen gaan herkennen, zijn er verschillende markers gemaakt die het makkelijk maken om de verschillende objecten te herkennen. Er zijn vier verschillende markers die de hoeken van een "Danger Zone" aangeven en er zijn zes verschillende markers die de verschillende katten aangeven. Deze markers zullen op een dobbelsteem worden geplakt om zo aan te geven welke kat het is. Per kat zal de laser iets anders doen. de commando's staat in het hoofdstuk 'Turret' beschreven. Verder staan hieronder de verschillende markers die door het systeem moeten worden herkend.
 
+De objecten zal worden geprint op een grote van 10x10 cm. Dit word gedaan om het goed zichtbaar te maken voor de camera.
+
 ![symbolen](/Docs/images/symbolen.png)
+
+De eerste 4 objecten zijn bedoeld voor het instellen van de “danger” zones, de object helemaal recht zal gebruikt worden om de desbetreffende “danger” zone te verwijderen, mist de object zich binnen de zone bevind.
+
+Als laatste zijn er 3 verschillende soorten katten. Om zo te simuleren dat er verschillende manier zijn om verschillende soorten katten te schieten.
+
 ![symbolen_cats](/Docs/images/symbolen_cats.png)
 
 ### Laptop
@@ -154,15 +161,15 @@ Dit is een commando dat aangeeft dat de turret per direct moet stoppen waar hij 
 
 Het commando ziet er als volgd uit:
 
-`#000;`
+`stop;`
 
 ##### AIM & FIRE
 
 Dit commando geeft de coordinaten van het doel door en geeft het commando om te schieten door. Het commando om te schieten hangt af van de verschillende soorten doelen, de coordinaten zullen tussen 0 en 800 vallen.
 
-Het commando ziet er als volgd uit, met X als X coordinaat, Y als Y coordinaat en Z als schiet commando:
+Het commando ziet er als volgd uit, met X als X coordinaat en C als schiet commando:
 
-`#X,Y,Z;`
+`C,X,Y;`
 
 ##### DONE
 
@@ -170,23 +177,19 @@ Het `Done` commando is het commando dat de WCA terug geeft aan de WCIP op het mo
 
 Het commando ziet er als volgd uit:
 
-`#done;`
+`done;`
 
 ##### MOVEMENT
 
-Ook is er een commando om de WCA handmatig te verstellen. Dit is nodig om deze te callibreren, het commando gaat weer van X en Y waardes uit, alleen dit keer zijn dit het aantal punten dat de turret naar links(positief) of naar rechts(negatief) moet bewegen, hetzelfde geld voor naar boven en onder op de Y as.
-
-Het commando ziet er als volgd uit, met X als X coordinaat en Y als Y coordinaat:
-
-`#X,Y;`
+De turret heeft de mogelijk om vrij rond te bewegen, dit is nodig om deze te callibreren. De commando's voor het instellen zijn de pijl toetsen op een toetsenbord. Via de seriële communicatie zal de volgende charakters worden meegestuurd: 65 - 68.
 
 ##### SET
 
-Als laatste is er een commando om de hoeken van het bereik van de WCA te bepalen. Ook dit is om de WCA te calibreren. Op het moment dat er een hoek word ingesteld zal het huidige punt het maximale punt worden in die richting. Er zijn twee punten te calibreren: links-boven en rechts-onder.
+Als laatste is er een commando om de hoeken van het bereik van de WCA te bepalen. Ook dit is om de WCA te calibreren. Op het moment dat er een hoek word ingesteld zal het huidige punt het maximale punt worden in die richting. Er zal 4 punten worden gecalibreerd. De waarde 51 - 54, word gebruikt om de verschillende hoeken vast te stellen.
 
-Het commando ziet er als volgd uit, met X als hoek waar 0 links-boven is en 1 rechts-onder:
+Vanuit de computer word dan de pixel waarde tenopzichte van x en y gestuurd. De opbouw van de commande ziet er als volgd uit:
 
-`#X;`
+`C, X, Y;`
 
 ### Code Guidelines
 
