@@ -7,7 +7,7 @@ In het `Technisch` gedeelte beschrijft de oplossingen die horen bij het technisc
 Bij `Problemen & oplossingen` worden problemen en oplossingen beschreven die tijdens het realiseren van dit project voorkwamen.
 
 ## Vision
-Het vision ontwerp beschrijft hoe de verschillende vision stappen (`Acquisition` , `Enhancement` , `Segmentation` , `Feature extraction` , `Classification`) worden geimplementeerd. Hieronder staat per deel Hoe de structuur gemaakt is.
+Het vision ontwerp beschrijft hoe de verschillende vision stappen (`Acquisition` , `Enhancement` , `Segmentation` , `Feature extraction` , `Classification`) worden geimplementeerd. Hieronder staat per deel hoe de structuur gemaakt is.
 
 ### Structuur
 
@@ -36,3 +36,5 @@ De gun turret is geprogrammeerd met een `Arduino` al is de `Arduino` library nie
 
 ## Problemen & oplossingen
 Tijdens het implementeren van dit project zijn er een paar kleine problemen geweest, vooral met het implementeren van blob herkenning in OpenCV. Na veel proberen en problemen is er gekozen voor `Aruco`, de code die gemaakt is voor detectie zonder `Aruco` is nog steeds te vinden in de repository maar word niet meer gebruikt.
+
+Tijdens het implementeren van de turret zijn er ook een aantal zaken moeizaam verlopen. Zo is er tijdens het ontwikkelen ondekt dat er een onnauwkeurigheid in het aansturen van de turret. Voor zover mogelijk zijn er in de software maatregelen tegen genomen.
