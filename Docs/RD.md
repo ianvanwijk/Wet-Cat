@@ -7,7 +7,7 @@ In het `Technisch` gedeelte beschrijft de oplossingen die horen bij het technisc
 Bij `Problemen & oplossingen` worden problemen en oplossingen beschreven die tijdens het realiseren van dit project voorkwamen.
 
 ## Vision
-Het vision ontwerp beschrijft hoe de verschillende vision stappen (`Acquisition` , `Enhancement` , `Segmentation` , `Feature extraction` , `Classification`) worden geimplementeerd. Hieronder staat per deel Hoe de structuur gemaakt is en een algeheel classediagram voor alle vision stappen.
+Het vision ontwerp beschrijft hoe de verschillende vision stappen (`Acquisition` , `Enhancement` , `Segmentation` , `Feature extraction` , `Classification`) worden geimplementeerd. Hieronder staat per deel Hoe de structuur gemaakt is.
 
 ### Structuur
 
@@ -25,9 +25,6 @@ Omdat de `Aruco` code in de segmenter al alle features uit de objecten haalt, do
 
 #### Classification
 De classificatie word erg simpel gedaan, op basis van het ID van het plaatje dat `Aruco` herkend word er een type aan de blob gegeven, op basis van dit type zal er wel op geschoten worden of niet.
-
-### Class diagram
-![opstelling](/Docs/images/classdiagram.png)
 
 ## Technisch
 
