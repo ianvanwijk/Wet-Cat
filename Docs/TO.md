@@ -10,7 +10,7 @@ Onder hardware worden de verschillende fysieke benodigdheden voor het project be
 
 ### Camera opstelling
 
-De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit van de beelden die de camera zal bieden. Hieronder is schematisch een tekening te zien van het prototype van de Wet-Cat, met deze opstelling zijn we van plan te gaan presenteren op het moment dat we het project moeten opleveren.
+De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit van de beelden die de camera zal bieden. Hieronder is schematisch een tekening te zien van het prototype van de Wet-Cat, met deze opstelling zijn we van plan te gaan presenteren op het moment dat we het project moeten opleveren.  De camera zal in de opstelling maximaal 2 meter van de “tuin” verwijderd staan. Omdat anders de verschillende objecten niet herkend kan worden.
 
 ![opstelling](/Docs/images/opstelling.png)
 
@@ -19,6 +19,11 @@ De opstelling van de tuin is erg belangrijk. Dit zal namelijk deels de kwaliteit
 Omdat we verschillende dingen gaan herkennen, zijn er verschillende markers gemaakt die het makkelijk maken om de verschillende objecten te herkennen. Er zijn vier verschillende markers die de hoeken van een "Danger Zone" aangeven en er zijn zes verschillende markers die de verschillende katten aangeven. Deze markers zullen op een dobbelsteem worden geplakt om zo aan te geven welke kat het is. Per kat zal de laser iets anders doen. de commando's staat in het hoofdstuk 'Turret' beschreven. Verder staan hieronder de verschillende markers die door het systeem moeten worden herkend.
 
 ![symbolen](/Docs/images/symbolen.png)
+
+De eerste 4 objecten zijn bedoeld voor het instellen van de “danger” zones, de object helemaal recht zal gebruikt worden om de desbetreffende “danger” zone te verwijderen, mist de object zich binnen de zone bevind.
+
+Als laatste zijn er 3 verschillende soorten katten. Om zo te simuleren dat er verschillende manier zijn om verschillende soorten katten te schieten.
+
 ![symbolen_cats](/Docs/images/symbolen_cats.png)
 
 ### Laptop
